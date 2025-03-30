@@ -1,5 +1,6 @@
 /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/drone_dynamixel_bridge
 /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepup
+/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepdown
 /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/package_run_dependencies/drone_dynamixel_bridge
 /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/parent_prefix_path/drone_dynamixel_bridge
 /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/ament_prefix_path.sh

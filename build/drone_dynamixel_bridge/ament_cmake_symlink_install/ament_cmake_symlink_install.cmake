@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "drone_dynamixel_bridge" "motor_stepup" "DESTINATION" "lib/drone_dynamixel_bridge")
+# install("TARGETS" "drone_dynamixel_bridge" "motor_stepup" "motor_stepdown" "DESTINATION" "lib/drone_dynamixel_bridge")
 include("/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/drone_dynamixel_bridge" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

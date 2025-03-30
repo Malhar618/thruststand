@@ -223,6 +223,19 @@ motor_stepup/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepup.dir/build.make CMakeFiles/motor_stepup.dir/build
 .PHONY : motor_stepup/fast
 
+#=============================================================================
+# Target rules for targets named motor_stepdown
+
+# Build rule for target.
+motor_stepdown: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motor_stepdown
+.PHONY : motor_stepdown
+
+# fast build rule for target.
+motor_stepdown/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/build
+.PHONY : motor_stepdown/fast
+
 src/drone_dynamixel_bridge.o: src/drone_dynamixel_bridge.cpp.o
 .PHONY : src/drone_dynamixel_bridge.o
 
@@ -246,6 +259,30 @@ src/drone_dynamixel_bridge.s: src/drone_dynamixel_bridge.cpp.s
 src/drone_dynamixel_bridge.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_dynamixel_bridge.dir/build.make CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.s
 .PHONY : src/drone_dynamixel_bridge.cpp.s
+
+src/motor_stepdown.o: src/motor_stepdown.cpp.o
+.PHONY : src/motor_stepdown.o
+
+# target to build an object file
+src/motor_stepdown.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/src/motor_stepdown.cpp.o
+.PHONY : src/motor_stepdown.cpp.o
+
+src/motor_stepdown.i: src/motor_stepdown.cpp.i
+.PHONY : src/motor_stepdown.i
+
+# target to preprocess a source file
+src/motor_stepdown.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/src/motor_stepdown.cpp.i
+.PHONY : src/motor_stepdown.cpp.i
+
+src/motor_stepdown.s: src/motor_stepdown.cpp.s
+.PHONY : src/motor_stepdown.s
+
+# target to generate assembly for a file
+src/motor_stepdown.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/src/motor_stepdown.cpp.s
+.PHONY : src/motor_stepdown.cpp.s
 
 src/motor_stepup.o: src/motor_stepup.cpp.o
 .PHONY : src/motor_stepup.o
@@ -287,10 +324,14 @@ help:
 	@echo "... drone_dynamixel_bridge_uninstall"
 	@echo "... uninstall"
 	@echo "... drone_dynamixel_bridge"
+	@echo "... motor_stepdown"
 	@echo "... motor_stepup"
 	@echo "... src/drone_dynamixel_bridge.o"
 	@echo "... src/drone_dynamixel_bridge.i"
 	@echo "... src/drone_dynamixel_bridge.s"
+	@echo "... src/motor_stepdown.o"
+	@echo "... src/motor_stepdown.i"
+	@echo "... src/motor_stepdown.s"
 	@echo "... src/motor_stepup.o"
 	@echo "... src/motor_stepup.i"
 	@echo "... src/motor_stepup.s"

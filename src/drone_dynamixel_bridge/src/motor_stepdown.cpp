@@ -3,20 +3,21 @@
 #include "px4_msgs/msg/vehicle_command.hpp"
 #include "px4_msgs/msg/offboard_control_mode.hpp"
 #include <chrono>
-#include <algorithm>
-#include <thread> // Required for std::this_thread::sleep_for
+#include <algorithm> // For std::max, std::min
+#include <cmath>     // For NAN
+#include <thread>    // Required for std::this_thread::sleep_for (though not used directly in final version, good practice)
 
 using namespace std::chrono_literals;
 
-class MotorStepUpTest : public rclcpp::Node
+class MotorStepDownTest : public rclcpp::Node
 {
 public:
-  MotorStepUpTest() : Node("motor_stepup_test"), armed_(false)
+  MotorStepDownTest() : Node("motor_stepdown_test"), armed_(false)
   {
-    // Initialize thrust: start at 5% (0.05) and step up by 5% until 100% (1.0)
-    current_power_ = 0.05f;
-    max_power_ = 1.0f;
-    increment_ = 0.05f;
+    // Initialize thrust: start at 100% (1.0) and step down by 5% until 0% (0.0)
+    current_power_ = 1.0f;
+    min_power_ = 0.0f; // Target minimum power
+    increment_ = 0.05f; // Step size for decrease
     // Use 12 channels (as defined in the actuator_motors message)
     num_channels_ = 12; // Although we only use one motor channel
 
@@ -27,15 +28,18 @@ public:
 
     // Timer to publish offboard control and actuator commands at 10 Hz
     // IMPORTANT: This timer starts immediately but waits for arming before sending actual motor commands.
-    publish_timer_ = this->create_wall_timer(100ms, std::bind(&MotorStepUpTest::publish_offboard_commands, this));
+    publish_timer_ = this->create_wall_timer(100ms, std::bind(&MotorStepDownTest::publish_offboard_commands, this));
 
     // Timer to update thrust every 15 seconds
-    step_timer_ = this->create_wall_timer(15s, std::bind(&MotorStepUpTest::step_power, this));
-    // Timer to attempt arming after a short delay (e.g., 1 second)
-    // We might need to send arm command repeatedly until confirmed, but start with one attempt.
-    arm_timer_ = this->create_wall_timer(1s, std::bind(&MotorStepUpTest::send_arm_command, this));
+    // This timer will be started *after* arming
+    step_timer_ = this->create_wall_timer(15s, std::bind(&MotorStepDownTest::step_power, this));
+    // Initially disable the step timer until arming is attempted
+    step_timer_->cancel();
 
-    RCLCPP_INFO(this->get_logger(), "Motor Step-Up Test Node Started. Initial Thrust = %.2f%%", current_power_ * 100);
+    // Timer to attempt arming after a short delay (e.g., 1 second)
+    arm_timer_ = this->create_wall_timer(1s, std::bind(&MotorStepDownTest::send_arm_command, this));
+
+    RCLCPP_INFO(this->get_logger(), "Motor Step-Down Test Node Started. Initial Thrust = %.2f%%", current_power_ * 100);
     RCLCPP_INFO(this->get_logger(), "Attempting to arm and enter offboard mode shortly...");
     RCLCPP_WARN(this->get_logger(), "Ensure propellers are REMOVED for safety!");
 
@@ -66,10 +70,10 @@ private:
     // to confirm arming state.
     armed_ = true;
 
-    // Give PX4 a moment to process the arm command before starting thrust increase
+    // Give PX4 a moment to process the arm command before starting thrust decrease
     // Start the step timer only after attempting to arm
-    RCLCPP_INFO(this->get_logger(), "Starting power step-up sequence.");
-    step_timer_->reset(); // Start the 15s countdown for the first step
+    RCLCPP_INFO(this->get_logger(), "Starting power step-down sequence.");
+    step_timer_->reset(); // Start the 15s countdown for the first step-down
   }
 
   // Publish OffboardControlMode and ActuatorMotors commands continuously
@@ -97,14 +101,13 @@ private:
 
       // Command only motor 1 (index 0).
       // Ensure the value is within the expected range [0, 1] for normalized thrust.
-      // PX4 might also map [-1, 1] depending on configuration, but 0-1 is typical for direct motor control.
       motor_msg.control[0] = std::max(0.0f, std::min(1.0f, current_power_));
 
       actuator_pub_->publish(motor_msg);
     }
   }
 
-  // Increase thrust by 5% every 15 seconds until 100% is reached
+  // Decrease thrust by 5% every 15 seconds until 0% is reached
   void step_power()
   {
     // Only step power if armed
@@ -113,22 +116,26 @@ private:
         return;
     }
 
-    if (current_power_ < max_power_) {
-      current_power_ += increment_;
-      // Clamp the value just in case
-      current_power_ = std::min(current_power_, max_power_);
-      RCLCPP_INFO(this->get_logger(), "Stepped thrust to %.2f%%", current_power_ * 100);
+    if (current_power_ > min_power_) {
+      current_power_ -= increment_;
+      // Clamp the value just in case it goes slightly below min_power due to floating point inaccuracies
+      current_power_ = std::max(current_power_, min_power_);
+      RCLCPP_INFO(this->get_logger(), "Stepped down thrust to %.2f%%", current_power_ * 100);
     }
 
-    if (current_power_ >= max_power_) {
-        RCLCPP_INFO(this->get_logger(), "Maximum thrust reached: %.2f%%. Test finished.", max_power_ * 100);
+    // Check if minimum power has been reached or passed
+    if (current_power_ <= min_power_) {
+        RCLCPP_INFO(this->get_logger(), "Minimum thrust reached: %.2f%%. Test finished.", min_power_ * 100);
         // Optionally stop timers or disarm here
-        // publish_timer_->cancel();
-        // step_timer_->cancel();
-        // send_disarm_command(); // Implement a disarm function
-        // rclcpp::shutdown(); // Or shutdown the node
+        // publish_timer_->cancel(); // Stop sending commands
+        step_timer_->cancel();      // Stop trying to step down further
+        // send_disarm_command(); // Implement and call a disarm function if desired
+        // rclcpp::shutdown(); // Or shutdown the node entirely
     }
   }
+
+  // Optional: Add a disarm function if needed
+  // void send_disarm_command() { ... }
 
   // Publishers and timers
   rclcpp::Publisher<px4_msgs::msg::ActuatorMotors>::SharedPtr actuator_pub_;
@@ -139,9 +146,9 @@ private:
   rclcpp::TimerBase::SharedPtr arm_timer_;
 
   // Thrust variables
-  float current_power_;
-  float max_power_;
-  float increment_;
+  float current_power_; // Starts high, decreases
+  float min_power_;     // Target minimum
+  float increment_;     // Amount to decrease by
   size_t num_channels_;
 
   // State flag
@@ -151,7 +158,7 @@ private:
 int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
-  auto node = std::make_shared<MotorStepUpTest>();
+  auto node = std::make_shared<MotorStepDownTest>();
   rclcpp::spin(node);
   rclcpp::shutdown();
   return 0;

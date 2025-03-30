@@ -1,0 +1,57 @@
+-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:4 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+-- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+-- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found px4_msgs: 2.0.1 (/home/odroid/ros2_thrust_ws/install/px4_msgs/share/px4_msgs/cmake)
+-- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)
+-- Found tf2_geometry_msgs: 0.17.5 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)
+-- Found dynamixel_sdk: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+-- Configuring done (5.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge
+[ 16%] [32mBuilding CXX object CMakeFiles/motor_stepdown.dir/src/motor_stepdown.cpp.o[0m
+[ 50%] Built target motor_stepup
+[ 83%] Built target drone_dynamixel_bridge
+[100%] [32m[1mLinking CXX executable motor_stepdown[0m
+[100%] Built target motor_stepdown
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/drone_dynamixel_bridge
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepup
+-- Symlinking: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepdown
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/package_run_dependencies/drone_dynamixel_bridge
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/parent_prefix_path/drone_dynamixel_bridge
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/path.sh
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/path.dsv
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.bash
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.sh
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.zsh
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.dsv
+-- Symlinking: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/package.dsv
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/packages/drone_dynamixel_bridge
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/cmake/drone_dynamixel_bridgeConfig.cmake
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/cmake/drone_dynamixel_bridgeConfig-version.cmake
+-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/package.xml

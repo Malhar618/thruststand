@@ -1,0 +1,478 @@
+[0.000000] (-) TimerEvent: {}
+[0.001786] (-) JobUnselected: {'identifier': 'dynamixel_sdk'}
+[0.002422] (-) JobUnselected: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.003887] (-) JobUnselected: {'identifier': 'dynamixel_sdk_examples'}
+[0.005270] (-) JobUnselected: {'identifier': 'flightstack'}
+[0.006463] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.006845] (drone_dynamixel_bridge) JobQueued: {'identifier': 'drone_dynamixel_bridge', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk'), ('px4_msgs', '/home/odroid/ros2_thrust_ws/install/px4_msgs')])}
+[0.007170] (drone_dynamixel_bridge) JobStarted: {'identifier': 'drone_dynamixel_bridge'}
+[0.079986] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'cmake'}
+[0.084733] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'build'}
+[0.089214] (drone_dynamixel_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.134 65244 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.134 65244 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/opt/ros/galactic')]), 'shell': False}
+[0.101657] (-) TimerEvent: {}
+[0.204448] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.205999] (-) TimerEvent: {}
+[0.218266] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[0.219895] (drone_dynamixel_bridge) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.220794] (drone_dynamixel_bridge) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.221656] (drone_dynamixel_bridge) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.222584] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[0.223346] (drone_dynamixel_bridge) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.224126] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[0.224974] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[0.225937] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.226831] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.227647] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.228511] (drone_dynamixel_bridge) StderrLine: {'line': b'  CMakeLists.txt:4 (find_package)\n'}
+[0.229480] (drone_dynamixel_bridge) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.230335] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[0m\n'}
+[0.306323] (-) TimerEvent: {}
+[0.356872] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.406568] (-) TimerEvent: {}
+[0.507643] (-) TimerEvent: {}
+[0.608735] (-) TimerEvent: {}
+[0.709918] (-) TimerEvent: {}
+[0.764335] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.810202] (-) TimerEvent: {}
+[0.828493] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[0.910459] (-) TimerEvent: {}
+[1.011743] (-) TimerEvent: {}
+[1.028976] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c\n'}
+[1.054081] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[1.112000] (-) TimerEvent: {}
+[1.160776] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp\n'}
+[1.212273] (-) TimerEvent: {}
+[1.313485] (-) TimerEvent: {}
+[1.414559] (-) TimerEvent: {}
+[1.511816] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[1.514773] (-) TimerEvent: {}
+[1.525284] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.615036] (-) TimerEvent: {}
+[1.632129] (drone_dynamixel_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.715532] (-) TimerEvent: {}
+[1.816986] (-) TimerEvent: {}
+[1.918467] (-) TimerEvent: {}
+[2.019748] (-) TimerEvent: {}
+[2.120930] (-) TimerEvent: {}
+[2.222577] (-) TimerEvent: {}
+[2.323708] (-) TimerEvent: {}
+[2.424870] (-) TimerEvent: {}
+[2.462476] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found px4_msgs: 2.0.1 (/home/odroid/ros2_thrust_ws/install/px4_msgs/share/px4_msgs/cmake)\n'}
+[2.525121] (-) TimerEvent: {}
+[2.559985] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)\n'}
+[2.625364] (-) TimerEvent: {}
+[2.726495] (-) TimerEvent: {}
+[2.823526] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.17.5 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)\n'}
+[2.826697] (-) TimerEvent: {}
+[2.859684] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)\n'}
+[2.926937] (-) TimerEvent: {}
+[3.028015] (-) TimerEvent: {}
+[3.129359] (-) TimerEvent: {}
+[3.230502] (-) TimerEvent: {}
+[3.331678] (-) TimerEvent: {}
+[3.433049] (-) TimerEvent: {}
+[3.534113] (-) TimerEvent: {}
+[3.635178] (-) TimerEvent: {}
+[3.736326] (-) TimerEvent: {}
+[3.837370] (-) TimerEvent: {}
+[3.938438] (-) TimerEvent: {}
+[4.039547] (-) TimerEvent: {}
+[4.140687] (-) TimerEvent: {}
+[4.241787] (-) TimerEvent: {}
+[4.342987] (-) TimerEvent: {}
+[4.444103] (-) TimerEvent: {}
+[4.545216] (-) TimerEvent: {}
+[4.646352] (-) TimerEvent: {}
+[4.747498] (-) TimerEvent: {}
+[4.848591] (-) TimerEvent: {}
+[4.949980] (-) TimerEvent: {}
+[4.976123] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found dynamixel_sdk: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)\n'}
+[5.050205] (-) TimerEvent: {}
+[5.151394] (-) TimerEvent: {}
+[5.252547] (-) TimerEvent: {}
+[5.353689] (-) TimerEvent: {}
+[5.454956] (-) TimerEvent: {}
+[5.465010] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Configuring done (5.3s)\n'}
+[5.555232] (-) TimerEvent: {}
+[5.605524] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[5.608058] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Build files have been written to: /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge\n'}
+[5.655580] (-) TimerEvent: {}
+[5.712752] (drone_dynamixel_bridge) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/motor_stepdown.dir/src/motor_stepdown.cpp.o\x1b[0m\n'}
+[5.755928] (-) TimerEvent: {}
+[5.763044] (drone_dynamixel_bridge) StdoutLine: {'line': b'[ 50%] Built target motor_stepup\n'}
+[5.778682] (drone_dynamixel_bridge) StdoutLine: {'line': b'[ 83%] Built target drone_dynamixel_bridge\n'}
+[5.856162] (-) TimerEvent: {}
+[5.957470] (-) TimerEvent: {}
+[6.058541] (-) TimerEvent: {}
+[6.159685] (-) TimerEvent: {}
+[6.260784] (-) TimerEvent: {}
+[6.361884] (-) TimerEvent: {}
+[6.463477] (-) TimerEvent: {}
+[6.564672] (-) TimerEvent: {}
+[6.665960] (-) TimerEvent: {}
+[6.767185] (-) TimerEvent: {}
+[6.868405] (-) TimerEvent: {}
+[6.969719] (-) TimerEvent: {}
+[7.070966] (-) TimerEvent: {}
+[7.172297] (-) TimerEvent: {}
+[7.273486] (-) TimerEvent: {}
+[7.374731] (-) TimerEvent: {}
+[7.476073] (-) TimerEvent: {}
+[7.577456] (-) TimerEvent: {}
+[7.678737] (-) TimerEvent: {}
+[7.780061] (-) TimerEvent: {}
+[7.881270] (-) TimerEvent: {}
+[7.982515] (-) TimerEvent: {}
+[8.083714] (-) TimerEvent: {}
+[8.184927] (-) TimerEvent: {}
+[8.286534] (-) TimerEvent: {}
+[8.387794] (-) TimerEvent: {}
+[8.489026] (-) TimerEvent: {}
+[8.590281] (-) TimerEvent: {}
+[8.691578] (-) TimerEvent: {}
+[8.792836] (-) TimerEvent: {}
+[8.894079] (-) TimerEvent: {}
+[8.995302] (-) TimerEvent: {}
+[9.096613] (-) TimerEvent: {}
+[9.197808] (-) TimerEvent: {}
+[9.299079] (-) TimerEvent: {}
+[9.400286] (-) TimerEvent: {}
+[9.501516] (-) TimerEvent: {}
+[9.602817] (-) TimerEvent: {}
+[9.704147] (-) TimerEvent: {}
+[9.805388] (-) TimerEvent: {}
+[9.906609] (-) TimerEvent: {}
+[10.007995] (-) TimerEvent: {}
+[10.109298] (-) TimerEvent: {}
+[10.210501] (-) TimerEvent: {}
+[10.311706] (-) TimerEvent: {}
+[10.412986] (-) TimerEvent: {}
+[10.514223] (-) TimerEvent: {}
+[10.615630] (-) TimerEvent: {}
+[10.716864] (-) TimerEvent: {}
+[10.818051] (-) TimerEvent: {}
+[10.919311] (-) TimerEvent: {}
+[11.020565] (-) TimerEvent: {}
+[11.121760] (-) TimerEvent: {}
+[11.223063] (-) TimerEvent: {}
+[11.324262] (-) TimerEvent: {}
+[11.425515] (-) TimerEvent: {}
+[11.526720] (-) TimerEvent: {}
+[11.627973] (-) TimerEvent: {}
+[11.729419] (-) TimerEvent: {}
+[11.830678] (-) TimerEvent: {}
+[11.931909] (-) TimerEvent: {}
+[12.033134] (-) TimerEvent: {}
+[12.134369] (-) TimerEvent: {}
+[12.235604] (-) TimerEvent: {}
+[12.336835] (-) TimerEvent: {}
+[12.438063] (-) TimerEvent: {}
+[12.539332] (-) TimerEvent: {}
+[12.640508] (-) TimerEvent: {}
+[12.741725] (-) TimerEvent: {}
+[12.843068] (-) TimerEvent: {}
+[12.944279] (-) TimerEvent: {}
+[13.045582] (-) TimerEvent: {}
+[13.146793] (-) TimerEvent: {}
+[13.248001] (-) TimerEvent: {}
+[13.349215] (-) TimerEvent: {}
+[13.450430] (-) TimerEvent: {}
+[13.551550] (-) TimerEvent: {}
+[13.652756] (-) TimerEvent: {}
+[13.753933] (-) TimerEvent: {}
+[13.855123] (-) TimerEvent: {}
+[13.956346] (-) TimerEvent: {}
+[14.057537] (-) TimerEvent: {}
+[14.158716] (-) TimerEvent: {}
+[14.260175] (-) TimerEvent: {}
+[14.361314] (-) TimerEvent: {}
+[14.462651] (-) TimerEvent: {}
+[14.563782] (-) TimerEvent: {}
+[14.664930] (-) TimerEvent: {}
+[14.766117] (-) TimerEvent: {}
+[14.867276] (-) TimerEvent: {}
+[14.968482] (-) TimerEvent: {}
+[15.069700] (-) TimerEvent: {}
+[15.170883] (-) TimerEvent: {}
+[15.272106] (-) TimerEvent: {}
+[15.373248] (-) TimerEvent: {}
+[15.474405] (-) TimerEvent: {}
+[15.575580] (-) TimerEvent: {}
+[15.676695] (-) TimerEvent: {}
+[15.777892] (-) TimerEvent: {}
+[15.879319] (-) TimerEvent: {}
+[15.980541] (-) TimerEvent: {}
+[16.081780] (-) TimerEvent: {}
+[16.183465] (-) TimerEvent: {}
+[16.284827] (-) TimerEvent: {}
+[16.386424] (-) TimerEvent: {}
+[16.488063] (-) TimerEvent: {}
+[16.589326] (-) TimerEvent: {}
+[16.690675] (-) TimerEvent: {}
+[16.791952] (-) TimerEvent: {}
+[16.893185] (-) TimerEvent: {}
+[16.994389] (-) TimerEvent: {}
+[17.095688] (-) TimerEvent: {}
+[17.197095] (-) TimerEvent: {}
+[17.298346] (-) TimerEvent: {}
+[17.399650] (-) TimerEvent: {}
+[17.500869] (-) TimerEvent: {}
+[17.602135] (-) TimerEvent: {}
+[17.703300] (-) TimerEvent: {}
+[17.804415] (-) TimerEvent: {}
+[17.905614] (-) TimerEvent: {}
+[18.006750] (-) TimerEvent: {}
+[18.107901] (-) TimerEvent: {}
+[18.209169] (-) TimerEvent: {}
+[18.310756] (-) TimerEvent: {}
+[18.411976] (-) TimerEvent: {}
+[18.513259] (-) TimerEvent: {}
+[18.614610] (-) TimerEvent: {}
+[18.716408] (-) TimerEvent: {}
+[18.817713] (-) TimerEvent: {}
+[18.919128] (-) TimerEvent: {}
+[19.020491] (-) TimerEvent: {}
+[19.121702] (-) TimerEvent: {}
+[19.222979] (-) TimerEvent: {}
+[19.324246] (-) TimerEvent: {}
+[19.425573] (-) TimerEvent: {}
+[19.526778] (-) TimerEvent: {}
+[19.628056] (-) TimerEvent: {}
+[19.729354] (-) TimerEvent: {}
+[19.830619] (-) TimerEvent: {}
+[19.931901] (-) TimerEvent: {}
+[20.033318] (-) TimerEvent: {}
+[20.134543] (-) TimerEvent: {}
+[20.235750] (-) TimerEvent: {}
+[20.337041] (-) TimerEvent: {}
+[20.438601] (-) TimerEvent: {}
+[20.539953] (-) TimerEvent: {}
+[20.641245] (-) TimerEvent: {}
+[20.742535] (-) TimerEvent: {}
+[20.843775] (-) TimerEvent: {}
+[20.944928] (-) TimerEvent: {}
+[21.046150] (-) TimerEvent: {}
+[21.147358] (-) TimerEvent: {}
+[21.248549] (-) TimerEvent: {}
+[21.349868] (-) TimerEvent: {}
+[21.451044] (-) TimerEvent: {}
+[21.552289] (-) TimerEvent: {}
+[21.653570] (-) TimerEvent: {}
+[21.754738] (-) TimerEvent: {}
+[21.855977] (-) TimerEvent: {}
+[21.957159] (-) TimerEvent: {}
+[22.058302] (-) TimerEvent: {}
+[22.159678] (-) TimerEvent: {}
+[22.260945] (-) TimerEvent: {}
+[22.362226] (-) TimerEvent: {}
+[22.463548] (-) TimerEvent: {}
+[22.565049] (-) TimerEvent: {}
+[22.666376] (-) TimerEvent: {}
+[22.767643] (-) TimerEvent: {}
+[22.868940] (-) TimerEvent: {}
+[22.970147] (-) TimerEvent: {}
+[23.071428] (-) TimerEvent: {}
+[23.173192] (-) TimerEvent: {}
+[23.274448] (-) TimerEvent: {}
+[23.375963] (-) TimerEvent: {}
+[23.477231] (-) TimerEvent: {}
+[23.578535] (-) TimerEvent: {}
+[23.679922] (-) TimerEvent: {}
+[23.781200] (-) TimerEvent: {}
+[23.882505] (-) TimerEvent: {}
+[23.983754] (-) TimerEvent: {}
+[24.085065] (-) TimerEvent: {}
+[24.186498] (-) TimerEvent: {}
+[24.287706] (-) TimerEvent: {}
+[24.388959] (-) TimerEvent: {}
+[24.490190] (-) TimerEvent: {}
+[24.591389] (-) TimerEvent: {}
+[24.692790] (-) TimerEvent: {}
+[24.793994] (-) TimerEvent: {}
+[24.895225] (-) TimerEvent: {}
+[24.996615] (-) TimerEvent: {}
+[25.097759] (-) TimerEvent: {}
+[25.199005] (-) TimerEvent: {}
+[25.300178] (-) TimerEvent: {}
+[25.401349] (-) TimerEvent: {}
+[25.502574] (-) TimerEvent: {}
+[25.603741] (-) TimerEvent: {}
+[25.704831] (-) TimerEvent: {}
+[25.805964] (-) TimerEvent: {}
+[25.907086] (-) TimerEvent: {}
+[26.008277] (-) TimerEvent: {}
+[26.109508] (-) TimerEvent: {}
+[26.210679] (-) TimerEvent: {}
+[26.311970] (-) TimerEvent: {}
+[26.413268] (-) TimerEvent: {}
+[26.514491] (-) TimerEvent: {}
+[26.615675] (-) TimerEvent: {}
+[26.716874] (-) TimerEvent: {}
+[26.818137] (-) TimerEvent: {}
+[26.919379] (-) TimerEvent: {}
+[27.020571] (-) TimerEvent: {}
+[27.121713] (-) TimerEvent: {}
+[27.222921] (-) TimerEvent: {}
+[27.324121] (-) TimerEvent: {}
+[27.425300] (-) TimerEvent: {}
+[27.526640] (-) TimerEvent: {}
+[27.627909] (-) TimerEvent: {}
+[27.729094] (-) TimerEvent: {}
+[27.830280] (-) TimerEvent: {}
+[27.931537] (-) TimerEvent: {}
+[28.033069] (-) TimerEvent: {}
+[28.134314] (-) TimerEvent: {}
+[28.235640] (-) TimerEvent: {}
+[28.337083] (-) TimerEvent: {}
+[28.438368] (-) TimerEvent: {}
+[28.539646] (-) TimerEvent: {}
+[28.640846] (-) TimerEvent: {}
+[28.742173] (-) TimerEvent: {}
+[28.843425] (-) TimerEvent: {}
+[28.944659] (-) TimerEvent: {}
+[29.045886] (-) TimerEvent: {}
+[29.147149] (-) TimerEvent: {}
+[29.248388] (-) TimerEvent: {}
+[29.349722] (-) TimerEvent: {}
+[29.450862] (-) TimerEvent: {}
+[29.552059] (-) TimerEvent: {}
+[29.653375] (-) TimerEvent: {}
+[29.754595] (-) TimerEvent: {}
+[29.855812] (-) TimerEvent: {}
+[29.956980] (-) TimerEvent: {}
+[30.058172] (-) TimerEvent: {}
+[30.159337] (-) TimerEvent: {}
+[30.260485] (-) TimerEvent: {}
+[30.361688] (-) TimerEvent: {}
+[30.463038] (-) TimerEvent: {}
+[30.564175] (-) TimerEvent: {}
+[30.665368] (-) TimerEvent: {}
+[30.766582] (-) TimerEvent: {}
+[30.867765] (-) TimerEvent: {}
+[30.968987] (-) TimerEvent: {}
+[31.070185] (-) TimerEvent: {}
+[31.171376] (-) TimerEvent: {}
+[31.272585] (-) TimerEvent: {}
+[31.373764] (-) TimerEvent: {}
+[31.474840] (-) TimerEvent: {}
+[31.576035] (-) TimerEvent: {}
+[31.677199] (-) TimerEvent: {}
+[31.778393] (-) TimerEvent: {}
+[31.879764] (-) TimerEvent: {}
+[31.981063] (-) TimerEvent: {}
+[32.082382] (-) TimerEvent: {}
+[32.183664] (-) TimerEvent: {}
+[32.284984] (-) TimerEvent: {}
+[32.386679] (-) TimerEvent: {}
+[32.488235] (-) TimerEvent: {}
+[32.589466] (-) TimerEvent: {}
+[32.690717] (-) TimerEvent: {}
+[32.792396] (-) TimerEvent: {}
+[32.893748] (-) TimerEvent: {}
+[32.995051] (-) TimerEvent: {}
+[33.096413] (-) TimerEvent: {}
+[33.197688] (-) TimerEvent: {}
+[33.298991] (-) TimerEvent: {}
+[33.400435] (-) TimerEvent: {}
+[33.501703] (-) TimerEvent: {}
+[33.603007] (-) TimerEvent: {}
+[33.704186] (-) TimerEvent: {}
+[33.805512] (-) TimerEvent: {}
+[33.906765] (-) TimerEvent: {}
+[34.008042] (-) TimerEvent: {}
+[34.109374] (-) TimerEvent: {}
+[34.210567] (-) TimerEvent: {}
+[34.311791] (-) TimerEvent: {}
+[34.413081] (-) TimerEvent: {}
+[34.514360] (-) TimerEvent: {}
+[34.615667] (-) TimerEvent: {}
+[34.716832] (-) TimerEvent: {}
+[34.817969] (-) TimerEvent: {}
+[34.919132] (-) TimerEvent: {}
+[35.020250] (-) TimerEvent: {}
+[35.121396] (-) TimerEvent: {}
+[35.222563] (-) TimerEvent: {}
+[35.323703] (-) TimerEvent: {}
+[35.424879] (-) TimerEvent: {}
+[35.526191] (-) TimerEvent: {}
+[35.627347] (-) TimerEvent: {}
+[35.728454] (-) TimerEvent: {}
+[35.829641] (-) TimerEvent: {}
+[35.930774] (-) TimerEvent: {}
+[36.031908] (-) TimerEvent: {}
+[36.133108] (-) TimerEvent: {}
+[36.234333] (-) TimerEvent: {}
+[36.335676] (-) TimerEvent: {}
+[36.436921] (-) TimerEvent: {}
+[36.538235] (-) TimerEvent: {}
+[36.639587] (-) TimerEvent: {}
+[36.740761] (-) TimerEvent: {}
+[36.841846] (-) TimerEvent: {}
+[36.943068] (-) TimerEvent: {}
+[37.044211] (-) TimerEvent: {}
+[37.145582] (-) TimerEvent: {}
+[37.246687] (-) TimerEvent: {}
+[37.347795] (-) TimerEvent: {}
+[37.448972] (-) TimerEvent: {}
+[37.550088] (-) TimerEvent: {}
+[37.651181] (-) TimerEvent: {}
+[37.752293] (-) TimerEvent: {}
+[37.853411] (-) TimerEvent: {}
+[37.954516] (-) TimerEvent: {}
+[38.055626] (-) TimerEvent: {}
+[38.156772] (-) TimerEvent: {}
+[38.257933] (-) TimerEvent: {}
+[38.359050] (-) TimerEvent: {}
+[38.460128] (-) TimerEvent: {}
+[38.561226] (-) TimerEvent: {}
+[38.662322] (-) TimerEvent: {}
+[38.684305] (drone_dynamixel_bridge) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable motor_stepdown\x1b[0m\n'}
+[38.762637] (-) TimerEvent: {}
+[38.864248] (-) TimerEvent: {}
+[38.965653] (-) TimerEvent: {}
+[39.066997] (-) TimerEvent: {}
+[39.168322] (-) TimerEvent: {}
+[39.269598] (-) TimerEvent: {}
+[39.371041] (-) TimerEvent: {}
+[39.472675] (-) TimerEvent: {}
+[39.573881] (-) TimerEvent: {}
+[39.675157] (-) TimerEvent: {}
+[39.776377] (-) TimerEvent: {}
+[39.877419] (-) TimerEvent: {}
+[39.978478] (-) TimerEvent: {}
+[40.079624] (-) TimerEvent: {}
+[40.180896] (-) TimerEvent: {}
+[40.282049] (-) TimerEvent: {}
+[40.383151] (-) TimerEvent: {}
+[40.415221] (drone_dynamixel_bridge) StdoutLine: {'line': b'[100%] Built target motor_stepdown\n'}
+[40.440101] (drone_dynamixel_bridge) CommandEnded: {'returncode': 0}
+[40.483528] (-) TimerEvent: {}
+[40.547263] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'install'}
+[40.573990] (drone_dynamixel_bridge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'], 'cwd': '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.134 65244 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.134 65244 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/opt/ros/galactic')]), 'shell': False}
+[40.585513] (-) TimerEvent: {}
+[40.600764] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[40.603148] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[40.605202] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/drone_dynamixel_bridge\n'}
+[40.606580] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepup\n'}
+[40.607749] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Symlinking: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepdown\n'}
+[40.625741] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/package_run_dependencies/drone_dynamixel_bridge\n'}
+[40.627102] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/parent_prefix_path/drone_dynamixel_bridge\n'}
+[40.628389] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/ament_prefix_path.sh\n'}
+[40.629783] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/ament_prefix_path.dsv\n'}
+[40.631025] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/path.sh\n'}
+[40.632345] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/path.dsv\n'}
+[40.633959] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.bash\n'}
+[40.635257] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.sh\n'}
+[40.636598] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.zsh\n'}
+[40.637929] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.dsv\n'}
+[40.639254] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Symlinking: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/package.dsv\n'}
+[40.657393] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/packages/drone_dynamixel_bridge\n'}
+[40.658695] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/cmake/drone_dynamixel_bridgeConfig.cmake\n'}
+[40.659981] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/cmake/drone_dynamixel_bridgeConfig-version.cmake\n'}
+[40.661061] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/package.xml\n'}
+[40.667626] (drone_dynamixel_bridge) CommandEnded: {'returncode': 0}
+[40.686471] (-) TimerEvent: {}
+[40.788380] (-) TimerEvent: {}
+[40.889903] (-) TimerEvent: {}
+[40.917920] (drone_dynamixel_bridge) JobEnded: {'identifier': 'drone_dynamixel_bridge', 'rc': 0}
+[40.923270] (-) EventReactorShutdown: {}

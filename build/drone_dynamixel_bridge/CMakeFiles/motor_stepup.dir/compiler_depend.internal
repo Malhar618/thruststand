@@ -7,6 +7,14 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__builder.hpp
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__struct.hpp
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__traits.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__builder.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__struct.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__traits.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__builder.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__struct.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__traits.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/offboard_control_mode.hpp
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_command.hpp
  /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__builder.hpp
  /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__struct.hpp
  /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp

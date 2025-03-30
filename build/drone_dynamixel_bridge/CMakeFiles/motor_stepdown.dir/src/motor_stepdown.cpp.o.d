@@ -1,5 +1,5 @@
-CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: \
- /home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/motor_stepup.cpp \
+CMakeFiles/motor_stepdown.dir/src/motor_stepdown.cpp.o: \
+ /home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/motor_stepdown.cpp \
  /usr/include/stdc-predef.h /opt/ros/galactic/include/rclcpp/rclcpp.hpp \
  /usr/include/c++/9/csignal \
  /usr/include/aarch64-linux-gnu/c++/9/bits/c++config.h \

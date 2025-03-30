@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge
 # The main recursive "all" target.
 all: CMakeFiles/drone_dynamixel_bridge.dir/all
 all: CMakeFiles/motor_stepup.dir/all
+all: CMakeFiles/motor_stepdown.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/drone_dynamixel_bridge_uninstall.dir/clean
 clean: CMakeFiles/drone_dynamixel_bridge.dir/clean
 clean: CMakeFiles/motor_stepup.dir/clean
+clean: CMakeFiles/motor_stepdown.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -163,7 +165,7 @@ CMakeFiles/drone_dynamixel_bridge.dir/clean:
 CMakeFiles/motor_stepup.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepup.dir/build.make CMakeFiles/motor_stepup.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepup.dir/build.make CMakeFiles/motor_stepup.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=3,4 "Built target motor_stepup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=5,6 "Built target motor_stepup"
 .PHONY : CMakeFiles/motor_stepup.dir/all
 
 # Build rule for subdir invocation for target.
@@ -181,6 +183,32 @@ motor_stepup: CMakeFiles/motor_stepup.dir/rule
 CMakeFiles/motor_stepup.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepup.dir/build.make CMakeFiles/motor_stepup.dir/clean
 .PHONY : CMakeFiles/motor_stepup.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/motor_stepdown.dir
+
+# All Build rule for target.
+CMakeFiles/motor_stepdown.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=3,4 "Built target motor_stepdown"
+.PHONY : CMakeFiles/motor_stepdown.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/motor_stepdown.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motor_stepdown.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles 0
+.PHONY : CMakeFiles/motor_stepdown.dir/rule
+
+# Convenience name for target.
+motor_stepdown: CMakeFiles/motor_stepdown.dir/rule
+.PHONY : motor_stepdown
+
+# clean rule for target.
+CMakeFiles/motor_stepdown.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/clean
+.PHONY : CMakeFiles/motor_stepdown.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

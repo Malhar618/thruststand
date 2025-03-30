@@ -6,6 +6,14 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
   /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__builder.hpp \
   /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__struct.hpp \
   /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__traits.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__builder.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__struct.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__traits.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__builder.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__struct.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__traits.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/offboard_control_mode.hpp \
+  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_command.hpp \
   /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__builder.hpp \
   /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__struct.hpp \
   /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp \
@@ -676,8 +684,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/pthread.h:
 
-/usr/include/math.h:
-
 /usr/include/locale.h:
 
 /usr/include/linux/types.h:
@@ -812,11 +818,17 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/c++/9/cctype:
 
-/opt/ros/galactic/include/rcutils/types/string_array.h:
+/usr/include/c++/9/bits/uses_allocator.h:
 
-/opt/ros/galactic/include/rcutils/types/array_list.h:
+/usr/include/c++/9/bits/unordered_set.h:
 
-/opt/ros/galactic/include/rcutils/types.h:
+/usr/include/c++/9/ext/numeric_traits.h:
+
+/usr/include/c++/9/bits/unordered_map.h:
+
+/usr/include/c++/9/bits/unique_lock.h:
+
+/usr/include/c++/9/bits/uniform_int_dist.h:
 
 /opt/ros/galactic/include/rcutils/macros.h:
 
@@ -842,8 +854,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/typesupport_helpers.hpp:
 
-/opt/ros/galactic/include/rcutils/types/char_array.h:
-
 /opt/ros/galactic/include/rclcpp/topic_statistics_state.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h:
@@ -862,6 +872,10 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/subscription_options.hpp:
 
+/usr/include/math.h:
+
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__struct.hpp:
+
 /usr/include/aarch64-linux-gnu/sys/time.h:
 
 /usr/include/asm-generic/errno.h:
@@ -878,10 +892,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/parameter_value.hpp:
 
-/opt/ros/galactic/include/rcutils/types/rcutils_ret.h:
-
-/usr/include/c++/9/bits/stl_iterator.h:
-
 /opt/ros/galactic/include/rclcpp/parameter_map.hpp:
 
 /usr/include/c++/9/tr1/exp_integral.tcc:
@@ -892,9 +902,19 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/node_options.hpp:
 
+/usr/include/c++/9/utility:
+
+/usr/include/c++/9/cassert:
+
+/opt/ros/galactic/include/rclcpp/node_interfaces/get_node_topics_interface.hpp:
+
 /opt/ros/galactic/include/rcl_interfaces/srv/get_parameters.hpp:
 
 /opt/ros/galactic/include/rclcpp/node_interfaces/node_timers_interface_traits.hpp:
+
+/usr/include/c++/9/bits/vector.tcc:
+
+/opt/ros/galactic/include/rclcpp/node_interfaces/node_time_source_interface.hpp:
 
 /usr/include/c++/9/bits/sstream.tcc:
 
@@ -904,11 +924,11 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/node_interfaces/node_base_interface.hpp:
 
-/opt/ros/galactic/include/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
-
 /opt/ros/galactic/include/rcutils/shared_library.h:
 
 /opt/ros/galactic/include/rclcpp/parameter_event_handler.hpp:
+
+/opt/ros/galactic/include/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
 
 /opt/ros/galactic/include/rclcpp/type_support_decl.hpp:
 
@@ -930,10 +950,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
 
-/opt/ros/galactic/include/rclcpp/message_info.hpp:
-
-/usr/include/c++/9/bits/uniform_int_dist.h:
-
 /opt/ros/galactic/include/rclcpp/memory_strategies.hpp:
 
 /opt/ros/galactic/include/rclcpp/wait_set_template.hpp:
@@ -946,13 +962,13 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/aarch64-linux-gnu/asm/errno.h:
 
-/opt/ros/galactic/include/rcutils/types/hash_map.h:
-
 /opt/ros/galactic/include/rclcpp/logging.hpp:
 
 /usr/include/aarch64-linux-gnu/sys/types.h:
 
 /opt/ros/galactic/include/rclcpp/node_interfaces/node_parameters_interface.hpp:
+
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__builder.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/sigthread.h:
 
@@ -1056,19 +1072,29 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/c++/9/bits/erase_if.h:
 
-/opt/ros/galactic/include/rclcpp/wait_set_policies/dynamic_storage.hpp:
+/usr/include/c++/9/bits/refwrap.h:
 
-/usr/include/c++/9/bits/stl_bvector.h:
+/opt/ros/galactic/include/rclcpp/wait_set.hpp:
 
-/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter__struct.hpp:
+/opt/ros/galactic/include/rclcpp/subscription_traits.hpp:
 
-/usr/include/c++/9/bits/allocated_ptr.h:
+/opt/ros/galactic/include/rclcpp/create_subscription.hpp:
 
-/opt/ros/galactic/include/builtin_interfaces/msg/time.hpp:
+/opt/ros/galactic/include/rcutils/logging_macros.h:
 
-/usr/include/aarch64-linux-gnu/c++/9/bits/gthr.h:
+/usr/include/c++/9/bits/locale_facets_nonio.tcc:
+
+/opt/ros/galactic/include/rclcpp/detail/mutex_two_priorities.hpp:
+
+/opt/ros/galactic/include/rmw/init.h:
+
+/opt/ros/galactic/include/rclcpp/create_publisher.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/integer_range__struct.hpp:
+
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__traits.hpp:
+
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__struct.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/floating_point_range__traits.hpp:
 
@@ -1102,8 +1128,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/any_executable.hpp:
 
-/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter__builder.hpp:
-
 /opt/ros/galactic/include/rcl/init_options.h:
 
 /home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/motor_stepup.cpp:
@@ -1112,25 +1136,17 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rcl/graph.h:
 
+/opt/ros/galactic/include/rcl/client.h:
+
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__builder.hpp:
+
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_command.hpp:
+
 /opt/ros/galactic/include/rclcpp/publisher_options.hpp:
 
 /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__struct.hpp:
 
 /opt/ros/galactic/include/rcl/network_flow_endpoints.h:
-
-/usr/include/c++/9/ext/alloc_traits.h:
-
-/opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/constants.hpp:
-
-/opt/ros/galactic/include/rcpputils/shared_library.hpp:
-
-/opt/ros/galactic/include/rclcpp/logger.hpp:
-
-/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
-
-/usr/include/c++/9/bits/ios_base.h:
-
-/opt/ros/galactic/include/builtin_interfaces/msg/detail/time__builder.hpp:
 
 /opt/ros/galactic/include/rclcpp/executors.hpp:
 
@@ -1138,25 +1154,51 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_descriptor__traits.hpp:
 
-/opt/ros/galactic/include/rclcpp/future_return_code.hpp:
-
 /opt/ros/galactic/include/rclcpp/function_traits.hpp:
+
+/opt/ros/galactic/include/rclcpp/future_return_code.hpp:
 
 /usr/include/aarch64-linux-gnu/c++/9/bits/messages_members.h:
 
-/usr/include/c++/9/bits/localefwd.h:
+/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter__builder.hpp:
 
-/opt/ros/galactic/include/rclcpp/any_service_callback.hpp:
+/usr/include/c++/9/typeinfo:
+
+/opt/ros/galactic/include/rclcpp/contexts/default_context.hpp:
+
+/opt/ros/galactic/include/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
+
+/opt/ros/galactic/include/libstatistics_collector/visibility_control.hpp:
+
+/opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
+
+/usr/include/c++/9/bits/char_traits.h:
+
+/opt/ros/galactic/include/rcutils/types.h:
+
+/usr/include/c++/9/bits/unique_ptr.h:
+
+/usr/include/aarch64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/aarch64-linux-gnu/bits/signal_ext.h:
+
+/opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
+
+/opt/ros/galactic/include/rclcpp/wait_set_policies/static_storage.hpp:
+
+/opt/ros/galactic/include/builtin_interfaces/msg/time.hpp:
+
+/usr/include/aarch64-linux-gnu/c++/9/bits/gthr.h:
+
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/offboard_control_mode__traits.hpp:
 
 /opt/ros/galactic/include/rclcpp/parameter_service.hpp:
 
-/opt/ros/galactic/include/rcl/client.h:
+/opt/ros/galactic/include/rclcpp/message_info.hpp:
 
-/opt/ros/galactic/include/rcl_interfaces/srv/detail/set_parameters_atomically__traits.hpp:
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__struct.hpp:
 
-/opt/ros/galactic/include/rcl/context.h:
-
-/opt/ros/galactic/include/statistics_msgs/msg/detail/metrics_message__traits.hpp:
+/opt/ros/galactic/include/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
 /opt/ros/galactic/include/rcl/arguments.h:
 
@@ -1172,29 +1214,67 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/c++/9/bits/atomic_lockfree_defines.h:
 
+/opt/ros/galactic/include/rcl_interfaces/srv/detail/set_parameters_atomically__traits.hpp:
+
+/opt/ros/galactic/include/rcl/context.h:
+
+/opt/ros/galactic/include/statistics_msgs/msg/detail/metrics_message__traits.hpp:
+
 /opt/ros/galactic/include/libstatistics_collector/collector/collector.hpp:
 
 /opt/ros/galactic/include/rcl/service.h:
 
 /usr/include/aarch64-linux-gnu/asm/bitsperlong.h:
 
-/opt/ros/galactic/include/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
+/opt/ros/galactic/include/rclcpp/any_service_callback.hpp:
 
-/opt/ros/galactic/include/rcl/wait.h:
+/usr/include/c++/9/bits/localefwd.h:
 
 /opt/ros/galactic/include/rclcpp/scope_exit.hpp:
 
 /opt/ros/galactic/include/rclcpp/detail/rmw_implementation_specific_payload.hpp:
 
-/opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
-
-/opt/ros/galactic/include/libstatistics_collector/visibility_control.hpp:
-
-/usr/include/c++/9/bits/char_traits.h:
-
 /opt/ros/galactic/include/rcl_yaml_param_parser/visibility_control.h:
 
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
+
+/opt/ros/galactic/include/rclcpp/node_interfaces/node_timers_interface.hpp:
+
+/usr/include/aarch64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
+
+/opt/ros/galactic/include/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
+
+/opt/ros/galactic/include/rclcpp/macros.hpp:
+
+/opt/ros/galactic/include/rcl/publisher.h:
+
+/usr/include/aarch64-linux-gnu/bits/procfs-prregset.h:
+
+/opt/ros/galactic/include/rclcpp/node_interfaces/get_node_timers_interface.hpp:
+
+/opt/ros/galactic/include/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
+
+/usr/include/asm-generic/errno-base.h:
+
+/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:
+
+/opt/ros/galactic/include/rcl_yaml_param_parser/types.h:
+
+/opt/ros/galactic/include/builtin_interfaces/msg/detail/time__struct.hpp:
+
+/opt/ros/galactic/include/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
+
+/opt/ros/galactic/include/rclcpp/service.hpp:
+
+/usr/include/c++/9/ext/alloc_traits.h:
+
+/opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/constants.hpp:
+
+/opt/ros/galactic/include/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
+
+/opt/ros/galactic/include/rcl/wait.h:
 
 /usr/include/c++/9/cstddef:
 
@@ -1216,39 +1296,9 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/libstatistics_collector/moving_average_statistics/moving_average.hpp:
 
-/opt/ros/galactic/include/builtin_interfaces/msg/detail/time__struct.hpp:
+/usr/include/c++/9/bits/ios_base.h:
 
-/opt/ros/galactic/include/rclcpp/node_interfaces/node_timers_interface.hpp:
-
-/usr/include/aarch64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
-
-/opt/ros/galactic/include/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
-
-/opt/ros/galactic/include/rclcpp/macros.hpp:
-
-/opt/ros/galactic/include/rcl/publisher.h:
-
-/usr/include/aarch64-linux-gnu/bits/procfs-prregset.h:
-
-/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__struct.hpp:
-
-/opt/ros/galactic/include/rclcpp/node_interfaces/get_node_timers_interface.hpp:
-
-/opt/ros/galactic/include/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
-
-/usr/include/asm-generic/errno-base.h:
-
-/opt/ros/galactic/include/rosidl_runtime_cpp/traits.hpp:
-
-/opt/ros/galactic/include/rcl_yaml_param_parser/types.h:
-
-/usr/include/aarch64-linux-gnu/bits/signal_ext.h:
-
-/opt/ros/galactic/include/rclcpp/wait_set_policies/static_storage.hpp:
-
-/opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
+/opt/ros/galactic/include/builtin_interfaces/msg/detail/time__builder.hpp:
 
 /opt/ros/galactic/include/rclcpp/visibility_control.hpp:
 
@@ -1262,18 +1312,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rcl/logging_rosout.h:
 
-/usr/include/c++/9/bits/refwrap.h:
-
-/opt/ros/galactic/include/rclcpp/wait_set.hpp:
-
-/opt/ros/galactic/include/rclcpp/subscription_traits.hpp:
-
-/opt/ros/galactic/include/rclcpp/create_subscription.hpp:
-
-/opt/ros/galactic/include/rcutils/logging_macros.h:
-
-/usr/include/c++/9/bits/locale_facets_nonio.tcc:
-
 /opt/ros/galactic/include/rcl/domain_id.h:
 
 /usr/include/c++/9/bits/stl_raw_storage_iter.h:
@@ -1283,6 +1321,20 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 /usr/include/c++/9/cwchar:
 
 /usr/include/aarch64-linux-gnu/c++/9/bits/gthr-default.h:
+
+/opt/ros/galactic/include/rclcpp/wait_set_policies/dynamic_storage.hpp:
+
+/usr/include/c++/9/bits/stl_bvector.h:
+
+/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter__struct.hpp:
+
+/usr/include/c++/9/bits/allocated_ptr.h:
+
+/opt/ros/galactic/include/rcpputils/shared_library.hpp:
+
+/opt/ros/galactic/include/rclcpp/logger.hpp:
+
+/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/srv/set_parameters_atomically.hpp:
 
@@ -1302,9 +1354,9 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/list_parameters_result__traits.hpp:
 
-/usr/include/aarch64-linux-gnu/bits/procfs.h:
-
 /opt/ros/galactic/include/rclcpp/node_interfaces/node_base_interface_traits.hpp:
+
+/usr/include/aarch64-linux-gnu/bits/procfs.h:
 
 /opt/ros/galactic/include/rclcpp/detail/resolve_enable_topic_statistics.hpp:
 
@@ -1324,6 +1376,8 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/c++/9/bits/stl_iterator_base_types.h:
 
+/opt/ros/galactic/include/rclcpp/create_service.hpp:
+
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/integer_range__traits.hpp:
@@ -1335,12 +1389,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 /opt/ros/galactic/include/rcl_interfaces/msg/set_parameters_result.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:
-
-/opt/ros/galactic/include/rclcpp/create_publisher.hpp:
-
-/opt/ros/galactic/include/rclcpp/detail/mutex_two_priorities.hpp:
-
-/opt/ros/galactic/include/rmw/init.h:
 
 /opt/ros/galactic/include/rcl_interfaces/srv/detail/describe_parameters__traits.hpp:
 
@@ -1356,12 +1404,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/intra_process_buffer_type.hpp:
 
-/opt/ros/galactic/include/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
-
-/opt/ros/galactic/include/rclcpp/service.hpp:
-
-/opt/ros/galactic/include/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
-
 /opt/ros/galactic/include/rclcpp/serialized_message.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
@@ -1375,8 +1417,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 /usr/include/c++/9/codecvt:
 
 /usr/include/aarch64-linux-gnu/bits/wchar.h:
-
-/opt/ros/galactic/include/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/srv/detail/set_parameters_atomically__builder.hpp:
 
@@ -1393,6 +1433,14 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 /opt/ros/galactic/include/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp:
 
 /opt/ros/galactic/include/rcl_interfaces/srv/get_parameter_types.hpp:
+
+/opt/ros/galactic/include/rclcpp/create_timer.hpp:
+
+/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_value__builder.hpp:
+
+/opt/ros/galactic/include/rmw/events_statuses/liveliness_lost.h:
+
+/opt/ros/galactic/include/rcl_interfaces/srv/list_parameters.hpp:
 
 /usr/include/c++/9/bits/shared_ptr_atomic.h:
 
@@ -1428,23 +1476,23 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /opt/ros/galactic/include/rclcpp/context.hpp:
 
-/usr/include/c++/9/typeinfo:
-
-/opt/ros/galactic/include/rclcpp/contexts/default_context.hpp:
-
 /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/actuator_motors__builder.hpp:
 
 /opt/ros/galactic/include/rclcpp/create_generic_publisher.hpp:
 
-/opt/ros/galactic/include/rclcpp/create_service.hpp:
+/opt/ros/galactic/include/rcutils/types/array_list.h:
 
-/opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_value__builder.hpp:
+/opt/ros/galactic/include/rcutils/types/char_array.h:
 
-/opt/ros/galactic/include/rmw/events_statuses/liveliness_lost.h:
+/home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/offboard_control_mode.hpp:
 
-/opt/ros/galactic/include/rcl_interfaces/srv/list_parameters.hpp:
+/opt/ros/galactic/include/rcutils/types/hash_map.h:
 
-/opt/ros/galactic/include/rclcpp/create_timer.hpp:
+/opt/ros/galactic/include/rcutils/types/rcutils_ret.h:
+
+/usr/include/c++/9/bits/stl_iterator.h:
+
+/opt/ros/galactic/include/rcutils/types/string_array.h:
 
 /opt/ros/galactic/include/rclcpp/memory_strategy.hpp:
 
@@ -1564,8 +1612,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/c++/9/bits/unordered_set.h:
-
 /opt/ros/galactic/include/statistics_msgs/msg/metrics_message.hpp:
 
 /opt/ros/galactic/include/tracetools/config.h:
@@ -1612,10 +1658,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/aarch64-linux-gnu/bits/endian.h:
 
-/usr/include/c++/9/ext/numeric_traits.h:
-
-/usr/include/c++/9/bits/unordered_map.h:
-
 /usr/include/aarch64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/aarch64-linux-gnu/bits/floatn.h:
@@ -1640,9 +1682,9 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/aarch64-linux-gnu/bits/locale.h:
 
-/opt/ros/galactic/include/rcutils/types/string_map.h:
-
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
+
+/opt/ros/galactic/include/rcutils/types/string_map.h:
 
 /usr/include/aarch64-linux-gnu/bits/long-double.h:
 
@@ -1681,8 +1723,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 /usr/include/aarch64-linux-gnu/bits/sigstack.h:
 
 /usr/include/aarch64-linux-gnu/bits/ss_flags.h:
-
-/usr/include/c++/9/bits/uses_allocator.h:
 
 /opt/ros/galactic/include/rclcpp/publisher_base.hpp:
 
@@ -1922,10 +1962,6 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 
 /usr/include/c++/9/bits/stl_list.h:
 
-/usr/include/aarch64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/c++/9/bits/unique_ptr.h:
-
 /usr/include/c++/9/bits/stl_multimap.h:
 
 /usr/include/c++/9/bits/stl_multiset.h:
@@ -1943,15 +1979,3 @@ CMakeFiles/motor_stepup.dir/src/motor_stepup.cpp.o: /home/odroid/ros2_thrust_ws/
 /usr/include/c++/9/bits/streambuf_iterator.h:
 
 /usr/include/c++/9/bits/stringfwd.h:
-
-/usr/include/c++/9/bits/unique_lock.h:
-
-/opt/ros/galactic/include/rclcpp/node_interfaces/node_time_source_interface.hpp:
-
-/usr/include/c++/9/bits/vector.tcc:
-
-/usr/include/c++/9/utility:
-
-/opt/ros/galactic/include/rclcpp/node_interfaces/get_node_topics_interface.hpp:
-
-/usr/include/c++/9/cassert:
