@@ -34,7 +34,7 @@ private:
     // Since msg.control is a fixed-size std::array, fill it with zeros
     std::fill(msg.control.begin(), msg.control.end(), 0.0f);
     // Command only motor 1 (channel 0)
-    msg.control[0] = current_power_;
+    msg.control[1] = current_power_;
     publisher_->publish(msg);
   }
 
