@@ -745,4 +745,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/drone_dynamixel_bridge.dir/DependInfo.cmake"
   "CMakeFiles/motor_stepup.dir/DependInfo.cmake"
   "CMakeFiles/motor_stepdown.dir/DependInfo.cmake"
+  "CMakeFiles/angular_state_logger.dir/DependInfo.cmake"
   )

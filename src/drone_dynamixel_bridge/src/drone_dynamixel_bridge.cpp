@@ -17,9 +17,9 @@
 using namespace std::chrono_literals;
 
 // --- Dynamixel configuration constants ---
-static constexpr uint8_t  DXL_ID              = 3;               // Motor ID for roll axis
+static constexpr uint8_t  DXL_ID              = 2;               // Motor ID for roll axis
 static constexpr char      DEVICENAME[]        = "/dev/ttyUSB1";    // Adjust this port as needed
-static constexpr int       BAUDRATE            = 57600;           // Baudrate for the MX-106T
+static constexpr int       BAUDRATE            = 4000000;           // Baudrate for the MX-106T
 static constexpr uint16_t  ADDR_TORQUE_ENABLE  = 64;              // Register for torque enable
 static constexpr uint16_t  ADDR_GOAL_CURRENT    = 102;              // Register for goal current
 static constexpr double      CURRENT_STEP        = 0.0045;         // 4.5 mA per step
@@ -111,7 +111,7 @@ public:
       return;
     }
     // Enable torque control (assumed pre-configured for Torque Control Mode)
-    write1Byte(DXL_ID, ADDR_TORQUE_ENABLE, 1);
+    write1Byte(DXL_ID, ADDR_TORQUE_ENABLE, 0);
 
     // Initialize our theoretical dynamics object.
     dynamics_ = std::make_shared<EqDynamics>();
@@ -240,7 +240,7 @@ private:
 
     // Log output (throttled to 2 seconds)
     RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 5,
-      "Roll torque: %.4f N·m -> reg=%.4f", roll_torque, omega_JI_dot.x());
+      "Roll omega: %.4f pitch omega: %.4f  yaw omega: %.4f", omega_JI[0], omega_JI[1], omega_JI[2]);
   }
 
   // --- Helper: Converts torque (N·m) to Dynamixel register value using piecewise conversion ---

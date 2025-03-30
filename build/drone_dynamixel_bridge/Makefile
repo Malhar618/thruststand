@@ -236,6 +236,43 @@ motor_stepdown/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/build
 .PHONY : motor_stepdown/fast
 
+#=============================================================================
+# Target rules for targets named angular_state_logger
+
+# Build rule for target.
+angular_state_logger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 angular_state_logger
+.PHONY : angular_state_logger
+
+# fast build rule for target.
+angular_state_logger/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angular_state_logger.dir/build.make CMakeFiles/angular_state_logger.dir/build
+.PHONY : angular_state_logger/fast
+
+src/angular_state_logger.o: src/angular_state_logger.cpp.o
+.PHONY : src/angular_state_logger.o
+
+# target to build an object file
+src/angular_state_logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angular_state_logger.dir/build.make CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o
+.PHONY : src/angular_state_logger.cpp.o
+
+src/angular_state_logger.i: src/angular_state_logger.cpp.i
+.PHONY : src/angular_state_logger.i
+
+# target to preprocess a source file
+src/angular_state_logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angular_state_logger.dir/build.make CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.i
+.PHONY : src/angular_state_logger.cpp.i
+
+src/angular_state_logger.s: src/angular_state_logger.cpp.s
+.PHONY : src/angular_state_logger.s
+
+# target to generate assembly for a file
+src/angular_state_logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angular_state_logger.dir/build.make CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.s
+.PHONY : src/angular_state_logger.cpp.s
+
 src/drone_dynamixel_bridge.o: src/drone_dynamixel_bridge.cpp.o
 .PHONY : src/drone_dynamixel_bridge.o
 
@@ -323,9 +360,13 @@ help:
 	@echo "... test"
 	@echo "... drone_dynamixel_bridge_uninstall"
 	@echo "... uninstall"
+	@echo "... angular_state_logger"
 	@echo "... drone_dynamixel_bridge"
 	@echo "... motor_stepdown"
 	@echo "... motor_stepup"
+	@echo "... src/angular_state_logger.o"
+	@echo "... src/angular_state_logger.i"
+	@echo "... src/angular_state_logger.s"
 	@echo "... src/drone_dynamixel_bridge.o"
 	@echo "... src/drone_dynamixel_bridge.i"
 	@echo "... src/drone_dynamixel_bridge.s"

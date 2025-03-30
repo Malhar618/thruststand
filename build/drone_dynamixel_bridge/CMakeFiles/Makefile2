@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge
 all: CMakeFiles/drone_dynamixel_bridge.dir/all
 all: CMakeFiles/motor_stepup.dir/all
 all: CMakeFiles/motor_stepdown.dir/all
+all: CMakeFiles/angular_state_logger.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -78,6 +79,7 @@ clean: CMakeFiles/drone_dynamixel_bridge_uninstall.dir/clean
 clean: CMakeFiles/drone_dynamixel_bridge.dir/clean
 clean: CMakeFiles/motor_stepup.dir/clean
 clean: CMakeFiles/motor_stepdown.dir/clean
+clean: CMakeFiles/angular_state_logger.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -139,7 +141,7 @@ CMakeFiles/drone_dynamixel_bridge_uninstall.dir/clean:
 CMakeFiles/drone_dynamixel_bridge.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_dynamixel_bridge.dir/build.make CMakeFiles/drone_dynamixel_bridge.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_dynamixel_bridge.dir/build.make CMakeFiles/drone_dynamixel_bridge.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=1,2 "Built target drone_dynamixel_bridge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=3,4 "Built target drone_dynamixel_bridge"
 .PHONY : CMakeFiles/drone_dynamixel_bridge.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,7 +167,7 @@ CMakeFiles/drone_dynamixel_bridge.dir/clean:
 CMakeFiles/motor_stepup.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepup.dir/build.make CMakeFiles/motor_stepup.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepup.dir/build.make CMakeFiles/motor_stepup.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=5,6 "Built target motor_stepup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=7,8 "Built target motor_stepup"
 .PHONY : CMakeFiles/motor_stepup.dir/all
 
 # Build rule for subdir invocation for target.
@@ -191,7 +193,7 @@ CMakeFiles/motor_stepup.dir/clean:
 CMakeFiles/motor_stepdown.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=3,4 "Built target motor_stepdown"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=5,6 "Built target motor_stepdown"
 .PHONY : CMakeFiles/motor_stepdown.dir/all
 
 # Build rule for subdir invocation for target.
@@ -209,6 +211,32 @@ motor_stepdown: CMakeFiles/motor_stepdown.dir/rule
 CMakeFiles/motor_stepdown.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_stepdown.dir/build.make CMakeFiles/motor_stepdown.dir/clean
 .PHONY : CMakeFiles/motor_stepdown.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/angular_state_logger.dir
+
+# All Build rule for target.
+CMakeFiles/angular_state_logger.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angular_state_logger.dir/build.make CMakeFiles/angular_state_logger.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angular_state_logger.dir/build.make CMakeFiles/angular_state_logger.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles --progress-num=1,2 "Built target angular_state_logger"
+.PHONY : CMakeFiles/angular_state_logger.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/angular_state_logger.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/angular_state_logger.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles 0
+.PHONY : CMakeFiles/angular_state_logger.dir/rule
+
+# Convenience name for target.
+angular_state_logger: CMakeFiles/angular_state_logger.dir/rule
+.PHONY : angular_state_logger
+
+# clean rule for target.
+CMakeFiles/angular_state_logger.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angular_state_logger.dir/build.make CMakeFiles/angular_state_logger.dir/clean
+.PHONY : CMakeFiles/angular_state_logger.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
