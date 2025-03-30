@@ -1,0 +1,100 @@
+[0.000000] (-) TimerEvent: {}
+[0.001736] (-) JobUnselected: {'identifier': 'dynamixel_sdk'}
+[0.002320] (-) JobUnselected: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.003683] (-) JobUnselected: {'identifier': 'dynamixel_sdk_examples'}
+[0.004798] (-) JobUnselected: {'identifier': 'flightstack'}
+[0.005815] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.006188] (drone_dynamixel_bridge) JobQueued: {'identifier': 'drone_dynamixel_bridge', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk'), ('px4_msgs', '/home/odroid/ros2_thrust_ws/install/px4_msgs')])}
+[0.006523] (drone_dynamixel_bridge) JobStarted: {'identifier': 'drone_dynamixel_bridge'}
+[0.072399] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'cmake'}
+[0.077289] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'build'}
+[0.081882] (drone_dynamixel_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.134 59712 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.134 59712 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic')]), 'shell': False}
+[0.099092] (-) TimerEvent: {}
+[0.183165] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.191513] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[0.192936] (drone_dynamixel_bridge) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.193811] (drone_dynamixel_bridge) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.194626] (drone_dynamixel_bridge) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.195621] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[0.196405] (drone_dynamixel_bridge) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.197239] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[0.198120] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[0.198991] (-) TimerEvent: {}
+[0.199750] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.200794] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.201733] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.202620] (drone_dynamixel_bridge) StderrLine: {'line': b'  CMakeLists.txt:4 (find_package)\n'}
+[0.203478] (drone_dynamixel_bridge) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.204361] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[0m\n'}
+[0.299218] (-) TimerEvent: {}
+[0.332026] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.399443] (-) TimerEvent: {}
+[0.500511] (-) TimerEvent: {}
+[0.601567] (-) TimerEvent: {}
+[0.702655] (-) TimerEvent: {}
+[0.721208] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.759390] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[0.802881] (-) TimerEvent: {}
+[0.903935] (-) TimerEvent: {}
+[0.919342] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c\n'}
+[0.939018] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[1.004204] (-) TimerEvent: {}
+[1.027189] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp\n'}
+[1.104460] (-) TimerEvent: {}
+[1.205792] (-) TimerEvent: {}
+[1.306955] (-) TimerEvent: {}
+[1.323522] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[1.333187] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.407252] (-) TimerEvent: {}
+[1.437072] (drone_dynamixel_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.507504] (-) TimerEvent: {}
+[1.608641] (-) TimerEvent: {}
+[1.709691] (-) TimerEvent: {}
+[1.810750] (-) TimerEvent: {}
+[1.911812] (-) TimerEvent: {}
+[2.012862] (-) TimerEvent: {}
+[2.113946] (-) TimerEvent: {}
+[2.204202] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found px4_msgs: 2.0.1 (/home/odroid/ros2_thrust_ws/install/px4_msgs/share/px4_msgs/cmake)\n'}
+[2.214182] (-) TimerEvent: {}
+[2.289895] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)\n'}
+[2.314407] (-) TimerEvent: {}
+[2.415569] (-) TimerEvent: {}
+[2.516707] (-) TimerEvent: {}
+[2.534096] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.17.5 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)\n'}
+[2.566077] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)\n'}
+[2.616952] (-) TimerEvent: {}
+[2.718102] (-) TimerEvent: {}
+[2.819190] (-) TimerEvent: {}
+[2.920344] (-) TimerEvent: {}
+[3.021508] (-) TimerEvent: {}
+[3.122620] (-) TimerEvent: {}
+[3.223749] (-) TimerEvent: {}
+[3.324870] (-) TimerEvent: {}
+[3.426084] (-) TimerEvent: {}
+[3.527445] (-) TimerEvent: {}
+[3.628573] (-) TimerEvent: {}
+[3.729654] (-) TimerEvent: {}
+[3.830677] (-) TimerEvent: {}
+[3.931802] (-) TimerEvent: {}
+[4.032887] (-) TimerEvent: {}
+[4.133991] (-) TimerEvent: {}
+[4.235039] (-) TimerEvent: {}
+[4.336036] (-) TimerEvent: {}
+[4.437066] (-) TimerEvent: {}
+[4.538155] (-) TimerEvent: {}
+[4.596023] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found dynamixel_sdk: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)\n'}
+[4.624265] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/galactic/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake:67 (message):\n'}
+[4.625683] (drone_dynamixel_bridge) StderrLine: {'line': b"  ament_cmake_symlink_install_targets() 'motor_power_50_node' is not a target\n"}
+[4.626421] (drone_dynamixel_bridge) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.627202] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/symlink_install/install.cmake:37 (ament_cmake_symlink_install_targets)\n'}
+[4.628097] (drone_dynamixel_bridge) StderrLine: {'line': b'  CMakeLists.txt:32 (install)\n'}
+[4.628937] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[4.629610] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[0m\n'}
+[4.630249] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.638418] (-) TimerEvent: {}
+[4.666262] (drone_dynamixel_bridge) StderrLine: {'line': b'make: *** [Makefile:349: cmake_check_build_system] Error 1\n'}
+[4.672925] (drone_dynamixel_bridge) CommandEnded: {'returncode': 2}
+[4.738736] (-) TimerEvent: {}
+[4.842774] (-) TimerEvent: {}
+[4.852977] (drone_dynamixel_bridge) JobEnded: {'identifier': 'drone_dynamixel_bridge', 'rc': 2}
+[4.865717] (-) EventReactorShutdown: {}

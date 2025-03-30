@@ -1,0 +1,29 @@
+[0.209s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+[0.478s] [ 50%] [32mBuilding CXX object CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o[0m
+[34.393s] In file included from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:40[m[K,
+[34.394s]                  from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+[34.396s]                  from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+[34.398s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+[34.400s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+[34.403s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+[34.405s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+[34.407s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[34.409s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+[34.410s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+[34.413s]                  from [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:1[m[K:
+[34.415s] [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:[m[K In member function ‘[01m[Kvoid DroneDynamixelBridgeNode::timer_callback()[m[K’:
+[34.417s] [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:246:7:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 5 has type ‘[01m[KEigen::Vector3d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 3, 1>[m[K’} [[01;35m[K-Wformat=[m[K]
+[34.421s]   246 |       [01;35m[K"angular_accel: %.4f rad/s^2"[m[K, omega_JI_dot);
+[34.425s]       |       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[34.427s] [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:246:26:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[34.428s]   246 |       "angular_accel: [01;36m[K%.4f[m[K rad/s^2", omega_JI_dot);
+[34.433s]       |                       [01;36m[K~~~^[m[K
+[34.435s]       |                          [01;36m[K|[m[K
+[34.437s]       |                          [01;36m[Kdouble[m[K
+[37.317s] make[2]: *** wait: No child processes.  Stop.
+[37.319s] make[2]: *** Waiting for unfinished jobs....
+[37.320s] make[2]: *** wait: No child processes.  Stop.
+[37.321s] make[1]: *** wait: No child processes.  Stop.
+[37.323s] make[1]: *** Waiting for unfinished jobs....
+[37.324s] make[1]: *** wait: No child processes.  Stop.
+[37.325s] make: *** [Makefile:146: all] Error 2

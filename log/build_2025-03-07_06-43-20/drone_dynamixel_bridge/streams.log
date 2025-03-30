@@ -1,0 +1,49 @@
+[0.184s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+[0.419s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.449s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.450s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.453s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.455s]   the cmake_policy command to set the policy and suppress this warning.
+[0.459s] 
+[0.460s] Call Stack (most recent call first):
+[0.462s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.467s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.474s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.479s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.480s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.482s]   CMakeLists.txt:4 (find_package)
+[0.483s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.484s] [0m
+[0.752s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.654s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.973s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[1.974s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[2.087s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[2.529s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[2.540s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[2.691s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.831s] -- Found px4_msgs: 2.0.1 (/home/odroid/ros2_thrust_ws/install/px4_msgs/share/px4_msgs/cmake)
+[3.964s] -- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)
+[4.282s] -- Found tf2_geometry_msgs: 0.17.5 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)
+[4.322s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)
+[6.814s] -- Found dynamixel_sdk: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[6.857s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[6.858s]   By not providing "FindEigen.cmake" in CMAKE_MODULE_PATH this project has
+[6.859s]   asked CMake to find a package configuration file provided by "Eigen", but
+[6.860s]   CMake did not find one.
+[6.861s] 
+[6.864s]   Could not find a package configuration file provided by "Eigen" with any of
+[6.865s]   the following names:
+[6.868s] 
+[6.870s]     EigenConfig.cmake
+[6.871s]     eigen-config.cmake
+[6.872s] 
+[6.874s]   Add the installation prefix of "Eigen" to CMAKE_PREFIX_PATH or set
+[6.875s]   "Eigen_DIR" to a directory containing one of the above files.  If "Eigen"
+[6.878s] -- Configuring incomplete, errors occurred!
+[6.880s]   provides a separate development package or SDK, be sure it has been
+[6.881s]   installed.
+[6.881s] 
+[6.882s] [0m
+[6.910s] make: *** [Makefile:267: cmake_check_build_system] Error 1
+[6.933s] Invoked command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4

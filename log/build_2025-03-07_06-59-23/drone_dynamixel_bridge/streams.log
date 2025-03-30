@@ -1,0 +1,57 @@
+[0.109s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+[0.208s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.220s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.221s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.222s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.224s]   the cmake_policy command to set the policy and suppress this warning.
+[0.226s] 
+[0.227s] Call Stack (most recent call first):
+[0.228s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.230s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.231s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.233s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.234s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.236s]   CMakeLists.txt:4 (find_package)
+[0.238s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.239s] [0m
+[0.422s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.057s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.279s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[1.305s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[1.427s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[1.824s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.838s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.959s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[2.805s] -- Found px4_msgs: 2.0.1 (/home/odroid/ros2_thrust_ws/install/px4_msgs/share/px4_msgs/cmake)
+[2.902s] -- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)
+[3.169s] -- Found tf2_geometry_msgs: 0.17.5 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)
+[3.205s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)
+[5.382s] -- Found dynamixel_sdk: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[5.922s] -- Configuring done (5.8s)
+[6.020s] -- Generating done (0.1s)
+[6.023s] -- Build files have been written to: /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge
+[6.203s] [ 50%] [32mBuilding CXX object CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o[0m
+[29.824s] In file included from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:40[m[K,
+[29.825s]                  from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+[29.826s]                  from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+[29.828s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+[29.829s]                  from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+[29.830s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+[29.831s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+[29.832s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[29.833s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+[29.833s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+[29.835s]                  from [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:1[m[K:
+[29.836s] [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:[m[K In member function ‘[01m[Kvoid DroneDynamixelBridgeNode::timer_callback()[m[K’:
+[29.837s] [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:243:7:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 6 has type ‘[01m[KEigen::Vector3d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 3, 1>[m[K’} [[01;35m[K-Wformat=[m[K]
+[29.838s]   243 |       [01;35m[K"Roll torque: %.4f N·m -> reg=%.4f"[m[K, roll_torque, omega_JI_dot);
+[29.841s]       |       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[29.842s] [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:243:41:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[29.845s]   243 |       "Roll torque: %.4f N·m -> reg=[01;36m[K%.4f[m[K", roll_torque, omega_JI_dot);
+[29.846s]       |                                      [01;36m[K~~~^[m[K
+[29.847s]       |                                         [01;36m[K|[m[K
+[29.848s]       |                                         [01;36m[Kdouble[m[K
+[44.957s] make[2]: *** [CMakeFiles/drone_dynamixel_bridge.dir/build.make:76: CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o] Interrupt
+[44.958s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/drone_dynamixel_bridge.dir/all] Interrupt
+[44.959s] make: *** [Makefile:146: all] Interrupt
+[45.117s] Invoked command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge' returned '-2': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4

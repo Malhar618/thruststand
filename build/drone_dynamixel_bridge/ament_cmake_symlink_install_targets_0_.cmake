@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/drone_dynamixel_bridge" "/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/motor_stepup" "TARGETS" "drone_dynamixel_bridge" "motor_stepup" "DESTINATION" "lib/drone_dynamixel_bridge")

@@ -1,0 +1,124 @@
+[0.195s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces -- -j4 -l4
+[0.429s] [  3%] Built target dynamixel_sdk_custom_interfaces__cpp
+[0.456s] [ 17%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c
+[0.591s] [ 31%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp
+[0.608s] [ 44%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c
+[0.678s] [ 58%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c
+[0.767s] [ 72%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp
+[0.829s] [ 72%] Built target dynamixel_sdk_custom_interfaces
+[0.896s] [ 75%] Built target dynamixel_sdk_custom_interfaces__py
+[0.971s] [ 86%] Built target dynamixel_sdk_custom_interfaces__python
+[1.117s] [ 93%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.119s] [100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext
+[1.361s] Invoked command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces -- -j4 -l4
+[1.916s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces
+[1.967s] -- Install configuration: ""
+[1.969s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces
+[1.973s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces
+[1.978s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg
+[1.979s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail
+[1.980s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.c
+[1.982s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h
+[1.988s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h
+[1.991s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h
+[1.992s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.993s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h
+[1.996s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv
+[1.997s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail
+[2.003s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h
+[2.005s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.c
+[2.006s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h
+[2.011s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h
+[2.020s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h
+[2.022s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh
+[2.031s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv
+[2.042s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
+[2.044s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces
+[2.045s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg
+[2.046s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail
+[2.048s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.c
+[2.049s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
+[2.062s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.064s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv
+[2.067s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail
+[2.068s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.c
+[2.069s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h
+[2.071s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
+[2.080s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
+[2.081s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces
+[2.082s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg
+[2.083s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail
+[2.097s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp
+[2.100s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp
+[2.101s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp
+[2.103s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp
+[2.104s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv
+[2.105s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail
+[2.106s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp
+[2.108s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp
+[2.122s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp
+[2.124s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp
+[2.125s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces
+[2.126s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg
+[2.136s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail
+[2.144s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp
+[2.146s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.cpp
+[2.147s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv
+[2.149s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail
+[2.150s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.cpp
+[2.151s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp
+[2.152s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.162s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
+[2.165s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh
+[2.166s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv
+[2.167s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/__init__.py
+[2.376s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg
+[2.378s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c
+[2.379s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py
+[2.384s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py
+[2.386s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv
+[2.389s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py
+[2.396s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c
+[2.397s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py
+[2.399s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[2.400s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[2.401s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so
+[2.402s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl
+[2.421s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl
+[2.429s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg
+[2.431s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv
+[2.439s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg
+[2.443s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg
+[2.445s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces
+[2.447s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces
+[2.449s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh
+[2.453s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv
+[2.458s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh
+[2.469s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv
+[2.470s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash
+[2.472s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh
+[2.473s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh
+[2.475s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv
+[2.476s] -- Installing: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv
+[2.478s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces
+[2.480s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake
+[2.481s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+[2.483s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[2.485s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.486s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake
+[2.488s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[2.492s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake
+[2.493s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[2.495s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.496s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake
+[2.497s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[2.499s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake
+[2.500s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.511s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[2.519s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[2.521s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.522s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.523s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake
+[2.524s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake
+[2.526s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml
+[2.528s] Invoked command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces

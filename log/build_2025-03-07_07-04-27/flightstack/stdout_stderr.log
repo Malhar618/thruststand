@@ -1,0 +1,18 @@
+[100%] Built target flightstack
+-- Install configuration: ""
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/lib/flightstack/flightstack
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/ament_index/resource_index/package_run_dependencies/flightstack
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/ament_index/resource_index/parent_prefix_path/flightstack
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/ament_prefix_path.sh
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/path.sh
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/path.dsv
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.bash
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.sh
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.zsh
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.dsv
+-- Installing: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/package.dsv
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/ament_index/resource_index/packages/flightstack
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/cmake/flightstackConfig.cmake
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/cmake/flightstackConfig-version.cmake
+-- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/package.xml
