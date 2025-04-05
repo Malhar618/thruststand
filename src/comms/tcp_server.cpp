@@ -8,7 +8,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
-
+#include <filesystem>
 #define PORT 5000  
 #define BUFFER_SIZE 1024
 
@@ -48,12 +48,12 @@ void process_file(const std::string& filename) {
     
     outFile << "Times received: " << times_received << "\n";
     outFile.close();
-
-
+    std::filesystem::copy("/home/odroid/ros2_thrust_ws/src/comms/gains_pid.json", "/home/odroid/ros2_thrust_ws/src/flightstack/params/control/pid/gains_pid.json", std::filesystem::copy_options::overwrite_existing);
     std::cout << "Processing file: " << filename << std::endl;
     char command1[255];
     char command2[255];
     sprintf(command1, "sh -c ./start_uxrce.sh");
+    usleep(10000);
     sprintf(command2, "sh -c ./run_flightstack.sh");
     std::cout << "flightstack ran" << std::endl;
 
@@ -102,7 +102,7 @@ int main() {
     struct sockaddr_in address;
     int addrlen = sizeof(address);
     int n = 5;
-    std::string filename = "received_file.txt";
+    std::string filename = "gains_pid.json";
 
     // Create socket
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
@@ -134,15 +134,14 @@ int main() {
         std::cerr << "Accept failed\n";
         return -1;
     }
-
     std::cout << "Client connected!\n";
-
+    const char* L2filename = "L2norm.json";
     for (int i = 0; i < n; i++) {
         std::cout << "Iteration " << i + 1 << " of " << n << std::endl;
 
-        receive_file(client_socket, filename);
-        process_file(filename);
-        send_file(client_socket, filename);
+        //receive_file(client_socket, filename);
+        //process_file(filename);
+        send_file(client_socket, L2filename);
     }
     close(client_socket);
     close(server_fd);

@@ -1,2 +1,2 @@
-{"KP_translational":{"scaling_coeff":1,"matrix":[[14,0,0],[0,14,0],[0,0,25]]},"KD_translational":{"scaling_coeff":1,"matrix":[[14,0,0],[0,14,0],[0,0,25]]},"KI_translational":{"scaling_coeff":1,"matrix":[[14,0,0],[0,14,0],[0,0,25]]},"KP_rotational":{"scaling_coeff":1,"matrix":[[14,0,0],[0,14,0],[0,0,25]]},"KD_rotational":{"scaling_coeff":1,"matrix":[[14,0,0],[0,14,0],[0,0,25]]},"KI_rotational":{"scaling_coeff":1,"matrix":[[14,0,0],[0,14,0],[0,0,25]]}}
-Times received: 5
+odroid
+Times received: 1
