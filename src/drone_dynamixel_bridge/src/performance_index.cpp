@@ -19,58 +19,58 @@ public:
   PerformanceIndexNode()
   : Node("performance_index_node"),
     accumulated_error_sq_(0.0),
-    mission_duration_sec_(30.0), // Adjust mission duration as needed
+    mission_duration_sec_(30.0), // Set mission duration here based on what Dr L'Afflitto Recoommends. 
     actual_received_(false),
     desired_received_(false)
   {
     RCLCPP_INFO(this->get_logger(), "Initializing PerformanceIndexNode...");
 
-    // Subscribe to the actual attitude topic
-    auto qos = rclcpp::QoS(10).best_effort();
+    // Subscribe to actual vehicle attitude from PX4 (topic: /fmu/out/vehicle_attitude)
+    auto qos_actual = rclcpp::QoS(10).best_effort();
     actual_sub_ = this->create_subscription<VehicleAttitude>(
-      "/fmu/out/vehicle_attitude", qos,
+      "/fmu/out/vehicle_attitude", qos_actual,
       std::bind(&PerformanceIndexNode::actualAttitudeCallback, this, std::placeholders::_1)
     );
 
-    // Subscribe to the desired attitude setpoint topic
+    // Subscribe to desired vehicle attitude setpoint (topic: /fmu/in/vehicle_attitude_setpoint)
+    auto qos_desired = rclcpp::QoS(10).best_effort();
     desired_sub_ = this->create_subscription<VehicleAttitudeSetpoint>(
-      "/fmu/in/vehicle_attitude_setpoint", qos,
+      "/fmu/in/vehicle_attitude_setpoint", qos_desired,
       std::bind(&PerformanceIndexNode::desiredAttitudeCallback, this, std::placeholders::_1)
     );
 
-    // Use a timer to periodically compute the error and integrate it (10 Hz)
+    // Timer callback runs at 10 Hz (every 100 ms)
     timer_ = this->create_wall_timer(100ms, std::bind(&PerformanceIndexNode::timerCallback, this));
     prev_time_ = this->now();
   }
 
 private:
-  // Subscribers
+  // Subscribers and Timer
   rclcpp::Subscription<VehicleAttitude>::SharedPtr actual_sub_;
   rclcpp::Subscription<VehicleAttitudeSetpoint>::SharedPtr desired_sub_;
   rclcpp::TimerBase::SharedPtr timer_;
 
-  // Mutex to protect shared data
+  // Mutex for thread safety
   std::mutex mutex_;
 
-  // Latest measured and desired Euler angles (in radians: roll, pitch, yaw)
+  // Latest received Euler angles (roll, pitch, yaw in radians)
   Eigen::Vector3d actual_attitude_{Eigen::Vector3d::Zero()};
   Eigen::Vector3d desired_attitude_{Eigen::Vector3d::Zero()};
-
-  // Flags to check whether messages have been received
   bool actual_received_;
   bool desired_received_;
 
-  // For performance index calculation
+  // Variables for performance index calculation
   double accumulated_error_sq_;
   rclcpp::Time prev_time_;
   rclcpp::Time mission_start_time_;
   bool mission_started_ = false;
-  double mission_duration_sec_;  // mission duration in seconds
+  double mission_duration_sec_;
 
-  // Callback for actual attitude (VehicleAttitude)
+  // Callback for actual vehicle attitude
   void actualAttitudeCallback(const VehicleAttitude::SharedPtr msg)
   {
-    tf2::Quaternion q(msg->q[1], msg->q[2], msg->q[3], msg->q[0]); // PX4 uses [w, x, y, z]
+    // Convert quaternion (PX4 uses [w, x, y, z]) to Euler angles (roll, pitch, yaw)
+    tf2::Quaternion q(msg->q[1], msg->q[2], msg->q[3], msg->q[0]);
     tf2::Matrix3x3 m(q);
     double roll, pitch, yaw;
     m.getRPY(roll, pitch, yaw);
@@ -86,10 +86,10 @@ private:
     }
   }
 
-  // Callback for desired attitude setpoint (VehicleAttitudeSetpoint)
-  // We assume the setpoint message provides desired roll, pitch, yaw in radians in fields: roll_body, pitch_body, yaw_body
+  // Callback for desired attitude setpoint
   void desiredAttitudeCallback(const VehicleAttitudeSetpoint::SharedPtr msg)
   {
+    // Assume desired Euler angles are provided in fields: roll_body, pitch_body, yaw_body (in radians)
     {
       std::lock_guard<std::mutex> lock(mutex_);
       desired_attitude_ = Eigen::Vector3d(msg->roll_body, msg->pitch_body, msg->yaw_body);
@@ -97,16 +97,15 @@ private:
     }
   }
 
-  // Timer callback runs at 10 Hz to compute the instantaneous error and integrate
+  // Timer callback: integrates squared error over time and computes performance index at mission end
   void timerCallback()
   {
     rclcpp::Time now = this->now();
     double dt = (now - prev_time_).seconds();
     prev_time_ = now;
 
-    // Only compute error if both actual and desired values have been received
-    bool compute_error = false;
     Eigen::Vector3d actual, desired;
+    bool compute_error = false;
     {
       std::lock_guard<std::mutex> lock(mutex_);
       if (actual_received_ && desired_received_) {
@@ -117,24 +116,21 @@ private:
     }
 
     if (compute_error) {
-      // Error = desired - actual
+      // Compute error vector in Euler angles
       Eigen::Vector3d error = desired - actual;
-      // Accumulate squared error (weighted by time step)
       accumulated_error_sq_ += error.squaredNorm() * dt;
       double elapsed = (now - mission_start_time_).seconds();
 
-      RCLCPP_INFO_THROTTLE(
-        this->get_logger(), *this->get_clock(), 2000,
-        "Elapsed=%.2fs, L2 Error=%.4f", elapsed, std::sqrt(error.squaredNorm())
-      );
+      RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 2000,
+        "Elapsed: %.2fs, Instant L2 Error: %.4f", elapsed, std::sqrt(error.squaredNorm()));
 
-      // If mission duration has elapsed, compute the performance index
+      // Once mission duration is reached, compute and write performance index
       if (elapsed >= mission_duration_sec_) {
         double performance_index = std::sqrt(accumulated_error_sq_);
         RCLCPP_INFO(this->get_logger(),
-          "Mission complete. Performance Index (integrated L2 norm) = %.4f", performance_index);
+          "Mission complete. Performance Index (L2 norm integrated over time): %.4f", performance_index);
 
-        // Write performance index to a text file
+        // Write performance index to file
         std::ofstream outfile("performance_index.txt");
         if (outfile.is_open()) {
           outfile << "Performance Index (integrated L2 norm): " << performance_index << "\n";
@@ -143,7 +139,6 @@ private:
         } else {
           RCLCPP_ERROR(this->get_logger(), "Failed to open file for writing performance index.");
         }
-        // Shut down the node after saving result (or you can choose to continue logging)
         rclcpp::shutdown();
       }
     }
