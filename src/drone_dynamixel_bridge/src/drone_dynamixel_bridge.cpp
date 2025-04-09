@@ -343,7 +343,7 @@ private:
 
         // --- 8. Calculate Total Cancellation Torque ---
         Eigen::Vector3d total_inertial_torque = T_UAV_inertia + T_RB + T_PR + T_YR;
-        Eigen::Vector3d required_motor_torque = -total_inertial_torque; // <<< VERIFY SIGN CONVENTION
+        Eigen::Vector3d required_motor_torque = total_inertial_torque; // <<< VERIFY SIGN CONVENTION
 
         // --- 9. Convert Torque Vector to Individual Motor Torques (Mx, My, Mz) ---
         Eigen::Matrix3d Gamma = compute_inverse_jacobian(current_phi_, current_theta_);
