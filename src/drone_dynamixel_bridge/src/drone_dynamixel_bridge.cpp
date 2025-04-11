@@ -1,4 +1,4 @@
-#include <rclcpp/rclcpp.hpp>
+ #include <rclcpp/rclcpp.hpp>
 #include <px4_msgs/msg/vehicle_odometry.hpp>
 #include <px4_msgs/msg/vehicle_angular_velocity.hpp>
 #include <dynamixel_sdk/dynamixel_sdk.h>
@@ -25,11 +25,10 @@ const float PROTOCOL_VERSION = 2.0;
 const uint16_t ADDR_OPERATING_MODE = 11, ADDR_TORQUE_ENABLE = 64, ADDR_GOAL_CURRENT = 102;
 const uint16_t LEN_OPERATING_MODE = 1, LEN_TORQUE_ENABLE = 1, LEN_GOAL_CURRENT = 2;
 
-// If your servo is the X-series type, each step is ~2.69mA = 0.00269 A
-static const double CURRENT_STEP = 0.00269;    
-static const double DEFAULT_CURRENT_LIMIT_STEPS = 1193.0;  // clamp limit
+static const double CURRENT_STEP = 0.0045; 
+static const double DEFAULT_CURRENT_LIMIT_STEPS = 1800.0; 
 
-// --- Filter Differentiator Class ---
+
 class FilterDiff {
 public:
     FilterDiff(double wn, double zeta) 
