@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.16) # Increased minimum version
+cmake_policy(SET CMP0148 NEW)       # <<< ADDED: Suppress Python warning
 project(drone_dynamixel_bridge)
 
 # Set C++ standard to C++17
@@ -10,8 +11,8 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(px4_msgs REQUIRED)
 find_package(tf2 REQUIRED)
-find_package(tf2_geometry_msgs REQUIRED)
-find_package(dynamixel_sdk REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED) # Needed for tf2 conversions
+find_package(DynamixelSDK REQUIRED)      # <<< MODIFIED: Use find_package, assuming system install or built underlay
 find_package(Eigen3 REQUIRED)
 
 # Executable: drone_dynamixel_bridge
@@ -23,9 +24,11 @@ ament_target_dependencies(drone_dynamixel_bridge
   px4_msgs
   tf2
   tf2_geometry_msgs
-  dynamixel_sdk
+  DynamixelSDK # <<< MODIFIED: Use package name found by find_package
   Eigen3
 )
+# Link Eigen3 explicitly if needed (often handled by ament_target_dependencies, but good practice)
+target_link_libraries(drone_dynamixel_bridge Eigen3::Eigen)
 
 # Executable: motor_stepup
 add_executable(motor_stepup
@@ -65,7 +68,9 @@ ament_target_dependencies(performance_index
   tf2_geometry_msgs
   Eigen3
 )
+target_link_libraries(performance_index Eigen3::Eigen) # <<< ADDED: Explicit Eigen link
 
+# Install targets
 install(TARGETS
   drone_dynamixel_bridge
   motor_stepup
