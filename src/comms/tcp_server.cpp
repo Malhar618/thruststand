@@ -92,7 +92,7 @@ void send_file(int socket, const std::string& filename) {
         send(socket, buffer, inFile.gcount(), 0);
     }
 
-    send(socket, "EOFtest", 8, 0);
+    send(socket, "EOF", 3, 0);
     inFile.close();
     std::cout << "File sent back: " << filename << std::endl;
 }
