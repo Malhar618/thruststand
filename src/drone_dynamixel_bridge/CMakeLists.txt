@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.16)
 if(POLICY CMP0148)
   cmake_policy(SET CMP0148 NEW)
 endif()
+
+# Append CMake module path so that FindPythonInterp.cmake is available
+list(APPEND CMAKE_MODULE_PATH "/usr/share/cmake-3.16/Modules")
+
 project(drone_dynamixel_bridge)
 
 # Set C++ standard to C++17
@@ -59,7 +63,7 @@ ament_target_dependencies(angular_state_logger
   px4_msgs
 )
 
-# New Executable: performance_index (from performance_index.cpp)
+# Executable: performance_index (from performance_index.cpp)
 add_executable(performance_index
   src/performance_index.cpp
 )
