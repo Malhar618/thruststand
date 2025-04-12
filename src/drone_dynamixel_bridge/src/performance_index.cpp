@@ -19,7 +19,7 @@ public:
   PerformanceIndexNode()
   : Node("performance_index_node"),
     accumulated_error_sq_(0.0),
-    mission_duration_sec_(30.0), // Set mission duration here based on what Dr L'Afflitto Recoommends. 
+    mission_duration_sec_(45.0), // Set mission duration here based on what Dr L'Afflitto Recoommends. 
     actual_received_(false),
     desired_received_(false)
   {
