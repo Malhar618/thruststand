@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ~/ros2_thrust_ws/src/comms;
+# ./start_uxrce.sh
+# ./run_flightstack.sh
+
+echo flighstack ran > /tmp/test.log
+
+exit 0

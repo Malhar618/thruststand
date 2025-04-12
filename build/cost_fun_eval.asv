@@ -1,0 +1,44 @@
+%% cost function multiobjective
+function J = cost_fun_eval(z,A,B,IC,odefun)
+    
+
+    
+    % Conditions for stopping integration (e.g. if it is taking too long)
+    options = odeset('Events', @stopEvent); % Set event function
+
+    % Integration of ODEs
+    tic;    
+    [T,Y,te,ye,ie] = ode45(@(t,y)odefun(t,y,z,A,B,n,), [0 10], IC, options);
+
+    % Check if integration was stopped by the event function
+    if ~isempty(te)
+        J = 1*10^13;
+    else
+
+        % Initilize variables to retrieve from odefun output
+        u =zeros(m,length(T));
+        e =zeros(n/2,length(T));
+        state_error =zeros(1,length(T));
+        control_effort =zeros(1,length(T));
+    
+        % Get Auxiliary Outputs from odefun_mck
+        for ii = 1:length(T)
+            
+            [~,u(ii),e(ii),state_error(ii), control_effort(ii)] = odefun(T(ii),Y(ii,:)',z,A,B,n,m);
+    
+        end
+
+        % Compute the derivative using finite differences
+        u_dot = (diff(u)')./ diff(T);
+        u_dot = [u_dot; u_dot(end)];
+    
+        % Vectorial Cost Function evaluation
+        Je = sqrt(sum(state_error));
+        Ju = sqrt(sum(control_effort));
+        Ju_dot = sqrt(sum(u_dot.^2));
+
+        % Not accept zero control input solutions
+        %W = diag(w_w, w_u, w_u_dot);
+        
+        J = 1*Je + 0.000001*Ju_dot*0 + 0.01*Ju*0;
+    end

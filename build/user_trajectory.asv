@@ -1,0 +1,17 @@
+function [x_user, x_dot_user] = user_trajectory(t,nD)
+
+%nD number of dimensions
+
+% sinusoid
+%     x_user = 2*sin(3*t);
+%     x_dot_user = 6*cos(3*t);
+
+% step + sinusoid
+switch nD
+    case 1
+        x_user = 3*(t<10) + (3+3*sin(10*t))*(t>=5);
+        x_dot_user = 30*cos(10*t)*(t>=5);
+    case 3
+        x_user = [1;2;3]*(t<5) + [3*sin(10*t); 2*sin(8*t); 1*sin(20*t) ]*(t>=5);
+        x_dot_user = [30*cos(10*t); 16*cos(8*t); 20*cos(20*t)]*(t>=5);
+end
