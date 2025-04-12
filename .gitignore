@@ -1,0 +1,8 @@
+build/
+install/
+log/
+logs/
+*.swp
+*.tmp
+*.bak
+*.log
