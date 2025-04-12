@@ -1,0 +1,32 @@
+[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:4 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[31mCMake Error at CMakeLists.txt:10 (find_package):
+  By not providing "FindEigen.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Eigen", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Eigen" with any of
+  the following names:
+
+    EigenConfig.cmake
+    eigen-config.cmake
+
+  Add the installation prefix of "Eigen" to CMAKE_PREFIX_PATH or set
+  "Eigen_DIR" to a directory containing one of the above files.  If "Eigen"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+[0m
+make: *** [Makefile:267: cmake_check_build_system] Error 1

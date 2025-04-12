@@ -1,0 +1,12 @@
+[0.209s] Invoking command in '/home/odroid/ros2_thrust_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/px4_msgs -- -j4 -l4
+[4.931s] [  0%] Built target px4_msgs__cpp
+[5.173s] [ 17%] Built target px4_msgs__rosidl_generator_c
+[5.611s] [ 34%] Built target px4_msgs__rosidl_typesupport_introspection_cpp
+[5.615s] [ 51%] Built target px4_msgs__rosidl_typesupport_introspection_c
+[5.895s] [ 67%] Built target px4_msgs__rosidl_typesupport_c
+[6.213s] [ 83%] Built target px4_msgs__rosidl_typesupport_cpp
+[6.274s] [ 83%] Built target px4_msgs
+[6.397s] [ 83%] Built target px4_msgs__py
+[7.009s] [ 99%] Built target px4_msgs__python
+[7.108s] [ 99%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext
+[7.129s] [100%] Built target px4_msgs__rosidl_typesupport_c__pyext

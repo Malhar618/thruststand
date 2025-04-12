@@ -1,0 +1,65 @@
+[0.094s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic LD_LIBRARY_PATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake /home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk_examples -DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples
+[0.482s] -- The C compiler identification is GNU 9.4.0
+[0.875s] -- The CXX compiler identification is GNU 9.4.0
+[0.937s] -- Detecting C compiler ABI info
+[1.350s] -- Detecting C compiler ABI info - done
+[1.447s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.450s] -- Detecting C compile features
+[1.453s] -- Detecting C compile features - done
+[1.477s] -- Detecting CXX compiler ABI info
+[1.955s] -- Detecting CXX compiler ABI info - done
+[2.086s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.087s] -- Detecting CXX compile features
+[2.088s] -- Detecting CXX compile features - done
+[2.106s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[2.141s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[2.143s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.145s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.147s]   the cmake_policy command to set the policy and suppress this warning.
+[2.148s] 
+[2.149s] Call Stack (most recent call first):
+[2.151s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[2.152s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[2.153s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[2.160s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[2.161s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[2.162s]   CMakeLists.txt:14 (find_package)
+[2.164s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.165s] [0m
+[2.362s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[2.364s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.110s] -- Found dynamixel_sdk: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[3.128s] -- Found dynamixel_sdk_custom_interfaces: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[3.331s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[3.383s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[3.559s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[3.930s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[4.393s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[4.418s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[4.574s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[4.582s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.118s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[5.121s] -- Looking for pthread_create in pthreads
+[5.426s] -- Looking for pthread_create in pthreads - not found
+[5.428s] -- Looking for pthread_create in pthread
+[5.936s] -- Looking for pthread_create in pthread - found
+[5.941s] -- Found Threads: TRUE
+[6.995s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[7.768s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.778s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.780s] -- Configured cppcheck include dirs: /home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk_examples/include
+[7.781s] -- Configured cppcheck exclude dirs and/or files: 
+[7.789s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.790s] -- Configured cpplint exclude dirs and/or files: 
+[7.797s] -- Added test 'lint_cmake' to check CMake code style
+[7.807s] -- Added test 'uncrustify' to check C / C++ code style
+[7.808s] -- Configured uncrustify additional arguments: 
+[7.813s] -- Added test 'xmllint' to check XML markup files
+[7.827s] -- Configuring done (7.7s)
+[7.915s] -- Generating done (0.1s)
+[7.919s] -- Build files have been written to: /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples
+[7.980s] Invoked command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples' returned '0': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic LD_LIBRARY_PATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake /home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk_examples -DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples
+[7.988s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic LD_LIBRARY_PATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[8.147s] [ 50%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[71.362s] [100%] [32m[1mLinking CXX executable read_write_node[0m
+[74.131s] [100%] Built target read_write_node

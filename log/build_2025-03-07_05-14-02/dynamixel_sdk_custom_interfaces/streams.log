@@ -1,0 +1,124 @@
+[0.143s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk_custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces
+[0.819s] -- The C compiler identification is GNU 9.4.0
+[1.456s] -- The CXX compiler identification is GNU 9.4.0
+[1.519s] -- Detecting C compiler ABI info
+[1.963s] -- Detecting C compiler ABI info - done
+[2.062s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.066s] -- Detecting C compile features
+[2.071s] -- Detecting C compile features - done
+[2.101s] -- Detecting CXX compiler ABI info
+[2.621s] -- Detecting CXX compiler ABI info - done
+[2.727s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.728s] -- Detecting CXX compile features
+[2.742s] -- Detecting CXX compile features - done
+[2.756s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[2.841s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[2.843s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.844s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.845s]   the cmake_policy command to set the policy and suppress this warning.
+[2.847s] 
+[2.848s] Call Stack (most recent call first):
+[2.860s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[2.861s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[2.862s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[2.864s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[2.865s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[2.866s]   CMakeLists.txt:14 (find_package)
+[2.867s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.868s] [0m
+[2.999s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[3.001s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.713s] -- Found builtin_interfaces: 1.0.3 (/opt/ros/galactic/share/builtin_interfaces/cmake)
+[3.878s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[3.922s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[4.087s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[4.292s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[4.422s] [33mCMake Warning (dev) at /opt/ros/galactic/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):
+[4.423s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[4.424s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[4.428s]   the cmake_policy command to set the policy and suppress this warning.
+[4.431s] 
+[4.432s] Call Stack (most recent call first):
+[4.433s]   /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[4.434s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[4.436s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[4.438s] [0m
+[4.713s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10")
+[7.336s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[7.541s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[7.587s] [33mCMake Warning (dev) at /opt/ros/galactic/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[7.589s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[7.590s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[7.592s]   the cmake_policy command to set the policy and suppress this warning.
+[7.593s] 
+[7.594s] Call Stack (most recent call first):
+[7.596s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[7.597s]   /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[7.605s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[7.606s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[7.607s] [0m
+[7.838s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5")
+[7.856s] -- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+[7.865s] [33mCMake Warning (dev) at /opt/ros/galactic/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):
+[7.866s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[7.868s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[7.869s]   the cmake_policy command to set the policy and suppress this warning.
+[7.870s] 
+[7.885s] Call Stack (most recent call first):
+[7.887s]   /opt/ros/galactic/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[7.888s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[7.889s]   /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[7.890s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[7.891s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[7.901s] [0m
+[8.261s] [33mCMake Warning (dev) at /opt/ros/galactic/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):
+[8.263s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[8.265s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[8.267s]   the cmake_policy command to set the policy and suppress this warning.
+[8.269s] 
+[8.272s] Call Stack (most recent call first):
+[8.275s]   /opt/ros/galactic/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[8.281s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[8.282s]   /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[8.284s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[8.285s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.286s] [0m
+[8.345s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5")
+[8.357s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[8.359s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[8.360s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[8.794s] -- Found PythonExtra: .so
+[9.776s] -- Configuring done (9.6s)
+[10.315s] -- Generating done (0.5s)
+[10.322s] -- Build files have been written to: /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces
+[10.370s] Invoked command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk_custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces
+[10.395s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces -- -j4 -l4
+[10.757s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[10.760s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[16.762s] [ 10%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.c.o[0m
+[16.790s] [ 13%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.c.o[0m
+[17.147s] [ 13%] Built target dynamixel_sdk_custom_interfaces__cpp
+[17.232s] [ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[17.560s] [ 20%] [32m[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so[0m
+[18.025s] [ 20%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c
+[18.105s] [ 24%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[21.998s] [ 27%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.cpp.o[0m
+[22.019s] [ 31%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.cpp.o[0m
+[23.726s] [ 34%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.c.o[0m
+[23.746s] [ 37%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.c.o[0m
+[24.227s] [ 41%] [32m[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so[0m
+[24.529s] [ 41%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c
+[24.597s] [ 44%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[25.830s] [ 48%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[26.009s] [ 48%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp
+[26.035s] [ 51%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[27.076s] [ 55%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o[0m
+[27.078s] [ 58%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o[0m
+[27.276s] [ 62%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so[0m
+[27.441s] [ 62%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c
+[28.138s] [ 68%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o[0m
+[28.139s] [ 68%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o[0m
+[29.792s] make[2]: *** [CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/build.make:92: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o] Interrupt
+[29.793s] make[2]: *** [CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/build.make:106: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o] Interrupt
+[29.795s] make[1]: *** [CMakeFiles/Makefile2:334: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/all] Interrupt
+[29.798s] make: *** [Makefile:146: all] Interrupt

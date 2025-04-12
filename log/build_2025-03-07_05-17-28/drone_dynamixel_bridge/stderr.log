@@ -1,0 +1,27 @@
+[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:4 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:[m[K In member function ‘[01m[Kvoid DroneDynamixelBridgeNode::timer_callback()[m[K’:
+[01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:220:41:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst std::_Swallow_assign[m[K’ to ‘[01m[Ktf2Scalar&[m[K’ {aka ‘[01m[Kdouble&[m[K’}
+  220 |       m_actual.getRPY(roll_actual, [01;31m[Kstd::ignore[m[K, std::ignore);
+      |                                    [01;31m[K~~~~~^~~~~~[m[K
+      |                                         [01;31m[K|[m[K
+      |                                         [01;31m[Kconst std::_Swallow_assign[m[K
+In file included from [01m[K/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src/drone_dynamixel_bridge.cpp:5[m[K:
+[01m[K/opt/ros/galactic/include/tf2/LinearMath/Matrix3x3.h:359:42:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid tf2::Matrix3x3::getRPY(tf2Scalar&, tf2Scalar&, tf2Scalar&, unsigned int) const[m[K’
+  359 |  void getRPY(tf2Scalar& roll, [01;36m[Ktf2Scalar& pitch[m[K, tf2Scalar& yaw, unsigned int solution_number = 1) const
+      |                               [01;36m[K~~~~~~~~~~~^~~~~[m[K
+make[2]: *** [CMakeFiles/drone_dynamixel_bridge.dir/build.make:76: CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/drone_dynamixel_bridge.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

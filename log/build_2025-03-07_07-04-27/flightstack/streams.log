@@ -1,0 +1,22 @@
+[0.107s] Invoking command in '/home/odroid/ros2_thrust_ws/build/flightstack': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/flightstack -- -j4 -l4
+[0.952s] [100%] Built target flightstack
+[0.979s] Invoked command in '/home/odroid/ros2_thrust_ws/build/flightstack' returned '0': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/flightstack -- -j4 -l4
+[1.254s] Invoking command in '/home/odroid/ros2_thrust_ws/build/flightstack': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/flightstack
+[1.276s] -- Install configuration: ""
+[1.278s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/lib/flightstack/flightstack
+[1.280s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/ament_index/resource_index/package_run_dependencies/flightstack
+[1.282s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/ament_index/resource_index/parent_prefix_path/flightstack
+[1.284s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/ament_prefix_path.sh
+[1.285s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/ament_prefix_path.dsv
+[1.286s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/path.sh
+[1.287s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/environment/path.dsv
+[1.289s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.bash
+[1.291s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.sh
+[1.294s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.zsh
+[1.300s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/local_setup.dsv
+[1.301s] -- Installing: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/package.dsv
+[1.303s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/ament_index/resource_index/packages/flightstack
+[1.304s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/cmake/flightstackConfig.cmake
+[1.305s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/cmake/flightstackConfig-version.cmake
+[1.307s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/flightstack/share/flightstack/package.xml
+[1.308s] Invoked command in '/home/odroid/ros2_thrust_ws/build/flightstack' returned '0': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/flightstack

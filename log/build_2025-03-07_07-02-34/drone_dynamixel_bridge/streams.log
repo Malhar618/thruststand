@@ -1,0 +1,8 @@
+[0.111s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+[0.277s] [ 50%] [32mBuilding CXX object CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o[0m
+[8.748s] make[2]: *** wait: No child processes.  Stop.
+[8.750s] make[2]: *** Waiting for unfinished jobs....
+[8.751s] make[2]: *** wait: No child processes.  Stop.
+[8.753s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/drone_dynamixel_bridge.dir/all] Error 2
+[8.754s] make: *** [Makefile:146: all] Interrupt
+[8.805s] Invoked command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge' returned '-2': CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4

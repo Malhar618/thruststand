@@ -1,0 +1,43 @@
+[0.171s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge -DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge
+[0.266s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.278s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.280s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.282s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.287s]   the cmake_policy command to set the policy and suppress this warning.
+[0.290s] 
+[0.299s] Call Stack (most recent call first):
+[0.300s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.302s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.304s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.305s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.307s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.310s]   CMakeLists.txt:4 (find_package)
+[0.311s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.312s] [0m
+[0.562s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.485s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.820s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[1.855s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[1.995s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[2.476s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[2.494s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[2.635s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.798s] [31mCMake Error at CMakeLists.txt:6 (find_package):
+[3.799s]   By not providing "Findpx4_msgs.cmake" in CMAKE_MODULE_PATH this project has
+[3.801s]   asked CMake to find a package configuration file provided by "px4_msgs",
+[3.802s]   but CMake did not find one.
+[3.804s] 
+[3.806s]   Could not find a package configuration file provided by "px4_msgs" with any
+[3.808s]   of the following names:
+[3.813s] 
+[3.815s]     px4_msgsConfig.cmake
+[3.816s]     px4_msgs-config.cmake
+[3.817s] 
+[3.818s]   Add the installation prefix of "px4_msgs" to CMAKE_PREFIX_PATH or set
+[3.820s]   "px4_msgs_DIR" to a directory containing one of the above files.  If
+[3.821s]   "px4_msgs" provides a separate development package or SDK, be sure it has
+[3.822s]   been installed.
+[3.824s] 
+[3.825s] [0m
+[3.826s] -- Configuring incomplete, errors occurred!
+[3.844s] Invoked command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge -DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge

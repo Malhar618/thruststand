@@ -1,0 +1,22 @@
+[  3%] Built target dynamixel_sdk_custom_interfaces__cpp
+[ 17%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c
+[ 31%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp
+[ 44%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c
+[ 48%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o[0m
+[ 65%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c
+[ 68%] [32m[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so[0m
+[ 72%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp
+[ 72%] Built target dynamixel_sdk_custom_interfaces
+[ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 75%] Built target dynamixel_sdk_custom_interfaces__py
+[ 82%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__python.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c.o[0m
+[ 82%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__python.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c.o[0m
+[ 86%] [32m[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/libdynamixel_sdk_custom_interfaces__python.so[0m
+[ 86%] Built target dynamixel_sdk_custom_interfaces__python
+[ 93%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext
+[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext

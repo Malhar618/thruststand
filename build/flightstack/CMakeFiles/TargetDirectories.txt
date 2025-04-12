@@ -1,0 +1,10 @@
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/uninstall.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/flightstack_uninstall.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/flightstack.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/test.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/edit_cache.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/rebuild_cache.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/list_install_components.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/install.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/install/local.dir
+/home/odroid/ros2_thrust_ws/build/flightstack/CMakeFiles/install/strip.dir
