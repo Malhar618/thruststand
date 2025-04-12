@@ -1,0 +1,189 @@
+# name: Deploy Docusaurus Site
+
+# on:
+#   push:
+#     branches:
+#       - main  # or the branch where your website source code resides
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 18  # specify the Node.js version you're using
+
+#       - name: Install dependencies
+#         working-directory: ./docs  # Change this if necessary
+#         run: |
+#           npm ci
+#           # npm ci  # or npm install if package-lock.json is not present
+
+#       - name: Build Docusaurus site
+#         working-directory: ./docs
+#         run: npm run build
+
+#       - name: Check if CNAME exists and create it if missing
+#         run: |
+#           if [ ! -f ./docs/build/CNAME ]; then
+#             echo "acslstack.com" > ./docs/build/CNAME
+#           fi
+
+#       - name: Deploy to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./docs/build 
+#           cname: acslstack.com # Add your custom domain here
+
+# name: Deploy to GitHub Pages
+
+# on:
+#   pull_request:
+#     branches: [main]
+#   push:
+#     branches: [main]
+
+# permissions:
+#   contents: write
+
+# jobs:
+#   test-deploy:
+#     if: github.event_name != 'push'
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#       - uses: actions/setup-node@v4
+#         with:
+#           cache-dependency-path: ./docs
+#           node-version: 18
+#           cache: npm
+#       - name: Install dependencies
+#         working-directory: ./docs
+#         run: npm ci
+#       - name: Test build website
+#         working-directory: ./docs
+#         run: npm run build
+#   deploy:
+#     if: github.event_name != 'pull_request'
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#       - uses: actions/setup-node@v4
+#         with:
+#           cache-dependency-path: ./docs
+#           node-version: 18
+#           cache: npm
+#       - uses: webfactory/ssh-agent@v0.5.0
+#         with:
+#           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+#       - name: Deploy to GitHub Pages
+#         env:
+#           USE_SSH: true
+#         working-directory: ./docs
+#         run: |
+#           # git config --global user.email "actions@github.com"
+#           # git config --global user.name "gh-actions"
+#           npm ci
+#           npm run deploy
+
+
+name: Deploy to GitHub Pages
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./docs
+
+on:
+  push:
+    branches:
+      - main
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+
+jobs:
+  build:
+    name: Build Docusaurus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          cache-dependency-path: ./docs
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Build website
+        run: npm run build
+
+      - name: List Current Directory
+        run: |
+          echo "Current Directory:"
+          pwd
+          echo "List Files:"
+          ls -la
+
+      # - name: List Files in Build Directory
+      #   run: |
+      #     echo "List Files in ./build:"
+      #     ls -la ./build || echo "Directory ./build does not exist"
+
+      - name: List Files in Build Directory
+        run: |
+          echo "List Files in ./build and its subdirectories:"
+          if [ -d ./build ]; then
+            find ./build -type f -exec ls -la {} +
+          else
+            echo "Directory ./build does not exist"
+          fi
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs/build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # - name: Deploy to gh-pages branch
+      #   run: |
+      #     git config --global user.name "github-actions[bot]"
+      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #     git fetch
+      #     git checkout -b gh-pages
+      #     git rm -rf . || true
+      #     cp -r ./docs/build/* .
+      #     git add .
+      #     git commit -m "Deploy to GitHub Pages"
+      #     git push --force origin gh-pages
