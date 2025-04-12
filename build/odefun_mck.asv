@@ -1,0 +1,35 @@
+function [dy,u,e,state_error,control_effort,x_user,x_dot_user] = odefun_mck(t,y,z,A,B,n,m)
+
+    % Initialize vector of dynamical equations
+    dy = zeros(length(y));
+
+    % Z = optimzation variable
+    Kp = z(1:n,1:n);
+    Kd = z(2);
+    Ki = z(3);
+    
+    % Retrieve State of the System 
+    x = y(1:2);
+    int_e = y(3);
+
+    %input
+    [x_user, x_dot_user] = user_trajectory(t);
+
+    % Error definition
+    e = x_user - x(1);
+    e_dot = x_dot_user - x(2);
+
+    % Control Input
+    u = Kp*e +Kd*e_dot +Ki*int_e;
+
+    % Dynamical model
+    dx = A*x + B*u;
+    dint_e = e;
+    
+    % Define variables that help us evaluate the performance of the system
+    % with a specific set of gains
+    state_error = norm( [e,e_dot] )^2;
+    control_effort = norm(u,2)^2;
+
+    % Define Output of the function ( System's ODEs )
+    dy = [dx;dint_e];

@@ -1,0 +1,272 @@
+%% **Main - GA multiobjective tuning - PID - 2nd Order System **
+
+close all
+clear all
+clc
+
+%% **Plant Paremeters** %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+m = 1;
+c = 0.12;
+k = 0.3;
+
+A = [0 1; -k/m -c/m];
+B = [0; 1/m];
+
+%Open Loop response for step input
+sys = ss(A,B,eye(2),zeros(2,1));
+step(sys)
+
+% u = Kp*e + Kd*e_dot + Ki*\int_{t_0}^{t} e \{\rm d}\tau
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% **Bound on Gains** %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+lb = [1 1 1]*0; % Lower bounds 
+ub = [1 1 1]*10^8;   % Upper bounds
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% **z = [Kp, Kd, Ki]** %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initial population matrix - Create Lattice
+% ** z = [gamma_x, gamma_r, gamma_theta]
+P0(1,:) = [1 1 1]*10^0;
+P0(2,:) = 5*[1 1 1]*10^0;
+P0(3,:) = [1 1 1]*10^1;
+P0(4,:) = 5*[1 1 1]*10^1;
+P0(5,:) = [1 1 1]*10^2;
+P0(6,:) = 5*[1 1 1]*10^2;
+P0(7,:) = [1 1 1]*10^3;
+P0(8,:) = 5*[1 1 1]*10^3;
+P0(9,:) = [1 1 1]*10^4;
+P0(10,:) = 5*[1 1 1]*10^4;
+P0(11,:) = [1 1 1]*10^5;
+P0(12,:) = [5 5 5]*10^5;
+P0(13,:) = [1 1 1]*0;
+P0(14,:) = [1 1 1]*10^6;
+P0(15,:) = 5*[1 1 1]*10^6;
+P0(16,:) = [1 1 1]*10^7;
+P0(17,:) = 5*[1 1 1]*10^7;
+
+for jj = 18:100 % population size
+    a = randi([1 17]);
+    b = randi([1 17]);
+    P0(jj,:) = randomCombine(P0(a,:),P0(b,:));
+end
+
+
+options = optimoptions('gamultiobj', ...
+    'PopulationSize', 60, ... % Population size
+    'MaxGenerations', 10, ... % Maximum number of generations
+    'FunctionTolerance', 1e-6, ... % Termination tolerance on the value of the objective functions
+    'ConstraintTolerance', 1e-6, ... % Termination tolerance on constraints
+    'ParetoFraction', 0.3, ... % Fraction of the population to retain after each generation
+    'SelectionFcn', {@selectiontournament, 2}, ... % Selection function
+    'CrossoverFcn', @crossoverintermediate, ... % Crossover function
+    'MutationFcn', {@mutationadaptfeasible, [], 0.1}, ... % Mutation function
+    'PlotFcn', {@gaplotpareto}, ... % Plot function
+    'Display', 'iter', ... % Display level
+    'UseParallel', true, ... % Whether to use parallel computing
+    'InitialPopulationMatrix', P0, ... % Initial population matrix
+    'StallGenLimit', 20, ... % Maximum number of generations over which the algorithm can stall
+    'PlotInterval', 1, ... % Plot interval
+    'Vectorized', 'off', ... % Vectorization option
+    'MigrationDirection', 'both', ... % Migration direction
+    'MigrationInterval', 20, ... % Migration interval
+    'MigrationFraction', 0.2);  % Fraction of the population to migrate
+
+
+disp('*****************************************************************')
+disp('**Genetic Algorithm Starting****************************************')
+disp('*****************************************************************')
+
+tic
+
+for i = 1:7
+
+    total_time_i_ga_multi = tic;
+
+    if i ~= 1
+        load('x0_file_multi.mat')
+        options.InitialPopulationMatrix(1:length(x(:,1)),:) = x;
+        if mod(i,2) ~= 1
+            options.InitialPopulationMatrix(length(x(:,1))+1:end,:) =  rand(100-length(x(:,1)), length(lb)).*(10.^(randi([0, 8], 100-length(x(:,1)), length(lb)))); 
+        else
+            for jj = length(x(:,1))+1:100 % population size
+                a = randi([1 17]);
+                b = randi([1 17]);
+                options.InitialPopulationMatrix(jj,:) = randomCombine(P0(a,:),P0(b,:));
+            end
+        end
+    end
+    
+    % Run the genetic algorithm
+    [x, fval] = gamultiobj(@(z)cost_fun_eval_multi(z,A,B), 3, [], [], [], [], lb, ub, [], options)
+    
+    save x0_file_multi x
+
+    total_time_f_ga_multi(i) = toc(total_time_i_ga_multi);
+end
+
+
+figure()
+plot(1:length(total_time_f_ga_multi), total_time_f_ga_multi, '*r')
+xlabel('$$Iteration$$', 'Interpreter','latex', FontSize=13)
+ylabel('$$RunTime[s]$$', 'Interpreter','latex', FontSize=13)
+grid on
+
+%% Visualization
+close all
+load('x0_file_multi.mat')
+
+for kk = 1:length(x(:,1))
+
+clear T Y u e state_error control_effort x_user x_dot_user
+    
+    IC = [0;0;0];
+    [T,Y] = ode45(@(t,y)odefun_mck(t,y,x(kk,:),A,B), [0 10], IC);
+
+    for ii = 1:length(T)
+%    [~,u(ii),e(ii,:),r(ii),da_sat(ii)] = odefun(T(ii),Y(ii,:)',x,p);
+       [~,u(ii),e(2,ii),state_error(ii),control_effort(ii),x_user(ii),x_dot_user(ii)] = odefun_mck(T(ii),Y(ii,:)',x(kk,:),A,B);
+
+    end
+
+    figure()
+    subplot(1,2,1)
+    plot(T,Y(:,1), '-k', T,x_user,'--r', 'LineWidth',2)
+    subplot(1,2,2)
+    plot(T,Y(:,2), '-k', T,x_dot_user,'--r', 'LineWidth',2)
+
+    
+% 
+%     disp('****************************************************************')
+%     fprintf('Optimal solution number %d yields:\n', kk)
+%     fprintf(['$$J_1 = ||e(t)||_2^2$$ ', num2str(fval(kk,1))], 'Interpreter', 'latex')
+%     fprintf(['$$J_2 = ||u(t)||_2^2$$ ', num2str(fval(kk,2))], 'Interpreter', 'latex')
+%     fprintf(['$$J_3 = ||\dot{u}(t)||_2^2$$ ', num2str(fval(kk,3))], 'Interpreter', 'latex')
+%     fprintf(['$$J_{penalty_{u}}$$ ', num2str(fval(kk,4))], 'Interpreter', 'latex')
+%     fprintf(['$$J_{penalty_{\dot{u}}}$$ ', num2str(fval(kk,5))], 'Interpreter', 'latex')
+%     disp('****************************************************************')
+
+end
+
+%% Best solution selection
+
+[best_e,best_e_index] = min(fval(:,1));
+
+admitted = find((fval(:,1)-best_e)/best_e<0.08)
+
+[best_u, best_u_index] = min(fval(admitted,2))
+
+clear u_dot
+clear u
+clear e
+clear r
+clear T
+clear Y
+clear norm_u_2
+clear norm_e_2
+clear da
+    
+    % IC = [x0; x0_ref; Kx0; Kr0; Theta0];
+    IC = [0;0;0];
+    
+    
+    [T,Y] = ode45(@(t,y)odefun_mck(t,y,x(best_u_index,:),A,B), [0 80], IC);
+
+    for ii = 1:length(T)
+       [~,u(ii),e(ii,:),r(ii),u_dot(ii),~,~,~,~,~,da(ii),~] = odefun_mck(T(ii),Y(ii,:)',x(best_u_index,:),A,B);
+    end
+
+
+
+    figure()
+    subplot(2,2,1)
+    plot(T,u_dot,'-b','Linewidth',1.2)
+    grid on
+    xlabel('$$T[s]$$',Interpreter='latex')
+    ylabel('$$\dot{u}(t)$$',Interpreter='latex')
+    
+    subplot(2,2,2)
+    plot(T,u*180/pi,'--k',T, da*180/pi,'-b','Linewidth',1.2)%,T,da_sat*180/pi,'--r','Linewidth',1.2)
+    grid on
+    xlabel('$$T[s]$$',Interpreter='latex')
+    ylabel('$$u(t) (\delta_a(t))[deg]$$',Interpreter='latex')
+    legend('$$\delta_{a_{cmd}}$$','$$\delta_{a}$$', Interpreter = 'latex')
+    
+    subplot(2,2,3)
+    plot(T,Y(:,2),'-b',T,Y(:,4),'--r','Linewidth',1.2)
+    grid on
+    xlabel('$$T[s]$$',Interpreter='latex')
+    legend('$$r[\frac{rad}{s}]$$','$$r_{ref}[\frac{rad}{s}]$$',Interpreter='latex')
+    
+    subplot(2,2,4)
+    plot(T,Y(:,1)*180/pi,'-b',T,r*180/pi,'--k',T,Y(:,3)*180/pi,'--r','Linewidth',1.2)
+    grid on
+    xlabel('$$T[s]$$',Interpreter='latex')
+    legend('$$\phi$$','$$\phi_{cmd}$$','$$\phi_{ref}$$',Interpreter='latex')
+    ylabel('$$\phi[deg]$$', Interpreter='latex')
+
+
+    %% **COMPARISON FUNCTION**
+
+if length(ub) == 3
+
+    % Generate sample data
+    Zrand = rand(5000, length(lb)).*(10.^(randi([0, 8], 5000, length(lb)))); 
+%     load("x0_file_multi.mat");
+    xx = x(best_u_index,:)
+
+    Z = [Zrand; xx];
+
+    for i = 1:length(Z(:,1))
+        c(i,:) = cost_fun_eval_multi(Z(i,:),p);
+    end
+    [min_c_1,i_c_1] = min(c(:,1));
+    [min_c_2,i_c_2] = min(c(:,2));
+
+    indices_1 = find(c(:,1)<0.03);
+    indices_2 = find(c(:,2)<0.08);
+
+    figure()
+    subplot(1,2,1)
+    plot3(Z(end,1),Z(end,2),Z(end,3),'or',MarkerSize=15)
+    hold on
+    plot3(Z(i_c_1,1),Z(i_c_1,2),Z(i_c_1,3),'ob',MarkerSize=11)
+%     legend('GA best', 'Random best')
+    hold on
+    % Plot the 3D scatter plot with color representing the fourth dimension
+    for jj = 1:length(indices_1)
+        scatter3(Z(indices_1(jj),1), Z(indices_1(jj),2), Z(indices_1(jj),3), 45, c(indices_1(jj),1), 'filled');
+        hold on
+    end
+    grid on
+    colormap('jet'); % Set the colormap (e.g., 'jet', 'hot', 'cool', etc.)
+    colorbar; % Display a color bar indicating the mapping of values to colors
+    title('$$\sum{||e||_2^2}$$', Interpreter='latex');
+    xlabel('$$\gamma_x$$', Interpreter='latex');
+    ylabel('$$\gamma_r$$', Interpreter='latex');
+    zlabel('$$\gamma_{\theta}$$', Interpreter='latex');
+
+
+
+    subplot(1,2,2)
+    plot3(Z(end,1),Z(end,2),Z(end,3),'or',MarkerSize=15)
+    hold on
+    plot3(Z(i_c_2,1),Z(i_c_2,2),Z(i_c_2,3),'ob',MarkerSize=11)
+%     legend('GA best', 'Random best')
+    hold on
+    % Plot the 3D scatter plot with color representing the fourth dimension
+    for jj = 1:length(indices_2)
+        scatter3(Z(indices_2(jj),1), Z(indices_2(jj),2), Z(indices_2(jj),3), 45, c(indices_2(jj),2), 'filled');
+        hold on
+    end
+    grid on
+    colormap('jet'); % Set the colormap (e.g., 'jet', 'hot', 'cool', etc.)
+    colorbar; % Display a color bar indicating the mapping of values to colors
+    title('$$\sum{||u||_2^2}$$', Interpreter='latex');
+    xlabel('$$\gamma_x$$', Interpreter='latex');
+    ylabel('$$\gamma_r$$', Interpreter='latex');
+    zlabel('$$\gamma_{\theta}$$', Interpreter='latex');
+
+end
