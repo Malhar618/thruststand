@@ -1,0 +1,63 @@
+[0.107s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': AMENT_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic LD_LIBRARY_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+[0.346s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.360s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.361s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.362s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.363s]   the cmake_policy command to set the policy and suppress this warning.
+[0.364s] 
+[0.365s] Call Stack (most recent call first):
+[0.366s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.366s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.367s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.369s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.370s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.372s]   CMakeLists.txt:8 (find_package)
+[0.373s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.374s] [0m
+[0.498s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.912s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.986s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.200s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[1.225s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[1.333s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[1.674s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.686s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.793s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[2.623s] -- Found px4_msgs: 2.0.1 (/home/odroid/ros2_thrust_ws/install/px4_msgs/share/px4_msgs/cmake)
+[2.722s] -- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)
+[2.984s] -- Found tf2_geometry_msgs: 0.17.5 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)
+[3.021s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)
+[5.151s] -- Found dynamixel_sdk: 3.8.1 (/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[5.646s] -- Configuring done (5.3s)
+[5.826s] -- Generating done (0.2s)
+[5.828s] -- Build files have been written to: /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge
+[5.939s] [ 12%] [32mBuilding CXX object CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o[0m
+[6.110s] [ 37%] Built target motor_stepup
+[6.116s] [ 62%] Built target motor_stepdown
+[6.136s] [ 87%] Built target drone_dynamixel_bridge
+[66.454s] [100%] [32m[1mLinking CXX executable angular_state_logger[0m
+[69.825s] [100%] Built target angular_state_logger
+[69.850s] Invoked command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge' returned '0': AMENT_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic LD_LIBRARY_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+[69.986s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': AMENT_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic LD_LIBRARY_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge
+[70.005s] -- Install configuration: ""
+[70.007s] -- Execute custom install script
+[70.011s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/drone_dynamixel_bridge
+[70.013s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepup
+[70.014s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/motor_stepdown
+[70.016s] -- Symlinking: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/lib/drone_dynamixel_bridge/angular_state_logger
+[70.035s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/package_run_dependencies/drone_dynamixel_bridge
+[70.037s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/parent_prefix_path/drone_dynamixel_bridge
+[70.040s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/ament_prefix_path.sh
+[70.042s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/ament_prefix_path.dsv
+[70.044s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/path.sh
+[70.045s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/environment/path.dsv
+[70.047s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.bash
+[70.049s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.sh
+[70.051s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.zsh
+[70.052s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/local_setup.dsv
+[70.054s] -- Symlinking: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/package.dsv
+[70.072s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/ament_index/resource_index/packages/drone_dynamixel_bridge
+[70.074s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/cmake/drone_dynamixel_bridgeConfig.cmake
+[70.075s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/cmake/drone_dynamixel_bridgeConfig-version.cmake
+[70.077s] -- Up-to-date symlink: /home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge/share/drone_dynamixel_bridge/package.xml
+[70.085s] Invoked command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge' returned '0': AMENT_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/opt/ros/galactic LD_LIBRARY_PATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge

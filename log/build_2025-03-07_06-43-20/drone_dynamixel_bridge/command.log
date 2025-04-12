@@ -1,0 +1,2 @@
+Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+Invoked command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4

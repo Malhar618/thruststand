@@ -1,0 +1,421 @@
+[0.000000] (-) TimerEvent: {}
+[0.001948] (drone_dynamixel_bridge) JobQueued: {'identifier': 'drone_dynamixel_bridge', 'dependencies': OrderedDict()}
+[0.002828] (dynamixel_sdk) JobQueued: {'identifier': 'dynamixel_sdk', 'dependencies': OrderedDict()}
+[0.003287] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.005384] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.008029] (dynamixel_sdk_examples) JobQueued: {'identifier': 'dynamixel_sdk_examples', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk'), ('dynamixel_sdk_custom_interfaces', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces')])}
+[0.008645] (flightstack) JobQueued: {'identifier': 'flightstack', 'dependencies': OrderedDict([('px4_msgs', '/home/odroid/ros2_thrust_ws/install/px4_msgs')])}
+[0.009037] (dynamixel_sdk) JobStarted: {'identifier': 'dynamixel_sdk'}
+[0.060563] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.099071] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.104043] (-) TimerEvent: {}
+[0.138995] (drone_dynamixel_bridge) JobStarted: {'identifier': 'drone_dynamixel_bridge'}
+[0.194551] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'cmake'}
+[0.199922] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'build'}
+[0.205345] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.214636] (-) TimerEvent: {}
+[0.237306] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.243076] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[0.245484] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.272358] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[0.279894] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[0.290485] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/px4_msgs', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/px4_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/px4_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.324320] (-) TimerEvent: {}
+[0.342786] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'cmake'}
+[0.343694] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'build'}
+[0.344258] (drone_dynamixel_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.424662] (-) TimerEvent: {}
+[0.441792] (dynamixel_sdk) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk\n'}
+[0.474499] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  3%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[0.500123] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[0.528898] (-) TimerEvent: {}
+[0.541889] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 17%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[0.587631] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 31%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.628697] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 44%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.630320] (-) TimerEvent: {}
+[0.645597] (drone_dynamixel_bridge) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o\x1b[0m\n'}
+[0.730707] (-) TimerEvent: {}
+[0.745202] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 68%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[0.752988] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 72%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[0.831002] (-) TimerEvent: {}
+[0.879946] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 72%] Built target dynamixel_sdk_custom_interfaces\n'}
+[0.914739] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'install'}
+[0.931484] (-) TimerEvent: {}
+[0.965804] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.982398] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 75%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[1.042230] (-) TimerEvent: {}
+[1.052256] (dynamixel_sdk) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.060542] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/\n'}
+[1.073103] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk\n'}
+[1.080163] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h\n'}
+[1.081475] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_bulk_read.h\n'}
+[1.082835] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h\n'}
+[1.084047] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h\n'}
+[1.103464] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h\n'}
+[1.107799] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h\n'}
+[1.114594] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h\n'}
+[1.116175] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h\n'}
+[1.123234] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h\n'}
+[1.124672] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h\n'}
+[1.130544] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h\n'}
+[1.135547] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_handler.h\n'}
+[1.138343] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h\n'}
+[1.139958] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_sync_read.h\n'}
+[1.141233] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h\n'}
+[1.151472] (-) TimerEvent: {}
+[1.153962] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h\n'}
+[1.157054] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 86%] Built target dynamixel_sdk_custom_interfaces__python\n'}
+[1.158447] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so\n'}
+[1.159920] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh\n'}
+[1.174209] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv\n'}
+[1.176087] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk\n'}
+[1.177833] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk\n'}
+[1.180139] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh\n'}
+[1.181798] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv\n'}
+[1.183273] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh\n'}
+[1.184541] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv\n'}
+[1.185791] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash\n'}
+[1.186888] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh\n'}
+[1.204246] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh\n'}
+[1.206251] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv\n'}
+[1.207399] (dynamixel_sdk) StdoutLine: {'line': b'-- Installing: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv\n'}
+[1.208394] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk\n'}
+[1.212774] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.214238] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.215748] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake\n'}
+[1.217090] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake\n'}
+[1.219059] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml\n'}
+[1.230008] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[1.257153] (-) TimerEvent: {}
+[1.279816] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 93%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[1.333132] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.358897] (-) TimerEvent: {}
+[1.491695] (-) TimerEvent: {}
+[1.541354] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[1.592278] (-) TimerEvent: {}
+[1.698361] (-) TimerEvent: {}
+[1.799923] (-) TimerEvent: {}
+[1.901602] (-) TimerEvent: {}
+[2.003442] (-) TimerEvent: {}
+[2.050348] (dynamixel_sdk) JobEnded: {'identifier': 'dynamixel_sdk', 'rc': 0}
+[2.062226] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[2.071898] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[2.102426] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.106101] (-) TimerEvent: {}
+[2.120808] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[2.127044] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces\n'}
+[2.132724] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg\n'}
+[2.134027] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[2.135378] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.c\n'}
+[2.144066] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[2.145532] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[2.146858] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[2.148152] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.149631] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[2.163697] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv\n'}
+[2.172022] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[2.173421] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[2.174675] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.c\n'}
+[2.175965] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[2.179812] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[2.188722] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[2.190175] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[2.191360] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[2.199083] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[2.202808] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces\n'}
+[2.204254] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg\n'}
+[2.205555] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[2.213116] (-) TimerEvent: {}
+[2.215953] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.c\n'}
+[2.217322] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[2.218599] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.219852] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv\n'}
+[2.221044] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[2.228517] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.c\n'}
+[2.230974] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[2.232296] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[2.233542] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[2.234889] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces\n'}
+[2.236226] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg\n'}
+[2.237412] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[2.238776] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[2.241459] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[2.242921] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[2.244347] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[2.246022] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv\n'}
+[2.247208] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[2.248469] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[2.250248] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[2.252576] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[2.260035] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[2.261348] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces\n'}
+[2.262769] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg\n'}
+[2.264052] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[2.265424] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.266746] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.cpp\n'}
+[2.268184] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv\n'}
+[2.282259] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[2.290090] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.cpp\n'}
+[2.291370] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.292753] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[2.294253] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[2.295864] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[2.297284] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[2.304361] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[2.318853] (-) TimerEvent: {}
+[2.420672] (-) TimerEvent: {}
+[2.498872] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg\n'}
+[2.501337] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c\n'}
+[2.502836] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[2.504095] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[2.505861] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv\n'}
+[2.507241] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py\n'}
+[2.508606] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c\n'}
+[2.509962] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py\n'}
+[2.512358] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[2.516219] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[2.519361] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so\n'}
+[2.521248] (-) TimerEvent: {}
+[2.523568] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[2.526367] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl\n'}
+[2.528656] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[2.530062] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv\n'}
+[2.531345] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg\n'}
+[2.532732] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg\n'}
+[2.542809] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[2.551439] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[2.553428] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[2.555832] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.557980] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[2.560050] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[2.563310] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[2.565820] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[2.567181] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[2.568398] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[2.571974] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[2.574147] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[2.576012] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[2.577348] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.578835] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.593258] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.594862] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[2.596245] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.597565] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[2.600021] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.602746] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.604654] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[2.606132] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.607573] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.609897] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.611551] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.613104] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.615624] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.616932] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.618702] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[2.620481] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[2.622312] (-) TimerEvent: {}
+[2.623687] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[2.625289] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[2.722660] (-) TimerEvent: {}
+[2.824425] (-) TimerEvent: {}
+[2.926373] (-) TimerEvent: {}
+[3.028119] (-) TimerEvent: {}
+[3.130149] (-) TimerEvent: {}
+[3.231904] (-) TimerEvent: {}
+[3.336417] (-) TimerEvent: {}
+[3.360115] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[3.365431] (dynamixel_sdk_examples) JobStarted: {'identifier': 'dynamixel_sdk_examples'}
+[3.437563] (-) TimerEvent: {}
+[3.499441] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'cmake'}
+[3.509403] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'build'}
+[3.512870] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[3.558788] (-) TimerEvent: {}
+[3.660577] (-) TimerEvent: {}
+[3.727880] (dynamixel_sdk_examples) StdoutLine: {'line': b'[100%] Built target read_write_node\n'}
+[3.762849] (-) TimerEvent: {}
+[3.769086] (dynamixel_sdk_examples) CommandEnded: {'returncode': 0}
+[3.863278] (-) TimerEvent: {}
+[3.891979] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'install'}
+[3.894745] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_examples'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[3.939838] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.941658] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/read_write_node\n'}
+[3.944096] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples\n'}
+[3.945561] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_examples\n'}
+[3.946932] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.sh\n'}
+[3.948250] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.dsv\n'}
+[3.952774] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.sh\n'}
+[3.970321] (-) TimerEvent: {}
+[3.972434] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.dsv\n'}
+[3.976291] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.bash\n'}
+[3.977661] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.sh\n'}
+[3.979333] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.zsh\n'}
+[3.980781] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.dsv\n'}
+[3.982029] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Installing: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv\n'}
+[3.983616] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/packages/dynamixel_sdk_examples\n'}
+[3.985123] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig.cmake\n'}
+[3.999720] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig-version.cmake\n'}
+[4.000935] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.xml\n'}
+[4.002099] (dynamixel_sdk_examples) CommandEnded: {'returncode': 0}
+[4.074086] (-) TimerEvent: {}
+[4.176161] (-) TimerEvent: {}
+[4.277632] (-) TimerEvent: {}
+[4.281317] (dynamixel_sdk_examples) JobEnded: {'identifier': 'dynamixel_sdk_examples', 'rc': 0}
+[4.377915] (-) TimerEvent: {}
+[4.479373] (-) TimerEvent: {}
+[4.580708] (-) TimerEvent: {}
+[4.682099] (-) TimerEvent: {}
+[4.783482] (-) TimerEvent: {}
+[4.790706] (px4_msgs) StdoutLine: {'line': b'[  0%] Built target px4_msgs__cpp\n'}
+[4.883829] (-) TimerEvent: {}
+[4.985286] (-) TimerEvent: {}
+[5.016494] (px4_msgs) StdoutLine: {'line': b'[ 17%] Built target px4_msgs__rosidl_generator_c\n'}
+[5.085672] (-) TimerEvent: {}
+[5.187131] (-) TimerEvent: {}
+[5.288535] (-) TimerEvent: {}
+[5.389912] (-) TimerEvent: {}
+[5.425727] (px4_msgs) StdoutLine: {'line': b'[ 34%] Built target px4_msgs__rosidl_typesupport_introspection_c\n'}
+[5.490210] (-) TimerEvent: {}
+[5.562181] (px4_msgs) StdoutLine: {'line': b'[ 51%] Built target px4_msgs__rosidl_typesupport_introspection_cpp\n'}
+[5.590499] (-) TimerEvent: {}
+[5.691903] (-) TimerEvent: {}
+[5.782060] (px4_msgs) StdoutLine: {'line': b'[ 67%] Built target px4_msgs__rosidl_typesupport_c\n'}
+[5.792129] (-) TimerEvent: {}
+[5.893546] (-) TimerEvent: {}
+[5.994962] (-) TimerEvent: {}
+[6.096420] (-) TimerEvent: {}
+[6.131718] (px4_msgs) StdoutLine: {'line': b'[ 83%] Built target px4_msgs__rosidl_typesupport_cpp\n'}
+[6.194074] (px4_msgs) StdoutLine: {'line': b'[ 83%] Built target px4_msgs\n'}
+[6.196700] (-) TimerEvent: {}
+[6.299739] (-) TimerEvent: {}
+[6.319487] (px4_msgs) StdoutLine: {'line': b'[ 83%] Built target px4_msgs__py\n'}
+[6.400026] (-) TimerEvent: {}
+[6.501330] (-) TimerEvent: {}
+[6.602735] (-) TimerEvent: {}
+[6.704123] (-) TimerEvent: {}
+[6.805526] (-) TimerEvent: {}
+[6.906858] (-) TimerEvent: {}
+[6.923036] (px4_msgs) StdoutLine: {'line': b'[ 99%] Built target px4_msgs__python\n'}
+[7.007227] (-) TimerEvent: {}
+[7.020014] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_c__pyext\n'}
+[7.029504] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[7.071969] (px4_msgs) CommandEnded: {'returncode': 0}
+[7.107681] (-) TimerEvent: {}
+[7.209404] (-) TimerEvent: {}
+[7.310919] (-) TimerEvent: {}
+[7.412502] (-) TimerEvent: {}
+[7.514056] (-) TimerEvent: {}
+[7.615607] (-) TimerEvent: {}
+[7.717094] (-) TimerEvent: {}
+[7.818621] (-) TimerEvent: {}
+[7.920108] (-) TimerEvent: {}
+[8.021522] (-) TimerEvent: {}
+[8.122947] (-) TimerEvent: {}
+[8.224517] (-) TimerEvent: {}
+[8.326102] (-) TimerEvent: {}
+[8.427778] (-) TimerEvent: {}
+[8.529329] (-) TimerEvent: {}
+[8.630659] (-) TimerEvent: {}
+[8.732047] (-) TimerEvent: {}
+[8.833416] (-) TimerEvent: {}
+[8.935004] (-) TimerEvent: {}
+[9.036465] (-) TimerEvent: {}
+[9.138000] (-) TimerEvent: {}
+[9.239469] (-) TimerEvent: {}
+[9.340851] (-) TimerEvent: {}
+[9.442436] (-) TimerEvent: {}
+[9.543868] (-) TimerEvent: {}
+[9.647465] (-) TimerEvent: {}
+[9.748967] (-) TimerEvent: {}
+[9.850411] (-) TimerEvent: {}
+[9.951975] (-) TimerEvent: {}
+[10.054034] (-) TimerEvent: {}
+[10.155486] (-) TimerEvent: {}
+[10.256939] (-) TimerEvent: {}
+[10.358357] (-) TimerEvent: {}
+[10.460217] (-) TimerEvent: {}
+[10.561763] (-) TimerEvent: {}
+[10.663323] (-) TimerEvent: {}
+[10.766300] (-) TimerEvent: {}
+[10.867540] (-) TimerEvent: {}
+[10.969286] (-) TimerEvent: {}
+[11.071403] (-) TimerEvent: {}
+[11.173005] (-) TimerEvent: {}
+[11.274398] (-) TimerEvent: {}
+[11.376312] (-) TimerEvent: {}
+[11.477827] (-) TimerEvent: {}
+[11.580345] (-) TimerEvent: {}
+[11.682964] (-) TimerEvent: {}
+[11.788110] (-) TimerEvent: {}
+[11.890532] (-) TimerEvent: {}
+[11.991986] (-) TimerEvent: {}
+[12.093349] (-) TimerEvent: {}
+[12.196481] (-) TimerEvent: {}
+[12.297818] (-) TimerEvent: {}
+[12.399638] (-) TimerEvent: {}
+[12.501654] (-) TimerEvent: {}
+[12.603010] (-) TimerEvent: {}
+[12.705599] (-) TimerEvent: {}
+[12.806943] (-) TimerEvent: {}
+[12.908597] (-) TimerEvent: {}
+[13.010035] (-) TimerEvent: {}
+[13.111475] (-) TimerEvent: {}
+[13.212875] (-) TimerEvent: {}
+[13.315040] (-) TimerEvent: {}
+[13.416499] (-) TimerEvent: {}
+[13.517916] (-) TimerEvent: {}
+[13.619289] (-) TimerEvent: {}
+[13.721275] (-) TimerEvent: {}
+[13.822785] (-) TimerEvent: {}
+[13.924274] (-) TimerEvent: {}
+[14.026836] (-) TimerEvent: {}
+[14.128161] (-) TimerEvent: {}
+[14.229877] (-) TimerEvent: {}
+[14.331163] (-) TimerEvent: {}
+[14.432584] (-) TimerEvent: {}
+[14.534506] (-) TimerEvent: {}
+[14.636807] (-) TimerEvent: {}
+[14.738298] (-) TimerEvent: {}
+[14.839669] (-) TimerEvent: {}
+[14.940883] (-) TimerEvent: {}
+[15.042277] (-) TimerEvent: {}
+[15.144120] (-) TimerEvent: {}
+[15.245620] (-) TimerEvent: {}
+[15.347096] (-) TimerEvent: {}
+[15.448583] (-) TimerEvent: {}
+[15.549968] (-) TimerEvent: {}
+[15.651427] (-) TimerEvent: {}
+[15.753771] (-) TimerEvent: {}
+[15.855302] (-) TimerEvent: {}
+[15.956751] (-) TimerEvent: {}
+[16.058389] (-) TimerEvent: {}
+[16.159949] (-) TimerEvent: {}
+[16.261249] (-) TimerEvent: {}
+[16.364730] (-) TimerEvent: {}
+[16.466389] (-) TimerEvent: {}
+[16.567781] (-) TimerEvent: {}
+[16.669267] (-) TimerEvent: {}
+[16.770817] (-) TimerEvent: {}
+[16.872225] (-) TimerEvent: {}
+[16.974735] (-) TimerEvent: {}
+[17.076239] (-) TimerEvent: {}
+[17.177603] (-) TimerEvent: {}
+[17.279548] (-) TimerEvent: {}
+[17.380946] (-) TimerEvent: {}
+[17.482598] (-) TimerEvent: {}
+[17.583953] (-) TimerEvent: {}
+[17.685439] (-) TimerEvent: {}
+[17.787828] (-) TimerEvent: {}
+[17.889270] (-) TimerEvent: {}
+[17.990571] (-) TimerEvent: {}
+[18.091900] (-) TimerEvent: {}
+[18.193318] (-) TimerEvent: {}
+[18.294614] (-) TimerEvent: {}
+[18.373907] (drone_dynamixel_bridge) StderrLine: {'line': b'make[2]: *** [CMakeFiles/drone_dynamixel_bridge.dir/build.make:76: CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o] Interrupt\n'}
+[18.377215] (drone_dynamixel_bridge) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/drone_dynamixel_bridge.dir/all] Interrupt\n'}
+[18.379569] (drone_dynamixel_bridge) StderrLine: {'line': b'make: *** [Makefile:146: all] Interrupt\n'}
+[18.396316] (px4_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 75, in execute\n    loop.run_until_complete(future)\n  File "/usr/lib/python3.8/asyncio/base_events.py", line 603, in run_until_complete\n    self.run_forever()\n  File "/usr/lib/python3.8/asyncio/base_events.py", line 570, in run_forever\n    self._run_once()\n  File "/usr/lib/python3.8/asyncio/base_events.py", line 1823, in _run_once\n    event_list = self._selector.select(timeout)\n  File "/usr/lib/python3.8/selectors.py", line 468, in select\n    fd_event_list = self._selector.poll(timeout, max_ev)\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build\n    rc = await extension.build(\n  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 110, in build\n    if await has_target(args.build_base, \'install\'):\n  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 57, in has_target\n    return target in await get_makefile_targets(path)\n  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 77, in get_makefile_targets\n    output = await check_output([\n  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output\n    assert not rc, f\'Expected {args} to pass: {stderr_data}\'\nAssertionError: Expected [\'/usr/bin/cmake\', \'--build\', \'/home/odroid/ros2_thrust_ws/build/px4_msgs\', \'--target\', \'help\'] to pass: make: *** [Makefile:35275: help] Interrupt\n\n'}
+[18.397785] (-) TimerEvent: {}
+[18.399987] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 'SIGINT'}
+[18.463928] (drone_dynamixel_bridge) JobEnded: {'identifier': 'drone_dynamixel_bridge', 'rc': 'SIGINT'}
+[18.478204] (flightstack) JobSkipped: {'identifier': 'flightstack'}
+[18.479046] (-) EventReactorShutdown: {}

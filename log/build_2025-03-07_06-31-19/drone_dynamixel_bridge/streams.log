@@ -1,0 +1,11 @@
+[0.209s] Invoking command in '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge -- -j4 -l4
+[0.511s] [ 50%] [32mBuilding CXX object CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o[0m
+[13.956s] make[2]: *** wait: No child processes.  Stop.
+[13.967s] make[2]: *** Waiting for unfinished jobs....
+[13.968s] make[2]: *** wait: No child processes.  Stop.
+[13.968s] make[1]: *** wait: No child processes.  Stop.
+[13.969s] make[1]: *** Waiting for unfinished jobs....
+[13.970s] make[1]: *** wait: No child processes.  Stop.
+[13.971s] make: *** wait: No child processes.  Stop.
+[13.972s] make: *** Waiting for unfinished jobs....
+[13.973s] make: *** wait: No child processes.  Stop.

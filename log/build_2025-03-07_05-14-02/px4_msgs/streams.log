@@ -1,0 +1,46 @@
+[0.145s] Invoking command in '/home/odroid/ros2_thrust_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/odroid/ros2_thrust_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/px4_msgs
+[0.788s] -- The C compiler identification is GNU 9.4.0
+[1.411s] -- The CXX compiler identification is GNU 9.4.0
+[1.490s] -- Detecting C compiler ABI info
+[1.960s] -- Detecting C compiler ABI info - done
+[2.086s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.087s] -- Detecting C compile features
+[2.089s] -- Detecting C compile features - done
+[2.117s] -- Detecting CXX compiler ABI info
+[2.681s] -- Detecting CXX compiler ABI info - done
+[2.853s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.854s] -- Detecting CXX compile features
+[2.855s] -- Detecting CXX compile features - done
+[2.856s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[2.886s] [33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[2.888s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.889s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.890s]   the cmake_policy command to set the policy and suppress this warning.
+[2.891s] 
+[2.893s] Call Stack (most recent call first):
+[2.894s]   /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[2.895s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[2.897s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[2.908s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[2.910s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[2.911s]   CMakeLists.txt:11 (find_package)
+[2.912s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.914s] [0m
+[3.143s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[3.144s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.871s] -- Found builtin_interfaces: 1.0.3 (/opt/ros/galactic/share/builtin_interfaces/cmake)
+[4.017s] -- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c
+[4.061s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[4.190s] -- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp
+[4.370s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[5.363s] [33mCMake Warning (dev) at /opt/ros/galactic/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):
+[5.366s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[5.369s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[5.371s]   the cmake_policy command to set the policy and suppress this warning.
+[5.374s] 
+[5.376s] Call Stack (most recent call first):
+[5.383s]   /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[5.389s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[5.390s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[5.392s] [0m
+[5.859s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10")

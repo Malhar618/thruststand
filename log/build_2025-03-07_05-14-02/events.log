@@ -1,0 +1,608 @@
+[0.000000] (-) TimerEvent: {}
+[0.002161] (drone_dynamixel_bridge) JobQueued: {'identifier': 'drone_dynamixel_bridge', 'dependencies': OrderedDict()}
+[0.004188] (dynamixel_sdk) JobQueued: {'identifier': 'dynamixel_sdk', 'dependencies': OrderedDict()}
+[0.005334] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.006387] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.006751] (dynamixel_sdk_examples) JobQueued: {'identifier': 'dynamixel_sdk_examples', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk'), ('dynamixel_sdk_custom_interfaces', '/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces')])}
+[0.007027] (flightstack) JobQueued: {'identifier': 'flightstack', 'dependencies': OrderedDict([('px4_msgs', '/home/odroid/ros2_thrust_ws/install/px4_msgs')])}
+[0.007267] (dynamixel_sdk) JobStarted: {'identifier': 'dynamixel_sdk'}
+[0.048475] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.077420] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.100994] (-) TimerEvent: {}
+[0.108177] (drone_dynamixel_bridge) JobStarted: {'identifier': 'drone_dynamixel_bridge'}
+[0.152450] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'cmake'}
+[0.154049] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '/home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk', '-DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.180859] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.182971] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk_custom_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.201406] (-) TimerEvent: {}
+[0.203998] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[0.207583] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/odroid/ros2_thrust_ws/src/px4_msgs', '-DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/px4_msgs'], 'cwd': '/home/odroid/ros2_thrust_ws/build/px4_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/px4_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.244619] (drone_dynamixel_bridge) JobProgress: {'identifier': 'drone_dynamixel_bridge', 'progress': 'cmake'}
+[0.247211] (drone_dynamixel_bridge) Command: {'cmd': ['/usr/bin/cmake', '/home/odroid/ros2_thrust_ws/src/drone_dynamixel_bridge', '-DCMAKE_INSTALL_PREFIX=/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge'], 'cwd': '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[0.302351] (-) TimerEvent: {}
+[0.408876] (-) TimerEvent: {}
+[0.510370] (-) TimerEvent: {}
+[0.612210] (-) TimerEvent: {}
+[0.714104] (-) TimerEvent: {}
+[0.815731] (-) TimerEvent: {}
+[0.845246] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.848677] (dynamixel_sdk) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.865701] (px4_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.868796] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.916145] (-) TimerEvent: {}
+[1.017534] (-) TimerEvent: {}
+[1.118925] (-) TimerEvent: {}
+[1.220456] (-) TimerEvent: {}
+[1.321982] (-) TimerEvent: {}
+[1.423628] (-) TimerEvent: {}
+[1.487224] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.488487] (px4_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.501797] (dynamixel_sdk) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.505850] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.523950] (-) TimerEvent: {}
+[1.564639] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.566117] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.568217] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.569804] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.624268] (-) TimerEvent: {}
+[1.725764] (-) TimerEvent: {}
+[1.827419] (-) TimerEvent: {}
+[1.929134] (-) TimerEvent: {}
+[2.008400] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.012826] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.024015] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.029492] (-) TimerEvent: {}
+[2.037832] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.111329] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.113178] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.114981] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.116316] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.121292] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.123164] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.124910] (dynamixel_sdk) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.127704] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.129500] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.130653] (-) TimerEvent: {}
+[2.151529] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.153755] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.157166] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.163746] (px4_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.165022] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.166526] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.194603] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.231034] (-) TimerEvent: {}
+[2.332662] (-) TimerEvent: {}
+[2.434297] (-) TimerEvent: {}
+[2.535977] (-) TimerEvent: {}
+[2.638043] (-) TimerEvent: {}
+[2.663951] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.671307] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.689915] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.738310] (-) TimerEvent: {}
+[2.758698] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.776964] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.778396] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.779676] (dynamixel_sdk) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.780805] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.782158] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.792524] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.794930] (dynamixel_sdk) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[2.803553] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.804878] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.806203] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[2.807348] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.812555] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[2.822398] (dynamixel_sdk) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[2.824344] (dynamixel_sdk) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.825461] (dynamixel_sdk) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.827012] (dynamixel_sdk) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.828196] (dynamixel_sdk) StderrLine: {'line': b'\n'}
+[2.829548] (dynamixel_sdk) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.830801] (dynamixel_sdk) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[2.833999] (dynamixel_sdk) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[2.835606] (dynamixel_sdk) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[2.837421] (dynamixel_sdk) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[2.840404] (-) TimerEvent: {}
+[2.842658] (dynamixel_sdk) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[2.844154] (dynamixel_sdk) StderrLine: {'line': b'  CMakeLists.txt:18 (find_package)\n'}
+[2.845429] (dynamixel_sdk) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.846881] (dynamixel_sdk) StderrLine: {'line': b'\x1b[0m\n'}
+[2.848143] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[2.849775] (drone_dynamixel_bridge) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.851140] (drone_dynamixel_bridge) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.859465] (drone_dynamixel_bridge) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.860855] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[2.862171] (drone_dynamixel_bridge) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.863623] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[2.864958] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[2.866246] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[2.867591] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[2.868817] (drone_dynamixel_bridge) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[2.887088] (drone_dynamixel_bridge) StderrLine: {'line': b'  CMakeLists.txt:4 (find_package)\n'}
+[2.888430] (drone_dynamixel_bridge) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.889937] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[0m\n'}
+[2.891227] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[2.893026] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.894458] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.895564] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.896900] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\n'}
+[2.898088] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.909637] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[2.911277] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[2.912473] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[2.913844] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[2.915044] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[2.916259] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  CMakeLists.txt:14 (find_package)\n'}
+[2.917438] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.918520] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[2.930407] (px4_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.931720] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.933020] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.934228] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[2.940710] (-) TimerEvent: {}
+[2.962882] (px4_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[2.965325] (px4_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[2.966946] (px4_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[2.968153] (px4_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[2.969315] (px4_msgs) StderrLine: {'line': b'\n'}
+[2.970588] (px4_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.971769] (px4_msgs) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[2.973157] (px4_msgs) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[2.974471] (px4_msgs) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[2.975903] (px4_msgs) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[2.987636] (px4_msgs) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[2.989054] (px4_msgs) StderrLine: {'line': b'  CMakeLists.txt:11 (find_package)\n'}
+[2.990353] (px4_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.991593] (px4_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[3.030800] (dynamixel_sdk) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")\n'}
+[3.032856] (dynamixel_sdk) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.041047] (-) TimerEvent: {}
+[3.049099] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")\n'}
+[3.051082] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.129170] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")\n'}
+[3.132339] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.141355] (-) TimerEvent: {}
+[3.220373] (px4_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")\n'}
+[3.222113] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.241679] (-) TimerEvent: {}
+[3.343163] (-) TimerEvent: {}
+[3.444634] (-) TimerEvent: {}
+[3.546142] (-) TimerEvent: {}
+[3.647655] (-) TimerEvent: {}
+[3.749042] (-) TimerEvent: {}
+[3.763369] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.3 (/opt/ros/galactic/share/builtin_interfaces/cmake)\n'}
+[3.826307] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[3.849406] (-) TimerEvent: {}
+[3.927707] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c\n'}
+[3.948494] (px4_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.3 (/opt/ros/galactic/share/builtin_interfaces/cmake)\n'}
+[3.950377] (-) TimerEvent: {}
+[3.972355] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[4.050703] (-) TimerEvent: {}
+[4.094776] (px4_msgs) StdoutLine: {'line': b'-- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c\n'}
+[4.129545] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c\n'}
+[4.137287] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp\n'}
+[4.138647] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[4.151034] (-) TimerEvent: {}
+[4.165903] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[4.251336] (-) TimerEvent: {}
+[4.267759] (px4_msgs) StdoutLine: {'line': b'-- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp\n'}
+[4.297202] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp\n'}
+[4.342671] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)\n'}
+[4.351658] (-) TimerEvent: {}
+[4.381420] (dynamixel_sdk) StdoutLine: {'line': b'-- Configuring done (4.2s)\n'}
+[4.428587] (dynamixel_sdk) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.431436] (dynamixel_sdk) StdoutLine: {'line': b'-- Build files have been written to: /home/odroid/ros2_thrust_ws/build/dynamixel_sdk\n'}
+[4.447335] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)\n'}
+[4.451980] (-) TimerEvent: {}
+[4.472184] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):\n'}
+[4.473697] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[4.474783] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[4.475826] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[4.480072] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\n'}
+[4.482845] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.483969] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[4.484936] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[4.485883] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[4.487833] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[4.489103] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[4.506403] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'build'}
+[4.507361] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[4.552405] (-) TimerEvent: {}
+[4.654153] (-) TimerEvent: {}
+[4.657350] (dynamixel_sdk) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o\x1b[0m\n'}
+[4.674994] (dynamixel_sdk) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o\x1b[0m\n'}
+[4.684859] (dynamixel_sdk) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o\x1b[0m\n'}
+[4.703187] (dynamixel_sdk) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o\x1b[0m\n'}
+[4.754477] (-) TimerEvent: {}
+[4.763218] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10")\n'}
+[4.854776] (-) TimerEvent: {}
+[4.930049] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[4.955135] (-) TimerEvent: {}
+[5.002761] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[5.055491] (-) TimerEvent: {}
+[5.157251] (-) TimerEvent: {}
+[5.258855] (-) TimerEvent: {}
+[5.360434] (-) TimerEvent: {}
+[5.440510] (px4_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):\n'}
+[5.443780] (px4_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[5.446619] (px4_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[5.449000] (px4_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[5.451208] (px4_msgs) StderrLine: {'line': b'\n'}
+[5.454082] (px4_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[5.460670] (px4_msgs) StderrLine: {'line': b'  /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[5.462129] (-) TimerEvent: {}
+[5.466493] (px4_msgs) StderrLine: {'line': b'  CMakeLists.txt:28 (rosidl_generate_interfaces)\n'}
+[5.468091] (px4_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[5.469777] (px4_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[5.480473] (drone_dynamixel_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[5.501978] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[5.562492] (-) TimerEvent: {}
+[5.664251] (-) TimerEvent: {}
+[5.765889] (-) TimerEvent: {}
+[5.867560] (-) TimerEvent: {}
+[5.936552] (px4_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10")\n'}
+[5.967935] (-) TimerEvent: {}
+[6.069506] (-) TimerEvent: {}
+[6.171029] (-) TimerEvent: {}
+[6.239896] (dynamixel_sdk) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o\x1b[0m\n'}
+[6.271420] (-) TimerEvent: {}
+[6.373031] (-) TimerEvent: {}
+[6.474591] (-) TimerEvent: {}
+[6.477250] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[6.479550] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[6.574906] (-) TimerEvent: {}
+[6.676459] (-) TimerEvent: {}
+[6.777996] (-) TimerEvent: {}
+[6.879577] (-) TimerEvent: {}
+[6.981466] (-) TimerEvent: {}
+[7.083363] (-) TimerEvent: {}
+[7.116057] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[7.119851] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[7.183711] (-) TimerEvent: {}
+[7.285646] (-) TimerEvent: {}
+[7.386335] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using single rosidl_typesupport_c: rosidl_typesupport_introspection_c\n'}
+[7.387755] (-) TimerEvent: {}
+[7.441416] (dynamixel_sdk) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o\x1b[0m\n'}
+[7.488107] (-) TimerEvent: {}
+[7.589487] (-) TimerEvent: {}
+[7.591575] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using single rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp\n'}
+[7.637250] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[7.639576] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[7.640911] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[7.642327] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[7.643602] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\n'}
+[7.644626] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[7.645825] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[7.647569] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[7.648946] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[7.656500] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[7.657720] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[7.689767] (-) TimerEvent: {}
+[7.791213] (-) TimerEvent: {}
+[7.888267] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5")\n'}
+[7.891529] (-) TimerEvent: {}
+[7.905018] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)\n'}
+[7.915153] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):\n'}
+[7.916690] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[7.917998] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[7.919482] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[7.920752] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\n'}
+[7.921948] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[7.936921] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[7.937999] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[7.939058] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[7.940310] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[7.941332] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[7.942387] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[7.978076] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[7.991845] (-) TimerEvent: {}
+[7.997469] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[8.002342] (dynamixel_sdk) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o\x1b[0m\n'}
+[8.096225] (-) TimerEvent: {}
+[8.197722] (-) TimerEvent: {}
+[8.299351] (-) TimerEvent: {}
+[8.311073] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/galactic/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):\n'}
+[8.313066] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[8.315358] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[8.317387] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[8.319411] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\n'}
+[8.321546] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[8.324700] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[8.327921] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[8.332474] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  /opt/ros/galactic/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[8.333862] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[8.335082] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[8.336502] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[8.394772] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5")\n'}
+[8.399582] (-) TimerEvent: {}
+[8.407637] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[8.409057] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[8.410473] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[8.499896] (-) TimerEvent: {}
+[8.601347] (-) TimerEvent: {}
+[8.702913] (-) TimerEvent: {}
+[8.804417] (-) TimerEvent: {}
+[8.843999] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so\n'}
+[8.904788] (-) TimerEvent: {}
+[9.006229] (-) TimerEvent: {}
+[9.107800] (-) TimerEvent: {}
+[9.209229] (-) TimerEvent: {}
+[9.310808] (-) TimerEvent: {}
+[9.412381] (-) TimerEvent: {}
+[9.513975] (-) TimerEvent: {}
+[9.615500] (-) TimerEvent: {}
+[9.716984] (-) TimerEvent: {}
+[9.818375] (-) TimerEvent: {}
+[9.825633] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Configuring done (9.6s)\n'}
+[9.918730] (-) TimerEvent: {}
+[10.020413] (-) TimerEvent: {}
+[10.121830] (-) TimerEvent: {}
+[10.223507] (-) TimerEvent: {}
+[10.325203] (-) TimerEvent: {}
+[10.364963] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Generating done (0.5s)\n'}
+[10.372370] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces\n'}
+[10.419732] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[10.422747] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[10.442064] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odroid'), ('SSH_CLIENT', '192.168.12.62 59755 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/odroid'), ('OLDPWD', '/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'odroid'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/odroid/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.12.62 59755 192.168.12.1 22'), ('PYTHONPATH', '/home/odroid/ros2_thrust_ws/install/px4_msgs/lib/python3.8/site-packages:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/odroid/ros2_thrust_ws/install/flightstack:/home/odroid/ros2_thrust_ws/install/px4_msgs:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_examples:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk_custom_interfaces:/home/odroid/ros2_thrust_ws/install/dynamixel_sdk:/home/odroid/ros2_thrust_ws/install/drone_dynamixel_bridge:/opt/ros/galactic')]), 'shell': False}
+[10.449880] (-) TimerEvent: {}
+[10.554818] (-) TimerEvent: {}
+[10.656488] (-) TimerEvent: {}
+[10.668116] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:6 (find_package):\n'}
+[10.669945] (drone_dynamixel_bridge) StderrLine: {'line': b'  By not providing "Findpx4_msgs.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[10.680829] (drone_dynamixel_bridge) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "px4_msgs",\n'}
+[10.682291] (drone_dynamixel_bridge) StderrLine: {'line': b'  but CMake did not find one.\n'}
+[10.683747] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[10.685092] (drone_dynamixel_bridge) StderrLine: {'line': b'  Could not find a package configuration file provided by "px4_msgs" with any\n'}
+[10.689733] (drone_dynamixel_bridge) StderrLine: {'line': b'  of the following names:\n'}
+[10.691446] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[10.692835] (drone_dynamixel_bridge) StderrLine: {'line': b'    px4_msgsConfig.cmake\n'}
+[10.694146] (drone_dynamixel_bridge) StderrLine: {'line': b'    px4_msgs-config.cmake\n'}
+[10.695480] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[10.696696] (drone_dynamixel_bridge) StderrLine: {'line': b'  Add the installation prefix of "px4_msgs" to CMAKE_PREFIX_PATH or set\n'}
+[10.697802] (drone_dynamixel_bridge) StderrLine: {'line': b'  "px4_msgs_DIR" to a directory containing one of the above files.  If\n'}
+[10.698976] (drone_dynamixel_bridge) StderrLine: {'line': b'  "px4_msgs" provides a separate development package or SDK, be sure it has\n'}
+[10.735703] (drone_dynamixel_bridge) StderrLine: {'line': b'  been installed.\n'}
+[10.737070] (drone_dynamixel_bridge) StderrLine: {'line': b'\n'}
+[10.738472] (drone_dynamixel_bridge) StderrLine: {'line': b'\x1b[0m\n'}
+[10.739852] (drone_dynamixel_bridge) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[10.741952] (drone_dynamixel_bridge) CommandEnded: {'returncode': 1}
+[10.761826] (-) TimerEvent: {}
+[10.806828] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[10.810031] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[10.862819] (-) TimerEvent: {}
+[10.964528] (-) TimerEvent: {}
+[11.019547] (drone_dynamixel_bridge) JobEnded: {'identifier': 'drone_dynamixel_bridge', 'rc': 1}
+[11.057531] (dynamixel_sdk) StderrLine: {'line': b'\x1b[01m\x1b[K/home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool dynamixel::GroupSyncRead::getError(uint8_t, uint8_t*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.059318] (dynamixel_sdk) StderrLine: {'line': b'\x1b[01m\x1b[K/home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp:201:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ksuggest parentheses around assignment used as truth value [\x1b[01;35m\x1b[K-Wparentheses\x1b[m\x1b[K]\n'}
+[11.061138] (dynamixel_sdk) StderrLine: {'line': b'  201 |   return \x1b[01;35m\x1b[Kerror[0] = error_list_[id][0]\x1b[m\x1b[K;\n'}
+[11.062585] (dynamixel_sdk) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.066076] (-) TimerEvent: {}
+[11.168116] (-) TimerEvent: {}
+[11.270064] (-) TimerEvent: {}
+[11.371707] (-) TimerEvent: {}
+[11.473285] (-) TimerEvent: {}
+[11.574793] (-) TimerEvent: {}
+[11.676272] (-) TimerEvent: {}
+[11.778178] (-) TimerEvent: {}
+[11.879570] (-) TimerEvent: {}
+[11.980992] (-) TimerEvent: {}
+[12.082355] (-) TimerEvent: {}
+[12.183842] (-) TimerEvent: {}
+[12.285341] (-) TimerEvent: {}
+[12.386766] (-) TimerEvent: {}
+[12.488227] (-) TimerEvent: {}
+[12.589746] (-) TimerEvent: {}
+[12.691140] (-) TimerEvent: {}
+[12.792425] (-) TimerEvent: {}
+[12.893822] (-) TimerEvent: {}
+[12.995267] (-) TimerEvent: {}
+[13.096728] (-) TimerEvent: {}
+[13.198151] (-) TimerEvent: {}
+[13.300185] (-) TimerEvent: {}
+[13.401669] (-) TimerEvent: {}
+[13.503203] (-) TimerEvent: {}
+[13.604921] (-) TimerEvent: {}
+[13.706609] (-) TimerEvent: {}
+[13.808110] (-) TimerEvent: {}
+[13.909595] (-) TimerEvent: {}
+[14.011009] (-) TimerEvent: {}
+[14.098554] (dynamixel_sdk) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_fast_bulk_read.cpp.o\x1b[0m\n'}
+[14.111372] (-) TimerEvent: {}
+[14.212815] (-) TimerEvent: {}
+[14.314298] (-) TimerEvent: {}
+[14.415915] (-) TimerEvent: {}
+[14.517541] (-) TimerEvent: {}
+[14.618987] (-) TimerEvent: {}
+[14.720488] (-) TimerEvent: {}
+[14.821959] (-) TimerEvent: {}
+[14.829344] (dynamixel_sdk) StderrLine: {'line': b'\x1b[01m\x1b[K/home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool dynamixel::GroupBulkRead::getError(uint8_t, uint8_t*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.831430] (dynamixel_sdk) StderrLine: {'line': b'\x1b[01m\x1b[K/home/odroid/ros2_thrust_ws/src/dynamixel_sdk/ros/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp:232:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ksuggest parentheses around assignment used as truth value [\x1b[01;35m\x1b[K-Wparentheses\x1b[m\x1b[K]\n'}
+[14.833493] (dynamixel_sdk) StderrLine: {'line': b'  232 |   return \x1b[01;35m\x1b[Kerror[0] = error_list_[id][0]\x1b[m\x1b[K;\n'}
+[14.835186] (dynamixel_sdk) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.922300] (-) TimerEvent: {}
+[15.023922] (-) TimerEvent: {}
+[15.125994] (-) TimerEvent: {}
+[15.227565] (-) TimerEvent: {}
+[15.329206] (-) TimerEvent: {}
+[15.430838] (-) TimerEvent: {}
+[15.532913] (-) TimerEvent: {}
+[15.634362] (-) TimerEvent: {}
+[15.736028] (-) TimerEvent: {}
+[15.755326] (dynamixel_sdk) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_fast_sync_read.cpp.o\x1b[0m\n'}
+[15.836278] (-) TimerEvent: {}
+[15.937681] (-) TimerEvent: {}
+[16.039098] (-) TimerEvent: {}
+[16.140567] (-) TimerEvent: {}
+[16.241965] (-) TimerEvent: {}
+[16.343572] (-) TimerEvent: {}
+[16.444981] (-) TimerEvent: {}
+[16.546320] (-) TimerEvent: {}
+[16.647716] (-) TimerEvent: {}
+[16.749230] (-) TimerEvent: {}
+[16.811980] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.c.o\x1b[0m\n'}
+[16.839994] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.c.o\x1b[0m\n'}
+[16.849591] (-) TimerEvent: {}
+[16.951172] (-) TimerEvent: {}
+[17.052806] (-) TimerEvent: {}
+[17.154415] (-) TimerEvent: {}
+[17.197114] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 13%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[17.254767] (-) TimerEvent: {}
+[17.282024] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[17.355079] (-) TimerEvent: {}
+[17.456586] (-) TimerEvent: {}
+[17.558110] (-) TimerEvent: {}
+[17.610059] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[17.658605] (-) TimerEvent: {}
+[17.760254] (-) TimerEvent: {}
+[17.861691] (-) TimerEvent: {}
+[17.963419] (-) TimerEvent: {}
+[18.064852] (-) TimerEvent: {}
+[18.075088] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 20%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[18.155143] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[18.165306] (-) TimerEvent: {}
+[18.266816] (-) TimerEvent: {}
+[18.368274] (-) TimerEvent: {}
+[18.469938] (-) TimerEvent: {}
+[18.571478] (-) TimerEvent: {}
+[18.596601] (dynamixel_sdk) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_handler.cpp.o\x1b[0m\n'}
+[18.671825] (-) TimerEvent: {}
+[18.773362] (-) TimerEvent: {}
+[18.874792] (-) TimerEvent: {}
+[18.976181] (-) TimerEvent: {}
+[19.077709] (-) TimerEvent: {}
+[19.179339] (-) TimerEvent: {}
+[19.280930] (-) TimerEvent: {}
+[19.382585] (-) TimerEvent: {}
+[19.484214] (-) TimerEvent: {}
+[19.585808] (-) TimerEvent: {}
+[19.592695] (dynamixel_sdk) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o\x1b[0m\n'}
+[19.686149] (-) TimerEvent: {}
+[19.787696] (-) TimerEvent: {}
+[19.889477] (-) TimerEvent: {}
+[19.971919] (dynamixel_sdk) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o\x1b[0m\n'}
+[19.989759] (-) TimerEvent: {}
+[20.091299] (-) TimerEvent: {}
+[20.192855] (-) TimerEvent: {}
+[20.294379] (-) TimerEvent: {}
+[20.395891] (-) TimerEvent: {}
+[20.497311] (-) TimerEvent: {}
+[20.598808] (-) TimerEvent: {}
+[20.700447] (-) TimerEvent: {}
+[20.801874] (-) TimerEvent: {}
+[20.903515] (-) TimerEvent: {}
+[21.005027] (-) TimerEvent: {}
+[21.107449] (-) TimerEvent: {}
+[21.209111] (-) TimerEvent: {}
+[21.310579] (-) TimerEvent: {}
+[21.411949] (-) TimerEvent: {}
+[21.513312] (-) TimerEvent: {}
+[21.614732] (-) TimerEvent: {}
+[21.716228] (-) TimerEvent: {}
+[21.817703] (-) TimerEvent: {}
+[21.919085] (-) TimerEvent: {}
+[22.020618] (-) TimerEvent: {}
+[22.048432] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.cpp.o\x1b[0m\n'}
+[22.068772] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.cpp.o\x1b[0m\n'}
+[22.120967] (-) TimerEvent: {}
+[22.222851] (-) TimerEvent: {}
+[22.324267] (-) TimerEvent: {}
+[22.425990] (-) TimerEvent: {}
+[22.527423] (-) TimerEvent: {}
+[22.629105] (-) TimerEvent: {}
+[22.730774] (-) TimerEvent: {}
+[22.832225] (-) TimerEvent: {}
+[22.933982] (-) TimerEvent: {}
+[23.035493] (-) TimerEvent: {}
+[23.137310] (-) TimerEvent: {}
+[23.238736] (-) TimerEvent: {}
+[23.340710] (-) TimerEvent: {}
+[23.442261] (-) TimerEvent: {}
+[23.544419] (-) TimerEvent: {}
+[23.646086] (-) TimerEvent: {}
+[23.747666] (-) TimerEvent: {}
+[23.775859] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.c.o\x1b[0m\n'}
+[23.795684] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.c.o\x1b[0m\n'}
+[23.848027] (-) TimerEvent: {}
+[23.949625] (-) TimerEvent: {}
+[24.051048] (-) TimerEvent: {}
+[24.152569] (-) TimerEvent: {}
+[24.254178] (-) TimerEvent: {}
+[24.276775] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[24.354491] (-) TimerEvent: {}
+[24.391377] (dynamixel_sdk) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk.so\x1b[0m\n'}
+[24.454842] (-) TimerEvent: {}
+[24.556416] (-) TimerEvent: {}
+[24.578726] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 41%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[24.647184] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[24.656753] (-) TimerEvent: {}
+[24.758381] (-) TimerEvent: {}
+[24.859917] (-) TimerEvent: {}
+[24.961403] (-) TimerEvent: {}
+[25.063492] (-) TimerEvent: {}
+[25.165124] (-) TimerEvent: {}
+[25.266676] (-) TimerEvent: {}
+[25.326920] (dynamixel_sdk) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk\n'}
+[25.367004] (-) TimerEvent: {}
+[25.388251] (dynamixel_sdk) JobEnded: {'identifier': 'dynamixel_sdk', 'rc': 'SIGINT'}
+[25.467336] (-) TimerEvent: {}
+[25.568786] (-) TimerEvent: {}
+[25.670377] (-) TimerEvent: {}
+[25.771661] (-) TimerEvent: {}
+[25.872992] (-) TimerEvent: {}
+[25.880100] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[25.973276] (-) TimerEvent: {}
+[26.058651] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 48%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[26.073583] (-) TimerEvent: {}
+[26.085188] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[26.173844] (-) TimerEvent: {}
+[26.275142] (-) TimerEvent: {}
+[26.376452] (-) TimerEvent: {}
+[26.477795] (-) TimerEvent: {}
+[26.579154] (-) TimerEvent: {}
+[26.680497] (-) TimerEvent: {}
+[26.781804] (-) TimerEvent: {}
+[26.883148] (-) TimerEvent: {}
+[26.984470] (-) TimerEvent: {}
+[27.086077] (-) TimerEvent: {}
+[27.125464] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o\x1b[0m\n'}
+[27.128258] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o\x1b[0m\n'}
+[27.186289] (-) TimerEvent: {}
+[27.287551] (-) TimerEvent: {}
+[27.326665] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[27.387867] (-) TimerEvent: {}
+[27.489232] (-) TimerEvent: {}
+[27.491497] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 62%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[27.589538] (-) TimerEvent: {}
+[27.691250] (-) TimerEvent: {}
+[27.792777] (-) TimerEvent: {}
+[27.893991] (-) TimerEvent: {}
+[27.995189] (-) TimerEvent: {}
+[28.096510] (-) TimerEvent: {}
+[28.187807] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o\x1b[0m\n'}
+[28.189180] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o\x1b[0m\n'}
+[28.196802] (-) TimerEvent: {}
+[28.298097] (-) TimerEvent: {}
+[28.399454] (-) TimerEvent: {}
+[28.500655] (-) TimerEvent: {}
+[28.602063] (-) TimerEvent: {}
+[28.703608] (-) TimerEvent: {}
+[28.805036] (-) TimerEvent: {}
+[28.906543] (-) TimerEvent: {}
+[29.008144] (-) TimerEvent: {}
+[29.109615] (-) TimerEvent: {}
+[29.211079] (-) TimerEvent: {}
+[29.312728] (-) TimerEvent: {}
+[29.414316] (-) TimerEvent: {}
+[29.515863] (-) TimerEvent: {}
+[29.617467] (-) TimerEvent: {}
+[29.719014] (-) TimerEvent: {}
+[29.820621] (-) TimerEvent: {}
+[29.841645] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'make[2]: *** [CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/build.make:92: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o] Interrupt\n'}
+[29.843483] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'make[2]: *** [CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/build.make:106: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o] Interrupt\n'}
+[29.844904] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:334: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/all] Interrupt\n'}
+[29.846359] (dynamixel_sdk_custom_interfaces) StderrLine: {'line': b'make: *** [Makefile:146: all] Interrupt\n'}
+[29.857157] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 'SIGINT'}
+[29.866954] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 'SIGINT'}
+[29.880622] (dynamixel_sdk_examples) JobSkipped: {'identifier': 'dynamixel_sdk_examples'}
+[29.881307] (flightstack) JobSkipped: {'identifier': 'flightstack'}
+[29.881862] (-) EventReactorShutdown: {}

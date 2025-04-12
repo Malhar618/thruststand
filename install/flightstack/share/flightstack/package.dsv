@@ -1,0 +1,8 @@
+source;share/flightstack/hook/cmake_prefix_path.ps1
+source;share/flightstack/hook/cmake_prefix_path.dsv
+source;share/flightstack/hook/cmake_prefix_path.sh
+source;share/flightstack/local_setup.bash
+source;share/flightstack/local_setup.dsv
+source;share/flightstack/local_setup.ps1
+source;share/flightstack/local_setup.sh
+source;share/flightstack/local_setup.zsh

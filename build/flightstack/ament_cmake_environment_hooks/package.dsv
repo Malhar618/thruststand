@@ -1,0 +1,4 @@
+source;share/flightstack/local_setup.bash
+source;share/flightstack/local_setup.dsv
+source;share/flightstack/local_setup.sh
+source;share/flightstack/local_setup.zsh

@@ -1,0 +1,1 @@
+Invoking command in '/home/odroid/ros2_thrust_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/px4_msgs -- -j4 -l4

@@ -1,0 +1,44 @@
+[0.207s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/dynamixel_sdk -- -j4 -l4
+[0.446s] [100%] Built target dynamixel_sdk
+[0.556s] Invoked command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/odroid/ros2_thrust_ws/build/dynamixel_sdk -- -j4 -l4
+[1.053s] Invoking command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/dynamixel_sdk
+[1.103s] -- Install configuration: ""
+[1.117s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/
+[1.123s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk
+[1.128s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h
+[1.130s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_bulk_read.h
+[1.133s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h
+[1.134s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h
+[1.136s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h
+[1.138s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h
+[1.140s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h
+[1.141s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h
+[1.146s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h
+[1.149s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h
+[1.151s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h
+[1.158s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_handler.h
+[1.166s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h
+[1.168s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_fast_sync_read.h
+[1.177s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h
+[1.179s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h
+[1.180s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so
+[1.182s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh
+[1.183s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv
+[1.184s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk
+[1.186s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk
+[1.195s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh
+[1.197s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv
+[1.198s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh
+[1.199s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv
+[1.201s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash
+[1.202s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh
+[1.203s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh
+[1.205s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv
+[1.219s] -- Installing: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv
+[1.228s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk
+[1.237s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.239s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[1.241s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake
+[1.243s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake
+[1.244s] -- Up-to-date: /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml
+[1.246s] Invoked command in '/home/odroid/ros2_thrust_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/odroid/ros2_thrust_ws/build/dynamixel_sdk
