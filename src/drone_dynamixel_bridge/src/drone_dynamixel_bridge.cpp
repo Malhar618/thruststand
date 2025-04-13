@@ -299,7 +299,7 @@ private:
         
         RCLCPP_DEBUG_THROTTLE(
             this->get_logger(), *this->get_clock(), 100,
-            "Angles (rad): [%.2f, %.2f, %.2f] | Rates (raw): [%.2f, %.2f, %.2f] | Filtered Accel: [%.2f, %.2f, %.2f] | Torques (Nm): [%.3f, %.3f, %.3f] | Currents (steps): [%ld, %ld, %ld]",
+            "Angles (rad): [%.2f, %.2f, %.2f] | Rates (raw): [%.2f, %.2f, %.2f] | Filtered Accel: [%.2f, %.2f, %.2f] | Torques (Nm): [%.3f, %.3f, %.3f] | Currents (steps): [%d, %d, %d]",
             phi_raw_, theta_raw_, psi_raw_,
             p_raw_, q_raw_, r_raw_,
             p_dot_filt_, q_dot_filt_, r_dot_filt_,
