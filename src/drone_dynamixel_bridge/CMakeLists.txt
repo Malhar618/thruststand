@@ -1,14 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
+project(drone_dynamixel_bridge)
+
+# If you're targeting Python 3 only, and on new CMake versions, set policy CMP0148 to NEW
 if(POLICY CMP0148)
   cmake_policy(SET CMP0148 NEW)
 endif()
 
-# Append CMake module path so that FindPythonInterp.cmake is available
-list(APPEND CMAKE_MODULE_PATH "/usr/share/cmake-3.16/Modules")
-
-project(drone_dynamixel_bridge)
-
-# Set C++ standard to C++17
+# Use C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -18,55 +16,46 @@ find_package(rclcpp REQUIRED)
 find_package(px4_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
-find_package(DynamixelSDK REQUIRED)
+find_package(dynamixel_sdk REQUIRED)
 find_package(Eigen3 REQUIRED)
-find_package(Python3 COMPONENTS Interpreter REQUIRED)
+# Modern Python 3 module (replaces old FindPythonInterp/FindPythonLibs)
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
-# Executable: drone_dynamixel_bridge
-add_executable(drone_dynamixel_bridge
-  src/drone_dynamixel_bridge.cpp
-)
+# drone_dynamixel_bridge executable
+add_executable(drone_dynamixel_bridge src/drone_dynamixel_bridge.cpp)
 ament_target_dependencies(drone_dynamixel_bridge
   rclcpp
   px4_msgs
   tf2
   tf2_geometry_msgs
-  DynamixelSDK
+  dynamixel_sdk
   Eigen3
 )
 target_link_libraries(drone_dynamixel_bridge Eigen3::Eigen)
 
-# Executable: motor_stepup
-add_executable(motor_stepup
-  src/motor_stepup.cpp
-)
+# motor_stepup executable
+add_executable(motor_stepup src/motor_stepup.cpp)
 ament_target_dependencies(motor_stepup
   rclcpp
   px4_msgs
 )
 
-# Executable: motor_stepdown
-add_executable(motor_stepdown
-  src/motor_stepdown.cpp
-)
+# motor_stepdown executable
+add_executable(motor_stepdown src/motor_stepdown.cpp)
 ament_target_dependencies(motor_stepdown
   rclcpp
   px4_msgs
 )
 
-# Executable: angular_state_logger
-add_executable(angular_state_logger
-  src/angular_state_logger.cpp
-)
+# angular_state_logger executable
+add_executable(angular_state_logger src/angular_state_logger.cpp)
 ament_target_dependencies(angular_state_logger
   rclcpp
   px4_msgs
 )
 
-# Executable: performance_index (from performance_index.cpp)
-add_executable(performance_index
-  src/performance_index.cpp
-)
+# performance_index executable
+add_executable(performance_index src/performance_index.cpp)
 ament_target_dependencies(performance_index
   rclcpp
   px4_msgs
@@ -76,7 +65,7 @@ ament_target_dependencies(performance_index
 )
 target_link_libraries(performance_index Eigen3::Eigen)
 
-# Install targets into the lib directory of your package
+# Install the targets
 install(TARGETS
   drone_dynamixel_bridge
   motor_stepup
