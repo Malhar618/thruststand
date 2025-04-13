@@ -156,19 +156,20 @@ public:
   ~DroneDynamixelBridgeNode() {
     RCLCPP_INFO(this->get_logger(), "Shutting down node...");
     for (uint8_t id : DXL_IDS) {
-        // *** FIXED: Use is_open() instead of isOpen() ***
-        if (portHandler_ && packetHandler_ && portHandler_->is_open()) {
+         // *** FIXED: Use correct function name isOpen() ***
+        if (portHandler_ && packetHandler_ && portHandler_->isOpen()) {
             packetHandler_->write1ByteTxRx(portHandler_, id, ADDR_TORQUE_ENABLE, 0, nullptr);
             rclcpp::sleep_for(10ms);
         }
     }
-     // *** FIXED: Use is_open() instead of isOpen() ***
-    if (portHandler_ && portHandler_->is_open()) {
+    // *** FIXED: Use correct function name isOpen() ***
+    if (portHandler_ && portHandler_->isOpen()) {
         portHandler_->closePort();
         RCLCPP_INFO(this->get_logger(), "Dynamixel port closed.");
     }
     RCLCPP_INFO(this->get_logger(), "Shutdown complete.");
   }
+
 
 private:
     // --- State Variables ---
@@ -221,20 +222,10 @@ private:
     void timer_callback() {
         // --- Timekeeping & Data Acq ---
         rclcpp::Time current_time = this->now(); double dt = (current_time - prev_time_).seconds();
-        if (dt <= 1e-6 || dt > 0.1) { // Prevent issues with invalid timestep
-            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "Invalid timestep dt = %.4f s. Skipping.", dt);
-             return;
-        }
-        prev_time_ = current_time;
-
+        if (dt <= 1e-6 || dt > 0.1) { return; } prev_time_ = current_time;
         px4_msgs::msg::VehicleOdometry::SharedPtr odom;
-        { std::lock_guard<std::mutex> lock(odom_mutex_);
-          if(!odometry_received_) { RCLCPP_WARN_THROTTLE(this->get_logger(),*this->get_clock(),1000,"Waiting for Odometry..."); return; }
-          odom = latest_odometry_msg_; }
-        { std::lock_guard<std::mutex> lock(ang_vel_mutex_);
-          if(!angular_velocity_received_) { RCLCPP_WARN_THROTTLE(this->get_logger(),*this->get_clock(),1000,"Waiting for Angular Velocity..."); return; }
-          /* p_raw_, q_raw_, r_raw_ updated in callback */ }
-
+        { std::lock_guard<std::mutex> lock(odom_mutex_); if(!odometry_received_) { RCLCPP_WARN_THROTTLE(this->get_logger(),*this->get_clock(),2000,"Waiting for Odometry..."); return; } odom = latest_odometry_msg_; }
+        { std::lock_guard<std::mutex> lock(ang_vel_mutex_); if(!angular_velocity_received_) { RCLCPP_WARN_THROTTLE(this->get_logger(),*this->get_clock(),2000,"Waiting for Angular Velocity..."); return; } /* p_raw_ updated */}
         Eigen::Quaterniond q_I_J(odom->q[0], odom->q[1], odom->q[2], odom->q[3]); q_I_J.normalize();
         C_J_I_ = q_I_J.toRotationMatrix().transpose();
 
@@ -321,14 +312,14 @@ private:
         }
 
         // --- Logging ---
-        // *** FIXED: Use %d for int32_t types ***
+         // *** FIXED: Use %d format specifier for int32_t ***
         RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 100, // Log @ 10 Hz
           "AnglesRaw(p,t,y): [%.2f,%.2f,%.2f] | RatesRaw(p,q,r): [%.2f,%.2f,%.2f] | AccelFilt(p,q,r): [%.2f,%.2f,%.2f] | E RatesRaw(p,t): [%.2f,%.2f] | TorqCmd: [%.3f,%.3f,%.3f] | CurrCmd: [%d,%d,%d]",
           phi_raw_, theta_raw_, psi_raw_,         // Log raw angles
           p_raw_, q_raw_, r_raw_,                 // Log raw body rates
           p_dot_filt_, q_dot_filt_, r_dot_filt_, // Log filtered body accels
           phi_dot_raw_calc_, theta_dot_raw_calc_, // Log euler rates from raw pqr
-          roll_torque, pitch_torque, yaw_torque, roll_curr, pitch_curr, yaw_curr); // Use %d
+          roll_torque, pitch_torque, yaw_torque, roll_curr, pitch_curr, yaw_curr); // Use %d for int32_t
     }
 
     // --- Helper Functions ---
@@ -336,7 +327,7 @@ private:
         portHandler_ = dynamixel::PortHandler::getPortHandler(DEVICENAME);
         packetHandler_ = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
         if (!portHandler_ || !packetHandler_) {RCLCPP_ERROR(this->get_logger(),"Failed get SDK handlers"); return false;}
-         // *** FIXED: Use is_open() ***
+        // *** FIXED: Use isOpen() ***
         if (!portHandler_->openPort()) { RCLCPP_ERROR(this->get_logger(), "Failed open port: %s", DEVICENAME); return false; }
         if (!portHandler_->setBaudRate(BAUDRATE)) { RCLCPP_ERROR(this->get_logger(), "Failed set baudrate: %d", BAUDRATE); portHandler_->closePort(); return false; }
         RCLCPP_INFO(this->get_logger(), "Opened port %s @ %d baud", DEVICENAME, BAUDRATE);
@@ -356,9 +347,7 @@ private:
         } else { // Gimbal lock case
             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "Gimbal lock detected! Euler angles inaccurate.");
             phi = 0.0; // Set roll arbitrarily to 0
-            // Use elements from row 1 which are well-defined in lock: C_J_I(1,0) and C_J_I(1,1)
-            psi = atan2(-R_Body_I(1,0), R_Body_I(1,1)); // atan2(-sin(phi-psi), cos(phi-psi)) or atan2(sin(psi+phi), cos(psi+phi))
-                                                       // If phi=0, becomes atan2(sin(+/-psi), cos(+/-psi)) -> +/- psi
+            psi = atan2(-R_Body_I(1,0), R_Body_I(1,1)); // Use atan2( -R(1,0)/cos(phi), R(1,1)/cos(phi) ) -> simplifies if phi=0
         }
     }
 
