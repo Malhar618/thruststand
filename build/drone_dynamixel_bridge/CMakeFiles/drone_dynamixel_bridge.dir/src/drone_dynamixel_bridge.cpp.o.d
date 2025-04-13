@@ -51,6 +51,7 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/aarch64-linux-gnu/sys/select.h \
  /usr/include/aarch64-linux-gnu/bits/select.h \
+ /usr/include/aarch64-linux-gnu/bits/select2.h \
  /usr/include/aarch64-linux-gnu/sys/types.h \
  /usr/include/aarch64-linux-gnu/bits/types/clock_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h \
@@ -117,6 +118,7 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/FILE.h \
  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/aarch64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/9/ext/atomicity.h \
  /usr/include/aarch64-linux-gnu/c++/9/bits/gthr.h \
  /usr/include/aarch64-linux-gnu/c++/9/bits/gthr-default.h \
@@ -153,7 +155,9 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /usr/include/c++/9/ext/string_conversions.h /usr/include/c++/9/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/9/bits/std_abs.h /usr/include/c++/9/cstdio \
  /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
@@ -162,9 +166,10 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /usr/include/c++/9/cerrno /usr/include/errno.h \
- /usr/include/aarch64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/aarch64-linux-gnu/asm/errno.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio2.h /usr/include/c++/9/cerrno \
+ /usr/include/errno.h /usr/include/aarch64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/aarch64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/9/bits/basic_string.tcc \
@@ -253,6 +258,8 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /opt/ros/galactic/include/rcutils/logging.h \
  /opt/ros/galactic/include/rcutils/error_handling.h \
  /usr/include/c++/9/stdlib.h /usr/include/string.h /usr/include/strings.h \
+ /usr/include/aarch64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/aarch64-linux-gnu/bits/string_fortified.h \
  /opt/ros/galactic/include/rcutils/snprintf.h \
  /opt/ros/galactic/include/rcutils/time.h \
  /opt/ros/galactic/include/rcutils/types.h \
@@ -432,6 +439,7 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+ /usr/include/aarch64-linux-gnu/bits/mathinline.h \
  /usr/include/c++/9/bits/specfun.h /usr/include/c++/9/tr1/gamma.tcc \
  /usr/include/c++/9/tr1/special_function_util.h \
  /usr/include/c++/9/tr1/bessel_function.tcc \
@@ -579,20 +587,10 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_odometry__struct.hpp \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_odometry__builder.hpp \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_odometry__traits.hpp \
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_attitude_setpoint.hpp \
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_attitude_setpoint__struct.hpp \
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_attitude_setpoint__builder.hpp \
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_attitude_setpoint__traits.hpp \
- /opt/ros/galactic/include/tf2/LinearMath/Quaternion.h \
- /opt/ros/galactic/include/tf2/LinearMath/Vector3.h \
- /opt/ros/galactic/include/tf2/LinearMath/Scalar.h \
- /usr/include/c++/9/math.h /usr/include/c++/9/cfloat \
- /usr/lib/gcc/aarch64-linux-gnu/9/include/float.h \
- /opt/ros/galactic/include/tf2/LinearMath/MinMax.h \
- /opt/ros/galactic/include/tf2/visibility_control.h \
- /opt/ros/galactic/include/tf2/LinearMath/QuadWord.h \
- /opt/ros/galactic/include/tf2/LinearMath/Matrix3x3.h \
- /opt/ros/galactic/include/tf2/LinearMath/Quaternion.h \
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_angular_velocity.hpp \
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_angular_velocity__struct.hpp \
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_angular_velocity__builder.hpp \
+ /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_angular_velocity__traits.hpp \
  /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h \
  /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h \
  /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/dynamixel_sdk/port_handler.h \
@@ -782,4 +780,5 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
- /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+ /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /usr/include/eigen3/Eigen/Geometry
