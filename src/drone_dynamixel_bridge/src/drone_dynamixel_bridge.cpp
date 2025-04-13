@@ -21,30 +21,32 @@ const uint8_t DXL_ID_PITCH  = 1;
 const uint8_t DXL_ID_YAW    = 3;
 const std::vector<uint8_t> DXL_IDS = {DXL_ID_ROLL, DXL_ID_PITCH, DXL_ID_YAW};
 
-const char* DEVICENAME = "/dev/ttyUSB1"; // VERIFY this port name
+const char* DEVICENAME = "/dev/ttyUSB1"; // <<< VERIFY this port name
 const int BAUDRATE = 4000000;
 const float PROTOCOL_VERSION = 2.0;
 
 // Addresses and lengths for control:
-const uint16_t ADDR_OPERATING_MODE = 11; 
-const uint16_t ADDR_TORQUE_ENABLE  = 64; 
+const uint16_t ADDR_OPERATING_MODE = 11;
+const uint16_t ADDR_TORQUE_ENABLE  = 64;
 const uint16_t ADDR_GOAL_CURRENT   = 102;
+const uint16_t LEN_OPERATING_MODE  = 1; // Needed for initialization check potentially
+const uint16_t LEN_TORQUE_ENABLE   = 1;
 const uint16_t LEN_GOAL_CURRENT    = 2;
 
 const double CURRENT_STEP = 0.00269; // 2.69 mA per unit for MX-106 2.0
-const double DEFAULT_CURRENT_LIMIT_STEPS = 1193.0; // Clamping limit
+const double DEFAULT_CURRENT_LIMIT_STEPS = 1193.0; // Clamping limit, ~3.21 A
 
 // --- Filter Differentiator Class ---
 class FilterDiff {
 public:
     FilterDiff(double wn, double zeta) : wn_(wn), zeta_(zeta), x1_(0.0), x2_(0.0), initialized_(false) {}
-    
+
     void update(double input, double dt) {
         if (dt <= 1e-9) return;
-        if (!initialized_) { 
-            x1_ = input; 
-            x2_ = 0.0; 
-            initialized_ = true; 
+        if (!initialized_) {
+            x1_ = input;
+            x2_ = 0.0;
+            initialized_ = true;
         } else {
             double x1_dot = x2_;
             double x2_dot = -wn_ * wn_ * x1_ - 2.0 * zeta_ * wn_ * x2_ + wn_ * wn_ * input;
@@ -52,11 +54,11 @@ public:
             x2_ += x2_dot * dt;
         }
     }
-    
+
     double getFilteredDerivative() const { return x2_; }
     void reset(double initial_value = 0.0) { x1_ = initial_value; x2_ = 0.0; initialized_ = true; }
     void resetState(double val, double deriv) { x1_ = val; x2_ = deriv; initialized_ = true; }
-    
+
 private:
     double wn_, zeta_, x1_, x2_;
     bool initialized_;
@@ -66,7 +68,7 @@ private:
 class EqDynamics {
 public:
     EqDynamics() {}
-    
+
     Eigen::Matrix3d crossProductMatrix(const Eigen::Vector3d &v) const {
         Eigen::Matrix3d m;
         m <<  0,    -v.z(),  v.y(),
@@ -74,15 +76,15 @@ public:
              -v.y(),  v.x(),  0;
         return m;
     }
-    
+
     Eigen::Vector3d computeIDomegaDt(const Eigen::Matrix3d &I, const Eigen::Vector3d &omega_dot) const {
         return I * omega_dot;
     }
-    
+
     Eigen::Vector3d computeOmegaCrossIomega(const Eigen::Matrix3d &I, const Eigen::Vector3d &omega1, const Eigen::Vector3d &omega2) const {
         return omega1.cross(I * omega2);
     }
-    
+
     // Compute torque using raw velocity and filtered acceleration.
     Eigen::Vector3d compute_torque_simplified_mixed(
         const Eigen::Matrix3d &ILi_inLi, const Eigen::Matrix3d &CJLi,
@@ -111,15 +113,16 @@ public:
                                  -0.000049,  1.110062,  0.000781,
                                  -0.000104,  0.000781,  1.286313).finished())
   {
-    RCLCPP_INFO(this->get_logger(), "Initializing DroneDynamixelBridgeNode (using odometry and angular velocity)...");
+    RCLCPP_INFO(this->get_logger(), "Initializing DroneDynamixelBridgeNode (Raw Angles/Vel, Axis-Filt Alpha)...");
 
     // --- Set Filter Parameters ---
-    double filter_omega_p_deriv = 70.0; // For p (roll rate) derivative
-    double filter_zeta_p_deriv  = 0.7;
-    double filter_omega_q_deriv = 70.0; // For q (pitch rate)
-    double filter_zeta_q_deriv  = 0.7;
-    double filter_omega_r_deriv = 70.0; // For r (yaw rate)
-    double filter_zeta_r_deriv  = 0.7;
+    // Filters ONLY for deriving body acceleration - SEPARATE PARAMS PER AXIS
+    double filter_omega_p_deriv = 70.0; // Filter Omega for p_raw -> p_dot_filt <<< TUNE
+    double filter_zeta_p_deriv  = 0.7;  // Filter Zeta for p_raw -> p_dot_filt <<< TUNE
+    double filter_omega_q_deriv = 70.0; // Filter Omega for q_raw -> q_dot_filt <<< TUNE (Init same as p)
+    double filter_zeta_q_deriv  = 0.7;  // Filter Zeta for q_raw -> q_dot_filt <<< TUNE (Init same as p)
+    double filter_omega_r_deriv = 70.0; // Filter Omega for r_raw -> r_dot_filt <<< TUNE (Init same as p)
+    double filter_zeta_r_deriv  = 0.7;  // Filter Zeta for r_raw -> r_dot_filt <<< TUNE (Init same as p)
 
     // --- Subscriptions ---
     auto qos = rclcpp::QoS(10).best_effort();
@@ -131,7 +134,7 @@ public:
         std::bind(&DroneDynamixelBridgeNode::angular_velocity_callback, this, std::placeholders::_1));
 
     // --- Timer Initialization ---
-    timer_ = this->create_wall_timer(5ms, std::bind(&DroneDynamixelBridgeNode::timer_callback, this));
+    timer_ = this->create_wall_timer(5ms, std::bind(&DroneDynamixelBridgeNode::timer_callback, this)); // 200 Hz
 
     // --- Initialize Dynamixels via SDK ---
     if (!initialize_dynamixels()) {
@@ -153,12 +156,14 @@ public:
   ~DroneDynamixelBridgeNode() {
     RCLCPP_INFO(this->get_logger(), "Shutting down node...");
     for (uint8_t id : DXL_IDS) {
-        if (portHandler_ && packetHandler_ && portHandler_->isOpen()) {
+        // *** FIXED: Use is_open() instead of isOpen() ***
+        if (portHandler_ && packetHandler_ && portHandler_->is_open()) {
             packetHandler_->write1ByteTxRx(portHandler_, id, ADDR_TORQUE_ENABLE, 0, nullptr);
             rclcpp::sleep_for(10ms);
         }
     }
-    if (portHandler_ && portHandler_->isOpen()) {
+     // *** FIXED: Use is_open() instead of isOpen() ***
+    if (portHandler_ && portHandler_->is_open()) {
         portHandler_->closePort();
         RCLCPP_INFO(this->get_logger(), "Dynamixel port closed.");
     }
@@ -201,7 +206,7 @@ private:
         latest_odometry_msg_ = msg;
         odometry_received_ = true;
     }
-    
+
     // --- Callback for Angular Velocity ---
     void angular_velocity_callback(const px4_msgs::msg::VehicleAngularVelocity::SharedPtr msg) {
         std::lock_guard<std::mutex> lock(ang_vel_mutex_);
@@ -214,255 +219,235 @@ private:
 
     // --- Timer Callback ---
     void timer_callback() {
-        rclcpp::Time current_time = this->now();
-        double dt = (current_time - prev_time_).seconds();
-        if (dt <= 1e-6 || dt > 0.1) { return; }
+        // --- Timekeeping & Data Acq ---
+        rclcpp::Time current_time = this->now(); double dt = (current_time - prev_time_).seconds();
+        if (dt <= 1e-6 || dt > 0.1) { // Prevent issues with invalid timestep
+            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "Invalid timestep dt = %.4f s. Skipping.", dt);
+             return;
+        }
         prev_time_ = current_time;
-        
+
         px4_msgs::msg::VehicleOdometry::SharedPtr odom;
-        {
-            std::lock_guard<std::mutex> lock(odom_mutex_);
-            if (!odometry_received_) return;
-            odom = latest_odometry_msg_;
-        }
-        {
-            std::lock_guard<std::mutex> lock(ang_vel_mutex_);
-            if (!angular_velocity_received_) return;
-        }
-        
-        // Use odometry quaternion (PX4 order: q[0]=w, q[1]=x, q[2]=y, q[3]=z)
-        Eigen::Quaterniond q_I_J(odom->q[0], odom->q[1], odom->q[2], odom->q[3]);
-        q_I_J.normalize();
+        { std::lock_guard<std::mutex> lock(odom_mutex_);
+          if(!odometry_received_) { RCLCPP_WARN_THROTTLE(this->get_logger(),*this->get_clock(),1000,"Waiting for Odometry..."); return; }
+          odom = latest_odometry_msg_; }
+        { std::lock_guard<std::mutex> lock(ang_vel_mutex_);
+          if(!angular_velocity_received_) { RCLCPP_WARN_THROTTLE(this->get_logger(),*this->get_clock(),1000,"Waiting for Angular Velocity..."); return; }
+          /* p_raw_, q_raw_, r_raw_ updated in callback */ }
+
+        Eigen::Quaterniond q_I_J(odom->q[0], odom->q[1], odom->q[2], odom->q[3]); q_I_J.normalize();
         C_J_I_ = q_I_J.toRotationMatrix().transpose();
-        
-        // Extract Euler angles (assumed ZYX sequence) from C_J_I_
-        extractEulerAnglesZYX(C_J_I_, phi_raw_, theta_raw_, psi_raw_);
-        
-        // Update filters for body acceleration derivation
-        if (first_run_) {
-            fd_p_deriv_->reset(p_raw_);
-            fd_q_deriv_->reset(q_raw_);
-            fd_r_deriv_->reset(r_raw_);
+
+        // --- Extract Raw Angles ---
+        extractEulerAnglesZYX(C_J_I_, phi_raw_, theta_raw_, psi_raw_); // Raw angles
+
+        // --- Get Filtered Body Acceleration (using separate filters per axis) ---
+        if (first_run_) { // Reset filters on first valid loop
+            fd_p_deriv_->reset(p_raw_); fd_q_deriv_->reset(q_raw_); fd_r_deriv_->reset(r_raw_);
             first_run_ = false;
-            RCLCPP_INFO(this->get_logger(), "Initial run: Filters reset.");
+            RCLCPP_INFO(this->get_logger(), "First run: Initializing accel filters.");
             return;
         }
-        fd_p_deriv_->update(p_raw_, dt);
-        fd_q_deriv_->update(q_raw_, dt);
-        fd_r_deriv_->update(r_raw_, dt);
+        fd_p_deriv_->update(p_raw_, dt); fd_q_deriv_->update(q_raw_, dt); fd_r_deriv_->update(r_raw_, dt);
         p_dot_filt_ = fd_p_deriv_->getFilteredDerivative();
         q_dot_filt_ = fd_q_deriv_->getFilteredDerivative();
         r_dot_filt_ = fd_r_deriv_->getFilteredDerivative();
-        
-        Eigen::Vector3d omega_JI_raw(p_raw_, q_raw_, r_raw_);
-        Eigen::Vector3d omega_JI_dot_filt(p_dot_filt_, q_dot_filt_, r_dot_filt_);
-        
-        // Calculate Euler rates from raw body rates and Euler angles
-        calculateEulerRates(phi_raw_, theta_raw_, p_raw_, q_raw_, r_raw_,
-                             phi_dot_raw_calc_, theta_dot_raw_calc_, psi_dot_raw_calc_);
-        
-        // Update DCMs (for gimbal transformation) using raw angles
-        update_dcms(phi_raw_, theta_raw_, psi_raw_);
-        
-        // --- Kinematics Calculations ---
-        // (For brevity, many intermediate transformations omitted; assume C_J_LPR_ and C_J_LYR_ updated by update_dcms())
-        // Here we demonstrate computation for one component (e.g., UAV body torque estimation)
+        Eigen::Vector3d omega_JI_raw(p_raw_, q_raw_, r_raw_);                 // Raw absolute omega
+        Eigen::Vector3d omega_JI_dot_filt(p_dot_filt_, q_dot_filt_, r_dot_filt_); // Filtered absolute alpha
+
+        // --- Calculate Raw Euler Rates ---
+        calculateEulerRates(phi_raw_, theta_raw_, p_raw_, q_raw_, r_raw_, phi_dot_raw_calc_, theta_dot_raw_calc_, psi_dot_raw_calc_);
+
+        // --- Update DCMs using Raw Angles ---
+        update_dcms(phi_raw_, theta_raw_, psi_raw_); // Use raw angles
+
+        // --- Calculate Kinematics (Raw Vel / Filt Accel / Zero Rel Accel) ---
+        // Relative Raw Rates (in J) using raw Euler rates
+        Eigen::Vector3d omega_LRB_J_raw(0,0,0);
+        Eigen::Vector3d omega_LPR_J_raw(phi_dot_raw_calc_, 0, 0); // <<< Use raw calc, VERIFY AXIS X
+        Eigen::Vector3d omega_LPR_LYR_in_LPR_raw(0, theta_dot_raw_calc_, 0); // <<< Use raw calc, VERIFY AXIS Y in LPR
+        Eigen::Vector3d omega_LPR_LYR_in_J_raw = C_J_LPR_ * omega_LPR_LYR_in_LPR_raw; // Uses DCM from raw angles
+        Eigen::Vector3d omega_LYR_J_raw = -(omega_LRB_J_raw + omega_LPR_J_raw + omega_LPR_LYR_in_J_raw);
+
+        // Relative Filtered Accels -> ASSUMED ZERO
+        Eigen::Vector3d omega_dot_LRB_J_filt(0,0,0);
+        Eigen::Vector3d omega_dot_LPR_J_filt(0,0,0); // Assume zero phi_ddot
+        Eigen::Vector3d omega_dot_LYR_J_filt(0,0,0); // Assume zero theta_ddot -> zero rel accel approx
+        RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 5000, "Assuming ZERO relative angular acceleration.");
+
+        // Absolute Raw Velocity (in J) = omega_LiJ_raw + omega_JI_raw
         Eigen::Vector3d omega_UAV_I_inJ_raw = omega_JI_raw;
+        Eigen::Vector3d omega_RB_I_inJ_raw  = omega_LRB_J_raw + omega_JI_raw; // = omega_JI_raw
+        Eigen::Vector3d omega_PR_I_inJ_raw  = omega_LPR_J_raw + omega_JI_raw;
+        Eigen::Vector3d omega_YR_I_inJ_raw  = omega_LYR_J_raw + omega_JI_raw;
+
+        // Absolute Filtered Acceleration (in J) = omega_dot_LiJ_filt(0) + omega_JI_dot_filt + omega_JI_raw x omega_LiJ_raw
+        Eigen::Vector3d tt_term_PR_raw = omega_JI_raw.cross(omega_LPR_J_raw); // <<< Use Raw Omegas
+        Eigen::Vector3d tt_term_YR_raw = omega_JI_raw.cross(omega_LYR_J_raw); // <<< Use Raw Omegas
         Eigen::Vector3d omega_dot_UAV_I_inJ_filt = omega_JI_dot_filt;
-        Eigen::Matrix3d C_LUAV_J = Eigen::Matrix3d::Identity(); // Identity if no transformation needed
-        Eigen::Vector3d omega_UAV_I_inLi_raw = C_LUAV_J * omega_UAV_I_inJ_raw;
-        Eigen::Vector3d omega_dot_UAV_I_inLi_filt = C_LUAV_J * omega_dot_UAV_I_inJ_filt;
-        
-        // Compute UAV torque (simplified) using dynamics
-        Eigen::Vector3d T_UAV = dynamics_->compute_torque_simplified_mixed(I_CUAV_, C_LUAV_J.transpose(),
-                                                             omega_UAV_I_inLi_raw, omega_dot_UAV_I_inLi_filt);
-        
-        // For demonstration, assume only UAV torque is used to cancel inertia:
-        Eigen::Vector3d required_motor_torque = -T_UAV; // Negate to cancel inertia
-        
-        // Convert required torque to motor (gimbal) torques via inverse Jacobian
-        Eigen::Matrix3d Gamma_inv = compute_inverse_jacobian(phi_raw_, theta_raw_);
+        Eigen::Vector3d omega_dot_RB_I_inJ_filt  = omega_dot_LRB_J_filt + omega_JI_dot_filt; // = omega_JI_dot_filt
+        Eigen::Vector3d omega_dot_PR_I_inJ_filt  = omega_dot_LPR_J_filt + omega_JI_dot_filt + tt_term_PR_raw; // = 0 + omega_JI_dot_filt + tt_term_PR_raw
+        Eigen::Vector3d omega_dot_YR_I_inJ_filt  = omega_dot_LYR_J_filt + omega_JI_dot_filt + tt_term_YR_raw; // = 0 + omega_JI_dot_filt + tt_term_YR_raw
+
+        // --- Transform to Local Li Frames ---
+        Eigen::Matrix3d C_LPR_J=C_J_LPR_.transpose(), C_LYR_J=C_J_LYR_.transpose(); // Uses DCM from raw angles
+        Eigen::Matrix3d C_LUAV_J=Eigen::Matrix3d::Identity(), C_LRB_J=Eigen::Matrix3d::Identity();
+        // Raw Velocities in Li
+        Eigen::Vector3d omega_UAV_I_inLi_raw = C_LUAV_J*omega_UAV_I_inJ_raw;
+        Eigen::Vector3d omega_RB_I_inLi_raw  = C_LRB_J*omega_RB_I_inJ_raw;
+        Eigen::Vector3d omega_PR_I_inLi_raw  = C_LPR_J*omega_PR_I_inJ_raw;
+        Eigen::Vector3d omega_YR_I_inLi_raw  = C_LYR_J*omega_YR_I_inJ_raw;
+        // Filtered Accelerations in Li
+        Eigen::Vector3d omega_dot_UAV_I_inLi_filt = C_LUAV_J*omega_dot_UAV_I_inJ_filt;
+        Eigen::Vector3d omega_dot_RB_I_inLi_filt  = C_LRB_J*omega_dot_RB_I_inJ_filt;
+        Eigen::Vector3d omega_dot_PR_I_inLi_filt  = C_LPR_J*omega_dot_PR_I_inJ_filt;
+        Eigen::Vector3d omega_dot_YR_I_inLi_filt  = C_LYR_J*omega_dot_YR_I_inJ_filt;
+
+        // --- Calculate Component Torques (MIXED RAW/FILT) ---
+        Eigen::Vector3d T_UAV = dynamics_->compute_torque_simplified_mixed(I_CUAV_, C_LUAV_J.transpose(), omega_UAV_I_inLi_raw, omega_dot_UAV_I_inLi_filt);
+        Eigen::Vector3d T_RB  = dynamics_->compute_torque_simplified_mixed(I_CRB_, C_J_LRB_, omega_RB_I_inLi_raw, omega_dot_RB_I_inLi_filt);
+        Eigen::Vector3d T_PR  = dynamics_->compute_torque_simplified_mixed(I_CPR_, C_J_LPR_, omega_PR_I_inLi_raw, omega_dot_PR_I_inLi_filt);
+        Eigen::Vector3d T_YR  = dynamics_->compute_torque_simplified_mixed(I_CYR_, C_J_LYR_, omega_YR_I_inLi_raw, omega_dot_YR_I_inLi_filt);
+
+        // --- Total Torque, Jacobian, Current, Send ---
+        Eigen::Vector3d total_inertial_torque = T_UAV + T_RB + T_PR + T_YR;
+        Eigen::Vector3d required_motor_torque = -total_inertial_torque; // Negate to cancel inertia
+        Eigen::Matrix3d Gamma_inv = compute_inverse_jacobian(phi_raw_, theta_raw_); // <<< Use raw angles
         Eigen::Vector3d gimbal_torques = Gamma_inv * required_motor_torque;
-        double roll_torque = gimbal_torques.x();
-        double pitch_torque = gimbal_torques.y();
-        double yaw_torque = gimbal_torques.z();
-        
-        // Convert torques to goal current steps for each motor
-        int32_t roll_curr = torque_to_goal_current_calibrated(roll_torque);
-        int32_t pitch_curr = torque_to_goal_current_calibrated(pitch_torque);
-        int32_t yaw_curr = torque_to_goal_current_calibrated(yaw_torque);
-        
-        // Send current commands to Dynamixel motors using SyncWrite
+        double roll_torque=gimbal_torques.x(), pitch_torque=gimbal_torques.y(), yaw_torque=gimbal_torques.z();
+        int32_t roll_curr=torque_to_goal_current_calibrated(roll_torque), pitch_curr=torque_to_goal_current_calibrated(pitch_torque), yaw_curr=torque_to_goal_current_calibrated(yaw_torque);
         if (!send_dynamixel_commands(roll_curr, pitch_curr, yaw_curr)) {
-            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "Failed to send Dynamixel commands.");
+             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "Failed send Dynamixel commands.");
         }
-        
-        RCLCPP_DEBUG_THROTTLE(
-            this->get_logger(), *this->get_clock(), 100,
-            "Angles (rad): [%.2f, %.2f, %.2f] | Rates (raw): [%.2f, %.2f, %.2f] | Filtered Accel: [%.2f, %.2f, %.2f] | Torques (Nm): [%.3f, %.3f, %.3f] | Currents (steps): [%d, %d, %d]",
-            phi_raw_, theta_raw_, psi_raw_,
-            p_raw_, q_raw_, r_raw_,
-            p_dot_filt_, q_dot_filt_, r_dot_filt_,
-            roll_torque, pitch_torque, yaw_torque,
-            static_cast<long>(roll_curr), static_cast<long>(pitch_curr), static_cast<long>(yaw_curr)
-        );
+
+        // --- Logging ---
+        // *** FIXED: Use %d for int32_t types ***
+        RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 100, // Log @ 10 Hz
+          "AnglesRaw(p,t,y): [%.2f,%.2f,%.2f] | RatesRaw(p,q,r): [%.2f,%.2f,%.2f] | AccelFilt(p,q,r): [%.2f,%.2f,%.2f] | E RatesRaw(p,t): [%.2f,%.2f] | TorqCmd: [%.3f,%.3f,%.3f] | CurrCmd: [%d,%d,%d]",
+          phi_raw_, theta_raw_, psi_raw_,         // Log raw angles
+          p_raw_, q_raw_, r_raw_,                 // Log raw body rates
+          p_dot_filt_, q_dot_filt_, r_dot_filt_, // Log filtered body accels
+          phi_dot_raw_calc_, theta_dot_raw_calc_, // Log euler rates from raw pqr
+          roll_torque, pitch_torque, yaw_torque, roll_curr, pitch_curr, yaw_curr); // Use %d
     }
-    
+
     // --- Helper Functions ---
     bool initialize_dynamixels() {
         portHandler_ = dynamixel::PortHandler::getPortHandler(DEVICENAME);
         packetHandler_ = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
-        if (!portHandler_ || !packetHandler_) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to get SDK handlers");
-            return false;
-        }
-        if (!portHandler_->openPort()) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open port: %s", DEVICENAME);
-            return false;
-        }
-        if (!portHandler_->setBaudRate(BAUDRATE)) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to set baudrate: %d", BAUDRATE);
-            portHandler_->closePort();
-            return false;
-        }
+        if (!portHandler_ || !packetHandler_) {RCLCPP_ERROR(this->get_logger(),"Failed get SDK handlers"); return false;}
+         // *** FIXED: Use is_open() ***
+        if (!portHandler_->openPort()) { RCLCPP_ERROR(this->get_logger(), "Failed open port: %s", DEVICENAME); return false; }
+        if (!portHandler_->setBaudRate(BAUDRATE)) { RCLCPP_ERROR(this->get_logger(), "Failed set baudrate: %d", BAUDRATE); portHandler_->closePort(); return false; }
         RCLCPP_INFO(this->get_logger(), "Opened port %s @ %d baud", DEVICENAME, BAUDRATE);
-        uint8_t op_mode = 0; // Set to 0 for Current Control
-        for (uint8_t id : DXL_IDS) {
-            write_byte_with_log(id, ADDR_OPERATING_MODE, op_mode, "Set OpMode");
-            rclcpp::sleep_for(30ms);
-        }
-        for (uint8_t id : DXL_IDS) {
-            write_byte_with_log(id, ADDR_TORQUE_ENABLE, 1, "Enable Torque");
-        }
-        RCLCPP_INFO(this->get_logger(), "Dynamixels initialized (Current Control, Torque Enabled).");
-        return true;
+        uint8_t op_mode = 0; // Current Control
+        for (uint8_t id : DXL_IDS) { write_byte_with_log(id, ADDR_OPERATING_MODE, op_mode, "Set OpMode"); rclcpp::sleep_for(30ms); }
+        for (uint8_t id : DXL_IDS) { write_byte_with_log(id, ADDR_TORQUE_ENABLE, 1, "Enable Torque"); }
+        RCLCPP_INFO(this->get_logger(), "Dynamixels initialized (OpMode=CurrentControl, Torque=Enabled)."); return true;
     }
-    
+
+    // Assumes ZYX rotation sequence for C_J_I (Body from Inertial) based on PDF Eq 18c
     void extractEulerAnglesZYX(const Eigen::Matrix3d& R_Body_I, double& phi, double& theta, double& psi) {
-        theta = -asin(R_Body_I(0, 2));
-        if (std::abs(cos(theta)) > 1e-6) {
-            phi = atan2(R_Body_I(1, 2), R_Body_I(2, 2));
-            psi = atan2(R_Body_I(0, 1), R_Body_I(0, 0));
-        } else {
+        theta = -asin( R_Body_I(0, 2) ); // From C_J_I(0,2) = -sin(theta)
+
+        if (abs(cos(theta)) > 1e-6) { // Avoid gimbal lock singularity
+            phi = atan2( R_Body_I(1, 2), R_Body_I(2, 2) ); // From C_J_I(1,2) / C_J_I(2,2)
+            psi = atan2( R_Body_I(0, 1), R_Body_I(0, 0) ); // From C_J_I(0,1) / C_J_I(0,0)
+        } else { // Gimbal lock case
             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "Gimbal lock detected! Euler angles inaccurate.");
-            phi = 0.0;
-            psi = (theta > 0) ? atan2(-R_Body_I(1,0), R_Body_I(1,1)) : atan2(R_Body_I(1,0), -R_Body_I(1,1));
+            phi = 0.0; // Set roll arbitrarily to 0
+            // Use elements from row 1 which are well-defined in lock: C_J_I(1,0) and C_J_I(1,1)
+            psi = atan2(-R_Body_I(1,0), R_Body_I(1,1)); // atan2(-sin(phi-psi), cos(phi-psi)) or atan2(sin(psi+phi), cos(psi+phi))
+                                                       // If phi=0, becomes atan2(sin(+/-psi), cos(+/-psi)) -> +/- psi
         }
     }
-    
+
+
+    // Calculates Euler rates from body rates (p,q,r) and angles (phi, theta)
     void calculateEulerRates(double phi, double theta, double p, double q, double r,
                              double& phi_dot, double& theta_dot, double& psi_dot) {
         double cphi = cos(phi), sphi = sin(phi);
         double cth = cos(theta);
-        if (std::abs(cth) < 1e-6) {
-            RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "Gimbal lock! Euler rate calculation inaccurate.");
-            phi_dot = p;
-            theta_dot = q * cphi - r * sphi;
-            psi_dot = 0;
+
+        if (abs(cth) < 1e-6) { // Handle gimbal lock singularity
+             RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "Gimbal lock! Euler rate calculation inaccurate/approximate.");
+             phi_dot = p; // Approximation
+             theta_dot = q * cphi - r * sphi; // Approximation
+             psi_dot = 0; // Undefined
         } else {
-            double tan_th = tan(theta);
+            double tan_th = tan(theta); // Safe because abs(cth) > 1e-6
             phi_dot = p + q * sphi * tan_th + r * cphi * tan_th;
-            theta_dot = q * cphi - r * sphi;
-            psi_dot = q * sphi / cth + r * cphi / cth;
+            theta_dot =     q * cphi          - r * sphi;
+            psi_dot =       q * sphi / cth    + r * cphi / cth;
         }
     }
-    
-    void update_dcms(double phi, double theta, double /*psi*/) {
-        double cphi = cos(phi), sphi = sin(phi), cth = cos(theta), sth = sin(theta);
-        C_J_LPR_ << 1, 0, 0,
-                    0, cphi, sphi,
-                    0, -sphi, cphi;
-        C_J_LYR_ << cth, sphi * sth, cphi * sth,
-                    0,      cphi,       -sphi,
-                    -sth, sphi * cth, cphi * cth;
+
+    // Updates DCMs based on RAW gimbal angles
+    void update_dcms(double phi, double theta, double /*psi*/) { // psi not needed for C_J_LPR/YR
+        double cphi=cos(phi), sphi=sin(phi), cth=cos(theta), sth=sin(theta);
+        // C_J/LPR = RotX(phi) <<< VERIFY AXIS X
+        C_J_LPR_ << 1,0,0, 0,cphi,sphi, 0,-sphi,cphi;
+        // C_J/LYR from PDF Eq 18b
+        C_J_LYR_ << cth,sphi*sth,cphi*sth, 0,cphi,-sphi, -sth,sphi*cth,cphi*cth;
     }
-    
+
+    // Computes inverse Jacobian using RAW gimbal angles
     Eigen::Matrix3d compute_inverse_jacobian(double phi, double theta) {
-        double cphi = cos(phi), sphi = sin(phi), cth = cos(theta);
-        Eigen::Matrix3d G_inv = Eigen::Matrix3d::Identity();
-        if (std::abs(cth) < 1e-6) {
-            RCLCPP_ERROR_THROTTLE(this->get_logger(),*this->get_clock(),2000, "Gimbal lock! Using Identity InvJac.");
-        } else {
-            double tan_th = tan(theta);
-            G_inv << 1, sphi * tan_th, cphi * tan_th,
-                     0, cphi,         -sphi,
-                     0, sphi/cth,      cphi/cth;
-        }
+        double cphi=cos(phi), sphi=sin(phi), cth=cos(theta); Eigen::Matrix3d G_inv=Eigen::Matrix3d::Identity();
+        if(abs(cth)<1e-6) {RCLCPP_ERROR_THROTTLE(this->get_logger(),*this->get_clock(),2000,"Gimbal lock! Using Identity InvJac.");}
+        else {double tan_th=tan(theta); G_inv << 1,sphi*tan_th,cphi*tan_th, 0,cphi,-sphi, 0,sphi/cth,cphi/cth;}
         return G_inv;
     }
-    
+
+    // Converts torque [Nm] to Dynamixel goal current steps using CALIBRATED fits
     int32_t torque_to_goal_current_calibrated(double torque_nm) {
         double current_A;
-        if (torque_nm >= 0) {
-            current_A = 0.6370 * torque_nm + 0.0395;
-        } else {
-            current_A = 0.6439 * torque_nm - 0.1097;
-        }
+        if (torque_nm >= 0) { current_A = 0.6370 * torque_nm + 0.0395; } // Positive Torque
+        else { current_A = 0.6439 * torque_nm - 0.1097; } // Negative Torque
         double steps = current_A / CURRENT_STEP;
         double max_steps = DEFAULT_CURRENT_LIMIT_STEPS;
-        steps = std::max(-max_steps, std::min(max_steps, steps));
+        steps = std::max(-max_steps, std::min(max_steps, steps)); // Clamp
         return static_cast<int32_t>(std::round(steps));
     }
-    
+
+    // Helper to write single byte with logging
     void write_byte_with_log(uint8_t id, uint16_t addr, uint8_t val, const std::string& op) {
-        if (!portHandler_ || !packetHandler_) return;
-        uint8_t err = 0;
-        int res = packetHandler_->write1ByteTxRx(portHandler_, id, addr, val, &err);
-        if (res != COMM_SUCCESS) {
-            RCLCPP_ERROR(this->get_logger(), "ID:%d Addr:%d (%s) Comm Fail: %s", id, addr, op.c_str(), packetHandler_->getTxRxResult(res));
-        } else if (err != 0) {
-            RCLCPP_ERROR(this->get_logger(), "ID:%d Addr:%d (%s) DXL Error: %s", id, addr, op.c_str(), packetHandler_->getRxPacketError(err));
-        }
+        if (!portHandler_||!packetHandler_) return; uint8_t err=0; int res=packetHandler_->write1ByteTxRx(portHandler_,id,addr,val,&err);
+        if(res!=COMM_SUCCESS){RCLCPP_ERROR(this->get_logger(),"ID:%d Addr:%d (%s) Comm Fail: %s",id,addr,op.c_str(),packetHandler_->getTxRxResult(res));}
+        else if(err!=0){RCLCPP_ERROR(this->get_logger(),"ID:%d Addr:%d (%s) DXL Error: %s",id,addr,op.c_str(),packetHandler_->getRxPacketError(err));}
     }
-    
+
+    // Sends current commands via SyncWrite
     bool send_dynamixel_commands(int32_t current_roll, int32_t current_pitch, int32_t current_yaw) {
-        if (!groupSyncWrite_ || !packetHandler_) return false;
-        bool ok = true;
-        uint8_t p[LEN_GOAL_CURRENT];
-        
-        uint16_t w_r = static_cast<uint16_t>(current_roll);
-        p[0] = DXL_LOBYTE(w_r); p[1] = DXL_HIBYTE(w_r);
-        if (!groupSyncWrite_->addParam(DXL_ID_ROLL, p)) ok = false;
-        
-        uint16_t w_p = static_cast<uint16_t>(current_pitch);
-        p[0] = DXL_LOBYTE(w_p); p[1] = DXL_HIBYTE(w_p);
-        if (!groupSyncWrite_->addParam(DXL_ID_PITCH, p)) ok = false;
-        
-        uint16_t w_y = static_cast<uint16_t>(current_yaw);
-        p[0] = DXL_LOBYTE(w_y); p[1] = DXL_HIBYTE(w_y);
-        if (!groupSyncWrite_->addParam(DXL_ID_YAW, p)) ok = false;
-        
-        if (!ok) {
-            RCLCPP_ERROR(this->get_logger(), "Failed addParam in SyncWrite.");
-            groupSyncWrite_->clearParam();
-            return false;
-        }
-        int res = groupSyncWrite_->txPacket();
-        bool tx_ok = (res == COMM_SUCCESS);
-        if (!tx_ok) {
-            RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "SyncWrite fail: %s", packetHandler_->getTxRxResult(res));
-        }
-        groupSyncWrite_->clearParam();
-        return tx_ok;
+        if(!groupSyncWrite_||!packetHandler_) return false; bool ok=true; uint8_t p[LEN_GOAL_CURRENT];
+        // Roll
+        uint16_t w_r=static_cast<uint16_t>(current_roll); p[0]=DXL_LOBYTE(w_r);p[1]=DXL_HIBYTE(w_r); if(!groupSyncWrite_->addParam(DXL_ID_ROLL, p)) ok=false;
+        // Pitch
+        uint16_t w_p=static_cast<uint16_t>(current_pitch); p[0]=DXL_LOBYTE(w_p);p[1]=DXL_HIBYTE(w_p); if(!groupSyncWrite_->addParam(DXL_ID_PITCH,p)) ok=false;
+        // Yaw
+        uint16_t w_y=static_cast<uint16_t>(current_yaw); p[0]=DXL_LOBYTE(w_y);p[1]=DXL_HIBYTE(w_y); if(!groupSyncWrite_->addParam(DXL_ID_YAW,  p)) ok=false;
+        if(!ok){RCLCPP_ERROR(this->get_logger(),"Failed addParam SyncWrite."); groupSyncWrite_->clearParam(); return false;}
+        int res = groupSyncWrite_->txPacket(); bool tx_ok=(res==COMM_SUCCESS);
+        if(!tx_ok){RCLCPP_ERROR_THROTTLE(this->get_logger(),*this->get_clock(),1000,"SyncWrite fail: %s", packetHandler_->getTxRxResult(res));}
+        groupSyncWrite_->clearParam(); return tx_ok;
     }
 
-    // --- Member variable to store the computed rotation matrix from body to inertial (transposed) ---
-    Eigen::Matrix3d C_J_I_;
-};
+}; // End class DroneDynamixelBridgeNode
 
+// --- Main Function ---
 int main(int argc, char **argv) {
-    rclcpp::init(argc, argv);
-    std::shared_ptr<DroneDynamixelBridgeNode> node = nullptr;
-    try {
-        node = std::make_shared<DroneDynamixelBridgeNode>();
-        RCLCPP_INFO(node->get_logger(), "Node created successfully. Spinning...");
-        rclcpp::spin(node);
-    } catch (const std::runtime_error & e) {
-        RCLCPP_FATAL(rclcpp::get_logger("Main"), "Node initialization failed: %s", e.what());
-    } catch (const std::exception & e) {
-        RCLCPP_FATAL(rclcpp::get_logger("Main"), "Unexpected error: %s", e.what());
-    }
-    RCLCPP_INFO(rclcpp::get_logger("Main"), "Shutting down node.");
-    rclcpp::shutdown();
-    return 0;
+  rclcpp::init(argc, argv);
+  std::shared_ptr<DroneDynamixelBridgeNode> node = nullptr;
+  try {
+      node = std::make_shared<DroneDynamixelBridgeNode>();
+      RCLCPP_INFO(node->get_logger(), "Node created successfully. Spinning...");
+      rclcpp::spin(node); // Runs callbacks until shutdown
+  } catch (const std::runtime_error & e) {
+      RCLCPP_FATAL(rclcpp::get_logger("Main"), "Node initialization failed: %s", e.what());
+  } catch (const std::exception & e) {
+       RCLCPP_FATAL(rclcpp::get_logger("Main"), "An unexpected error occurred: %s", e.what());
+  }
+  RCLCPP_INFO(rclcpp::get_logger("Main"), "Shutting down node.");
+  rclcpp::shutdown();
+  return 0;
 }
