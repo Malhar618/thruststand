@@ -98,3 +98,12 @@ Research from this project may inform the design of fault-tolerant and adaptive 
 
 Measured data, filtered states, and actuator logs will be published to this repository after testing. Refer to the `/logs` directory for CSV logs and the `/docs` directory for visuals, equations, and results.
 
+---
+
+### Maintenance and Contact
+
+This repository is maintained by:
+
+- **Malhar Mahajan** – [malhar05@vt.edu](mailto:malhar05@vt.edu)  
+- **Dr. Andrea L’Afflitto** – [a.lafflitto@vt.edu](mailto:a.lafflitto@vt.edu)
+
