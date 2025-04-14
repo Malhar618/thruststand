@@ -345,7 +345,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
   /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
-  /usr/include/aarch64-linux-gnu/bits/mathinline.h \
   /usr/include/aarch64-linux-gnu/bits/procfs-extra.h \
   /usr/include/aarch64-linux-gnu/bits/procfs-id.h \
   /usr/include/aarch64-linux-gnu/bits/procfs-prregset.h \
@@ -354,7 +353,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
   /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/aarch64-linux-gnu/bits/sched.h \
   /usr/include/aarch64-linux-gnu/bits/select.h \
-  /usr/include/aarch64-linux-gnu/bits/select2.h \
   /usr/include/aarch64-linux-gnu/bits/setjmp.h \
   /usr/include/aarch64-linux-gnu/bits/sigaction.h \
   /usr/include/aarch64-linux-gnu/bits/sigcontext.h \
@@ -370,14 +368,8 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
   /usr/include/aarch64-linux-gnu/bits/ss_flags.h \
   /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
   /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/aarch64-linux-gnu/bits/stdio.h \
-  /usr/include/aarch64-linux-gnu/bits/stdio2.h \
   /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/aarch64-linux-gnu/bits/stdlib.h \
-  /usr/include/aarch64-linux-gnu/bits/string_fortified.h \
-  /usr/include/aarch64-linux-gnu/bits/strings_fortified.h \
   /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
   /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
@@ -422,7 +414,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
   /usr/include/aarch64-linux-gnu/bits/waitflags.h \
   /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
   /usr/include/aarch64-linux-gnu/bits/wchar.h \
-  /usr/include/aarch64-linux-gnu/bits/wchar2.h \
   /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/aarch64-linux-gnu/bits/wordsize.h \
   /usr/include/aarch64-linux-gnu/c++/9/bits/atomic_word.h \
@@ -850,24 +841,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /usr/include/c++/9/bits/string_view.tcc:
 
-/usr/include/c++/9/bits/streambuf.tcc:
-
-/usr/include/c++/9/bits/stream_iterator.h:
-
-/usr/include/c++/9/bits/stl_vector.h:
-
-/usr/include/c++/9/bits/stl_uninitialized.h:
-
-/usr/include/c++/9/bits/stl_tree.h:
-
-/usr/include/c++/9/bits/stl_tempbuf.h:
-
-/usr/include/c++/9/bits/stl_set.h:
-
-/usr/include/c++/9/bits/stl_relops.h:
-
-/usr/include/c++/9/bits/stl_raw_storage_iter.h:
-
 /opt/ros/galactic/include/rcutils/types/array_list.h:
 
 /opt/ros/galactic/include/rcutils/types.h:
@@ -1176,8 +1149,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /opt/ros/galactic/include/rcl/client.h:
 
-/usr/include/aarch64-linux-gnu/bits/select2.h:
-
 /usr/include/c++/9/bits/ios_base.h:
 
 /opt/ros/galactic/include/builtin_interfaces/msg/detail/time__builder.hpp:
@@ -1240,8 +1211,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /opt/ros/galactic/include/rcl/guard_condition.h:
 
-/usr/include/aarch64-linux-gnu/bits/strings_fortified.h:
-
 /opt/ros/galactic/include/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
 /usr/include/c++/9/bits/localefwd.h:
@@ -1278,8 +1247,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /opt/ros/galactic/include/rcl/arguments.h:
 
-/usr/include/aarch64-linux-gnu/bits/stdlib.h:
-
 /opt/ros/galactic/include/rcutils/snprintf.h:
 
 /usr/include/c++/9/tr1/riemann_zeta.tcc:
@@ -1289,6 +1256,8 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /usr/include/c++/9/ext/type_traits.h:
 
 /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_attitude__traits.hpp:
+
+/usr/include/c++/9/bits/stl_uninitialized.h:
 
 /opt/ros/galactic/include/builtin_interfaces/msg/detail/time__struct.hpp:
 
@@ -1330,6 +1299,8 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /opt/ros/galactic/include/rcl/domain_id.h:
 
+/usr/include/c++/9/bits/stl_raw_storage_iter.h:
+
 /opt/ros/galactic/include/libstatistics_collector/collector/metric_details_interface.hpp:
 
 /usr/include/c++/9/cwchar:
@@ -1369,6 +1340,8 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /opt/ros/galactic/include/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/timesize.h:
+
+/usr/include/c++/9/bits/stream_iterator.h:
 
 /opt/ros/galactic/include/rcl_interfaces/msg/parameter.hpp:
 
@@ -1458,8 +1431,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /opt/ros/galactic/include/rcl_interfaces/srv/get_parameter_types.hpp:
 
-/usr/include/aarch64-linux-gnu/bits/string_fortified.h:
-
 /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_angular_velocity.hpp:
 
 /usr/include/c++/9/bits/shared_ptr_atomic.h:
@@ -1489,8 +1460,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /usr/include/c++/9/bits/memoryfwd.h:
 
 /opt/ros/galactic/include/rclcpp/client.hpp:
-
-/usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h:
 
 /opt/ros/galactic/include/rclcpp/qos_event.hpp:
 
@@ -1566,8 +1535,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /opt/ros/galactic/include/rmw/get_topic_names_and_types.h:
 
-/usr/include/aarch64-linux-gnu/bits/stdio.h:
-
 /opt/ros/galactic/include/rmw/incompatible_qos_events_statuses.h:
 
 /opt/ros/galactic/include/rmw/init_options.h:
@@ -1608,6 +1575,8 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /opt/ros/galactic/include/rmw/types.h:
 
+/usr/include/c++/9/bits/stl_tempbuf.h:
+
 /opt/ros/galactic/include/rmw/visibility_control.h:
 
 /opt/ros/galactic/include/rosidl_runtime_c/message_initialization.h:
@@ -1619,8 +1588,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /opt/ros/galactic/include/rosidl_runtime_c/sequence_bound.h:
 
 /opt/ros/galactic/include/rosidl_runtime_c/visibility_control.h:
-
-/usr/include/aarch64-linux-gnu/bits/stdio2.h:
 
 /opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:
 
@@ -1647,8 +1614,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /opt/ros/galactic/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/aarch64-linux-gnu/bits/wchar2.h:
 
 /opt/ros/galactic/include/statistics_msgs/msg/metrics_message.hpp:
 
@@ -1679,6 +1644,10 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /usr/include/aarch64-linux-gnu/asm/types.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/c++/9/bits/stl_tree.h:
+
+/usr/include/c++/9/bits/stl_vector.h:
 
 /usr/include/aarch64-linux-gnu/bits/byteswap.h:
 
@@ -1727,14 +1696,6 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /usr/include/aarch64-linux-gnu/bits/math-vector.h:
 
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
-
-/usr/include/aarch64-linux-gnu/bits/mathinline.h:
-
-/opt/ros/galactic/include/statistics_msgs/msg/detail/statistic_data_point__traits.hpp:
-
-/usr/include/c++/9/bits/codecvt.h:
-
-/usr/include/c++/9/bits/enable_special_members.h:
 
 /usr/include/aarch64-linux-gnu/bits/procfs-extra.h:
 
@@ -1858,6 +1819,8 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 
 /usr/include/aarch64-linux-gnu/bits/waitstatus.h:
 
+/usr/include/c++/9/bits/stl_relops.h:
+
 /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h:
 
 /opt/ros/galactic/include/rclcpp/allocator/allocator_common.hpp:
@@ -1935,6 +1898,12 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /usr/include/c++/9/bits/basic_ios.h:
 
 /usr/include/c++/9/bits/basic_string.h:
+
+/opt/ros/galactic/include/statistics_msgs/msg/detail/statistic_data_point__traits.hpp:
+
+/usr/include/c++/9/bits/codecvt.h:
+
+/usr/include/c++/9/bits/enable_special_members.h:
 
 /usr/include/c++/9/bits/cxxabi_init_exception.h:
 
@@ -2021,3 +1990,7 @@ CMakeFiles/angular_state_logger.dir/src/angular_state_logger.cpp.o: /home/odroid
 /usr/include/c++/9/bits/stl_multimap.h:
 
 /usr/include/c++/9/bits/stl_multiset.h:
+
+/usr/include/c++/9/bits/stl_set.h:
+
+/usr/include/c++/9/bits/streambuf.tcc:

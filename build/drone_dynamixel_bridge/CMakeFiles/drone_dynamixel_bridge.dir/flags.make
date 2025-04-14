@@ -6,5 +6,5 @@ CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_cyclonedds_cpp -DRCUTILS_ENABLE_F
 
 CXX_INCLUDES = -I/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include -isystem /home/odroid/ros2_thrust_ws/install/px4_msgs/include -isystem /opt/ros/galactic/include -isystem /usr/include/eigen3
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -std=gnu++17
 

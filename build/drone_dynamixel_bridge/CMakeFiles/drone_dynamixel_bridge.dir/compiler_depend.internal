@@ -13,13 +13,9 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o
  /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h
  /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
  /home/odroid/ros2_thrust_ws/install/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_angular_velocity__builder.hpp
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_angular_velocity__struct.hpp
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_angular_velocity__traits.hpp
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_odometry__builder.hpp
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_odometry__struct.hpp
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_odometry__traits.hpp
- /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_angular_velocity.hpp
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_odometry.hpp
  /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__builder.hpp
  /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__struct.hpp
@@ -357,7 +353,6 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o
  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/aarch64-linux-gnu/bits/mathcalls.h
- /usr/include/aarch64-linux-gnu/bits/mathinline.h
  /usr/include/aarch64-linux-gnu/bits/posix1_lim.h
  /usr/include/aarch64-linux-gnu/bits/posix2_lim.h
  /usr/include/aarch64-linux-gnu/bits/procfs-extra.h
@@ -368,7 +363,6 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h
  /usr/include/aarch64-linux-gnu/bits/sched.h
  /usr/include/aarch64-linux-gnu/bits/select.h
- /usr/include/aarch64-linux-gnu/bits/select2.h
  /usr/include/aarch64-linux-gnu/bits/setjmp.h
  /usr/include/aarch64-linux-gnu/bits/sigaction.h
  /usr/include/aarch64-linux-gnu/bits/sigcontext.h
@@ -384,14 +378,8 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o
  /usr/include/aarch64-linux-gnu/bits/ss_flags.h
  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h
- /usr/include/aarch64-linux-gnu/bits/stdio.h
- /usr/include/aarch64-linux-gnu/bits/stdio2.h
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h
- /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h
- /usr/include/aarch64-linux-gnu/bits/stdlib.h
- /usr/include/aarch64-linux-gnu/bits/string_fortified.h
- /usr/include/aarch64-linux-gnu/bits/strings_fortified.h
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h
@@ -437,7 +425,6 @@ CMakeFiles/drone_dynamixel_bridge.dir/src/drone_dynamixel_bridge.cpp.o
  /usr/include/aarch64-linux-gnu/bits/waitflags.h
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h
  /usr/include/aarch64-linux-gnu/bits/wchar.h
- /usr/include/aarch64-linux-gnu/bits/wchar2.h
  /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h
  /usr/include/aarch64-linux-gnu/bits/wordsize.h
  /usr/include/aarch64-linux-gnu/bits/xopen_lim.h
