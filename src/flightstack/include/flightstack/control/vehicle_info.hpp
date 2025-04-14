@@ -232,14 +232,14 @@ struct VehicleInfo
   // Polynomial coefficients vector to evaluate the Commanded Thrust [-] based on the Thrust in Newton
   // NEW ESCs (TMotor)
   const Eigen::VectorXd thrust_polynomial_coefficients_quadcopter = (Eigen::VectorXd(8) << 
-    0.00000318912344541255,
-    -0.000107583270223678,
-    0.00147671457913486,
-    -0.0107666934546496,
-    0.0459838527842087,
-    -0.121504752465409,
-    0.285725583084306,
-    -0.0118110779377008
+    0.00000003031608494,
+    -0.00000181446865792,
+    0.00004243451294814,
+    -0.00050487431926449,
+    0.00352492906047405,
+    -0.01755233396312960,
+    0.11496540347604700,
+    0.01100128668939260
   ).finished();
 
 };
