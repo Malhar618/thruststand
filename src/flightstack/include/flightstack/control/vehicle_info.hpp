@@ -73,11 +73,11 @@ struct VehicleInfo
     0,                0,                0
   ).finished();
 
-  const double distance_motors_cenetrline_x_dir = 0.0881269; // [m] distance between the centerline of the drone and the
+  const double distance_motors_cenetrline_x_dir = 0.15; // [m] distance between the centerline of the drone and the
                                                             // motors along x direction in local FRD frame
-  const double distance_motors_cenetrline_y_dir = 0.1083450; // [m] distance between the centerline of the drone and the
+  const double distance_motors_cenetrline_y_dir = 0.17; // [m] distance between the centerline of the drone and the
                                                             // motors along y direction in local FRD frame
-  const double propeller_drag_coefficient = 0.01; // [m] propellers drag coefficient
+  const double propeller_drag_coefficient = 0.1098; // [m] propellers drag coefficient
 
   // const Eigen::Matrix2d A_filter_roll_des = (Eigen::Matrix2d() << 
   //   -40.824, -1049.8, 
