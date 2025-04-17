@@ -97,12 +97,12 @@ public:
   DroneDynamixelBridgeNode()
     : Node("drone_dynamixel_bridge_node"),
       // Inertia tensors (these must be expressed in the appropriate Li frames relative to CoM)
-      I_CUAV_((Eigen::Matrix3d() <<  0.010679, -0.000001, -0.000072,
-                                   -0.000001, 0.017318,  0.000007,
-                                   -0.000072, 0.000007,  0.026610).finished()),
-      I_CRB_((Eigen::Matrix3d() <<   0.000847, -0.000004, -0.000010,
-                                   -0.000004, 0.098249,  0.000000,
-                                   -0.000010, 0.000000,  0.098096).finished()),
+      I_CUAV_((Eigen::Matrix3d() <<  0.012576, -0.000001, -0.000069,
+                                   -0.000001, 0.019215,  0.000012,
+                                   -0.000069, 0.000012,  0.026610).finished()),
+      I_CRB_((Eigen::Matrix3d() <<   0.000866, -0.000001, -0.000068,
+                                   -0.000001, 0.101389,  0.000004,
+                                   -0.000068, 0.000004,  0.101225).finished()),
       I_CPR_((Eigen::Matrix3d() <<   0.640302,  0.000043,  0.000078,
                                    0.000043,  0.570491, -0.000025,
                                    0.000078, -0.000025,  1.200050).finished()),
