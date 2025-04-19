@@ -200,13 +200,13 @@ struct VehicleInfo
 
     mat(1, 0) =  1.0 / 4.0;
     mat(1, 1) =  1.0 / (4.0 * this->distance_motors_cenetrline_y_dir);
-    mat(1, 2) =  1.0 / (4.0 * this->distance_motors_cenetrline_x_dir);
-    mat(1, 3) = -1.0 / (4.0 * this->propeller_drag_coefficient); 
+    mat(1, 2) = -1.0 / (4.0 * this->distance_motors_cenetrline_x_dir);
+    mat(1, 3) = 1.0 / (4.0 * this->propeller_drag_coefficient); 
 
     mat(2, 0) =  1.0 / 4.0;
     mat(2, 1) =  1.0 / (4.0 * this->distance_motors_cenetrline_y_dir);
-    mat(2, 2) = -1.0 / (4.0 * this->distance_motors_cenetrline_x_dir);
-    mat(2, 3) =  1.0 / (4.0 * this->propeller_drag_coefficient); 
+    mat(2, 2) =  1.0 / (4.0 * this->distance_motors_cenetrline_x_dir);
+    mat(2, 3) = -1.0 / (4.0 * this->propeller_drag_coefficient); 
 
     mat(3, 0) =  1.0 / 4.0;
     mat(3, 1) = -1.0 / (4.0 * this->distance_motors_cenetrline_y_dir);
