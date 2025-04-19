@@ -294,9 +294,9 @@ void PID::computeControlAlgorithm()
     from Newton to the normalized value comprised between 0 and 1 to be sent to Pixhawk
   */
   // FOR X8COPTER
-  this->computeNormalizedThrust(cim, vehicle_info);
+  //this->computeNormalizedThrust(cim, vehicle_info);
 
   // FOR QUADCOPTER
-  // this->computeNormalizedThrustQuadcopterMode(cim, vehicle_info);
+  this->computeNormalizedThrustQuadcopterMode(cim, vehicle_info);
 
 }
