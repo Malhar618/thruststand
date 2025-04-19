@@ -42,7 +42,7 @@
 /// ------------- USER DEFINED ------------- ///
 // - > The amplitude and frequency for the sine generator test function
 inline constexpr double AMP = 5*(M_PI/180);
-inline constexpr double FREQ = 0.5;        
+inline constexpr double FREQ = 0.1;        
 
 namespace _test_functions_
 {
@@ -52,11 +52,12 @@ namespace _test_functions_
 // model of the inner loop.
 inline void generateSineWave(double time, double &roll_d, double &pitch_d, double &yaw_d, double &yaw_rate_d) 
 {
-    double value = AMP * std::sin(2 * M_PI * FREQ * time);
+    double value_roll = AMP * std::sin(2 * M_PI * FREQ * time);
+    double value_pitch = AMP * std::sin(2 * M_PI * FREQ * time);
     double rate_of_change = 2 * M_PI * AMP * FREQ * std::cos(2 * M_PI * FREQ * time);
     
-    roll_d = value;
-    pitch_d = value;
+    roll_d = value_roll;
+    pitch_d = value_pitch;
     yaw_d = 0;
     yaw_rate_d = 0;
 }
