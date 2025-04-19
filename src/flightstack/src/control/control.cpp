@@ -37,7 +37,7 @@
 
 #include "multi_threaded_node.hpp"
 #include "control.hpp"
-#includ "sine_wave_generator.hpp"
+#include "sine_wave_generator.hpp"
 
 // Constructor
 Control::ControlInternalMembers::ControlInternalMembers() : 
