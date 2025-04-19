@@ -38,6 +38,8 @@
 #include "multi_threaded_node.hpp"
 #include "control.hpp"
 #include "sine_wave_generator.hpp"
+#include <cmath>
+#include "rclcpp/rclcpp.hpp"
 
 // Constructor
 Control::ControlInternalMembers::ControlInternalMembers() : 
@@ -368,24 +370,45 @@ void Control::computeNormalizedThrust(ControlInternalMembers& cim, VehicleInfo& 
 */
 void Control::compute_U1_RollDes_PitchDes(ControlInternalMembers& cim)
 {
-  // Convert the mu_translational from global to local coordinates
-  cim.mu_translational = cim.rotation_matrix_321_global_to_local * cim.mu_translational_raw; 
+    cim.mu_translational = cim.rotation_matrix_321_global_to_local * cim.mu_translational_raw;
 
-  cim.U_control_inputs[0] = std::sqrt(
-      std::pow(cim.mu_translational[0], 2)
-    + std::pow(cim.mu_translational[1], 2)
-    + std::pow(cim.mu_translational[2], 2)
-  );
+    // cim.mu_translational[0] = 0.0; // Original logic retained if needed
+    // cim.mu_translational[1] = 0.0; // Original logic retained if needed
 
-  double temporaryvar_roll_desired_1 = cim.mu_translational[1] / cim.U_control_inputs[0];
-  cim.roll_desired= std::atan2(
-    temporaryvar_roll_desired_1,
-    std::sqrt(1 - std::pow(temporaryvar_roll_desired_1, 2))
-  );
+    cim.U_control_inputs[0] = std::sqrt(
+          std::pow(cim.mu_translational[0],2) +
+          std::pow(cim.mu_translational[1],2) +
+          std::pow(cim.mu_translational[2],2)   );
 
-  cim.pitch_desired = std::atan2(-cim.mu_translational[0], -cim.mu_translational[2]);
+    double current_time = 0.0;
+    try {
+        if (node_.get_clock()) {
+             current_time = node_.get_clock()->now().seconds();
+        }
+    } catch (const std::exception& e) {
+        // Minimal error handling if clock fails, default time remains 0.0
+    }
+
+    double roll_d_sine, pitch_d_sine, yaw_d_sine, yaw_rate_d_sine;
+
+    _test_functions_::generateSineWave(current_time, roll_d_sine, pitch_d_sine, yaw_d_sine, yaw_rate_d_sine);
+
+    cim.roll_desired = roll_d_sine;
+    cim.pitch_desired = pitch_d_sine;
+
+    /*
+    double temporaryvar_roll_desired_1 = 0.0;
+    if (std::abs(cim.U_control_inputs[0]) > 1e-6) {
+        temporaryvar_roll_desired_1 = cim.mu_translational[1] / cim.U_control_inputs[0];
+        temporaryvar_roll_desired_1 = std::max(-1.0, std::min(1.0, temporaryvar_roll_desired_1));
+    }
+    cim.roll_desired= std::atan2(
+      temporaryvar_roll_desired_1,
+      std::sqrt(std::max(0.0, 1.0 - std::pow(temporaryvar_roll_desired_1, 2)))
+    );
+    cim.pitch_desired = std::atan2(-cim.mu_translational[0], cim.mu_translational[2]);
+    */
 }
-
 /*
   Function that computes the translational position error
 */
