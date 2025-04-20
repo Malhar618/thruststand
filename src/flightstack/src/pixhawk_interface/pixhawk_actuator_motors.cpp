@@ -138,7 +138,7 @@ void MultiThreadedNode::publish_actuator_motors()
 		msg.control[7] = MINIMUM_VALUE_PUBLISH_MOTORS;
 	} else {
 
-		/* // QUADCOPTER
+		//quadcopter
 		msg.control[0] = this->getControl()->getControlInternalMembers().thrust_vector_quadcopter_normalized[0];
 		msg.control[1] = this->getControl()->getControlInternalMembers().thrust_vector_quadcopter_normalized[1];
 		msg.control[2] = this->getControl()->getControlInternalMembers().thrust_vector_quadcopter_normalized[2];
@@ -147,9 +147,10 @@ void MultiThreadedNode::publish_actuator_motors()
 		msg.control[5] = 0.0;
 		msg.control[6] = 0.0;
 		msg.control[7] = 0.0;
-		*/
+		
 
 		// X8-COPTER
+		/*
 		msg.control[0] = this->getControl()->getControlInternalMembers().thrust_vector_normalized[0];
 		msg.control[1] = this->getControl()->getControlInternalMembers().thrust_vector_normalized[1];
 		msg.control[2] = this->getControl()->getControlInternalMembers().thrust_vector_normalized[2];
@@ -158,6 +159,7 @@ void MultiThreadedNode::publish_actuator_motors()
 		msg.control[5] = this->getControl()->getControlInternalMembers().thrust_vector_normalized[5];
 		msg.control[6] = this->getControl()->getControlInternalMembers().thrust_vector_normalized[6];
 		msg.control[7] = this->getControl()->getControlInternalMembers().thrust_vector_normalized[7];
+                */
 	}
 	
 	msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
