@@ -53,12 +53,12 @@ inline constexpr double MINIMUM_VALUE_PUBLISH_MOTORS = 0.05;
 struct VehicleInfo 
 {
 
-  const double mass = 1.920; // [kg] vehicle mass
+  const double mass = 1.07651851; // [kg] vehicle mass
 
   const Eigen::Matrix3d inertia_matrix = (Eigen::Matrix3d() << 
-     2.271990e-02, -6.557000e-06, -1.003498e-03,
-    -6.557000e-06,  2.202047e-02,  5.658400e-06,
-    -1.003498e-03,  5.658400e-06,  1.614693e-02
+     1.268012e-02, -1.239e-05, 5.395e-05,
+    -1.239e-05,  2.029902e-02,  1.522e-05,
+    5.395e-05,  1.522e-05,  3.173301e-02
   ).finished(); // [kg*m^2] inertia matrix of the vehicle system (drone frame + box + propellers) expressed in
                 // Pixhawk coordinate system (FRD - x-Front, y-Right, z-Down), computed at the vehicle center of mass
   
