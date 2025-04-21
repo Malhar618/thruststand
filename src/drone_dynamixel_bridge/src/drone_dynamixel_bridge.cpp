@@ -40,8 +40,6 @@ const int    CURRENT_RAW_MAX     = 4095;         // Max register (±9.2115 A) �
 // address & length of the Present Current register in the XM‑series (e.g. XM430‑W210)
 static constexpr uint16_t ADDR_PRESENT_CURRENT = 126;
 static constexpr uint16_t LEN_PRESENT_CURRENT  = 2;
-// SyncRead helper for reading back present currents
-std::unique_ptr<dynamixel::GroupSyncRead> groupSyncReadPresentCurrent_;
 // --- Filter Differentiator Class ---
 // (Used ONLY to obtain a filtered derivative for body rates)
 class FilterDiff {
@@ -234,7 +232,6 @@ private:
     p_raw_ = odom->angular_velocity[0];
     q_raw_ = odom->angular_velocity[1];
     r_raw_ = odom->angular_velocity[2];
-    file << p_raw_ << "," << q_raw_ << "," << r_raw_ << "\n";
     // Get rotation matrix from odometry quaternion ([w, x, y, z] - PX4 standard)
     // Eigen expects Quaterniond(w, x, y, z)
     Eigen::Quaterniond q_I_J(odom->q[0], odom->q[1], odom->q[2], odom->q[3]);
@@ -333,7 +330,6 @@ private:
     double I_roll_A  = (raw_currents[0] - CURRENT_OFFSET_RAW) * CURRENT_LSB;
     double I_pitch_A = (raw_currents[1] - CURRENT_OFFSET_RAW) * CURRENT_LSB;
     double I_yaw_A   = (raw_currents[2] - CURRENT_OFFSET_RAW) * CURRENT_LSB;
-  }
     // --- Logging ---
     // *** UPDATED Logging Format String ***
   //   RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 100,
