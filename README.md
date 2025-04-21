@@ -57,7 +57,7 @@ Make sure you have the following packages built in your workspace:
 1. Start the **micro-ROS agent** (in a new terminal):
 ```bash
 cd ~/ros2_thrust_ws
-./start_uxrce.sh
+MicroXRCEAgent serial --dev /dev/ttyUSB0 -b 921600
 ```
 
 2. Start the **Dynamixel Bridge Node**:
