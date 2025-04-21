@@ -3279,6 +3279,9 @@ CMakeFiles/flightstack.dir/src/control/mrac/logging_mrac.cpp.o: \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_control_mode__builder.hpp \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_control_mode__traits.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \

@@ -295,11 +295,12 @@ private:
     Eigen::Vector3d T_YR  = dynamics_->compute_torque_simplified_mixed(I_CYR_, C_J_LYR_, omega_YR_I_inLi_raw, omega_dot_YR_I_inLi_filt);
 
     // --- Total Torque, Jacobian, Current, Send ---
-    Eigen::Vector3d total_inertial_torque = T_UAV + T_RB + T_PR + T_YR;
+    Eigen::Vector3d total_inertial_torque =  T_RB + T_PR + T_YR;
     Eigen::Vector3d required_motor_torque = total_inertial_torque;
     Eigen::Matrix3d Gamma_inv = compute_inverse_jacobian(phi_raw_, theta_raw_);
     Eigen::Vector3d gimbal_torques = Gamma_inv * required_motor_torque;
-    double roll_torque=gimbal_torques.x(), pitch_torque=gimbal_torques.y(), yaw_torque=gimbal_torques.z();
+    //double roll_torque=gimbal_torques.x(), pitch_torque=gimbal_torques.y(), yaw_torque=gimbal_torques.z();
+    double roll_torque=0.1*gimbal_torques.x(), pitch_torque=0, yaw_torque=0;
     int32_t roll_curr=torque_to_goal_current_calibrated(roll_torque), pitch_curr=torque_to_goal_current_calibrated(pitch_torque), yaw_curr=torque_to_goal_current_calibrated(yaw_torque);
     if (!send_dynamixel_commands(roll_curr, pitch_curr, yaw_curr)) { /* Warn */ }
 

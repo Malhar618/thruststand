@@ -864,7 +864,7 @@ CMakeFiles/flightstack.dir/src/user_defined_trajectory/piecewise_polynomial_traj
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_control_mode__builder.hpp \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_control_mode__traits.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
  /usr/local/include/boost/numeric/odeint.hpp \
  /usr/local/include/boost/numeric/odeint/version.hpp \
@@ -2257,11 +2257,8 @@ CMakeFiles/flightstack.dir/src/user_defined_trajectory/piecewise_polynomial_traj
  /usr/local/include/boost/numeric/odeint/iterator/impl/const_step_iterator_impl.hpp \
  /usr/local/include/boost/numeric/odeint/iterator/const_step_time_iterator.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/QR \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
  /usr/local/include/boost/date_time/posix_time/posix_time.hpp \
  /usr/local/include/boost/date_time/compiler_config.hpp \
  /usr/local/include/boost/date_time/locale_config.hpp \

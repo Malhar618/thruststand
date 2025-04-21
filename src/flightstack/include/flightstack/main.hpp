@@ -51,12 +51,12 @@ enum class EKF2FusionMode {
 /*
  *  Perform data fusion using GPS
  */
-// inline constexpr EKF2FusionMode CURRENT_EKF2_FUSION_MODE = EKF2FusionMode::GPS;
+   inline constexpr EKF2FusionMode CURRENT_EKF2_FUSION_MODE = EKF2FusionMode::GPS;
 
 /*
  * Perform data fusion using MOCAP
  */
-inline constexpr EKF2FusionMode CURRENT_EKF2_FUSION_MODE = EKF2FusionMode::MOCAP;
+//inline constexpr EKF2FusionMode CURRENT_EKF2_FUSION_MODE = EKF2FusionMode::MOCAP;
 
 /***********************************************************************************************************************
   
