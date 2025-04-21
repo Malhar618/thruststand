@@ -319,7 +319,21 @@ private:
     double roll_torque=0.1*gimbal_torques.x(), pitch_torque=0, yaw_torque=0;
     int32_t roll_curr=torque_to_goal_current_calibrated(roll_torque), pitch_curr=torque_to_goal_current_calibrated(pitch_torque), yaw_curr=torque_to_goal_current_calibrated(yaw_torque);
     if (!send_dynamixel_commands(roll_curr, pitch_curr, yaw_curr)) { /* Warn */ }
-
+    // --- read raw present currents back from the servos ---
+    if (!groupSyncReadPresentCurrent_->txRxPacket()) {
+      RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+        "Failed to read back present currents");
+    }
+    std::array<int32_t,3> raw_currents;
+    for (size_t i=0; i<DXL_IDS.size(); i++) {
+      raw_currents[i] = groupSyncReadPresentCurrent_->getData(DXL_IDS[i], 0);
+    }
+    groupSyncReadPresentCurrent_->clearParam();
+    // convert to Amps if you like:
+    double I_roll_A  = (raw_currents[0] - CURRENT_OFFSET_RAW) * CURRENT_LSB;
+    double I_pitch_A = (raw_currents[1] - CURRENT_OFFSET_RAW) * CURRENT_LSB;
+    double I_yaw_A   = (raw_currents[2] - CURRENT_OFFSET_RAW) * CURRENT_LSB;
+  }
     // --- Logging ---
     // *** UPDATED Logging Format String ***
   //   RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 100,
