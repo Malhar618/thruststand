@@ -97,11 +97,61 @@ void send_file(int socket, const std::string& filename) {
     std::cout << "File sent back: " << filename << std::endl;
 }
 
+//int main() {
+//    int server_fd, client_socket;
+//    struct sockaddr_in address;
+//    int addrlen = sizeof(address);
+//    int n = 5;
+//    std::string filename = "gains_pid.json";
+
+    // Create socket
+//    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
+//        std::cerr << "Socket creation failed\n";
+//        return -1;
+//    }
+
+    // Set up address
+ //   address.sin_family = AF_INET;
+ //   address.sin_addr.s_addr = INADDR_ANY;
+ //   address.sin_port = htons(PORT);
+
+    // Bind socket
+ //   if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0) {
+ //       std::cerr << "Bind failed\n";
+ //       return -1;
+ //   }
+
+    // Listen
+ //   if (listen(server_fd, 3) < 0) {
+ //       std::cerr << "Listen failed\n";
+ //       return -1;
+ //   }
+
+ //   std::cout << "Server listening on port " << PORT << "...\n";
+
+    // Accept connection
+//    if ((client_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) {
+//        std::cerr << "Accept failed\n";
+//        return -1;
+//    }
+//    std::cout << "Client connected!\n";
+//    const char* L2filename = "L2norm.json";
+//    for (int i = 0; i < n; i++) {
+//        std::cout << "Iteration " << i + 1 << " of " << n << std::endl;
+
+//        receive_file(client_socket, filename);
+//        process_file(filename);
+//        send_file(client_socket, L2filename);
+//    }
+//    close(client_socket);
+//    close(server_fd);
+
+//    return 0;
+//}
 int main() {
     int server_fd, client_socket;
     struct sockaddr_in address;
     int addrlen = sizeof(address);
-    int n = 5;
     std::string filename = "gains_pid.json";
 
     // Create socket
@@ -109,6 +159,10 @@ int main() {
         std::cerr << "Socket creation failed\n";
         return -1;
     }
+
+    // Reuse address for quick restarts
+    int opt = 1;
+    setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 
     // Set up address
     address.sin_family = AF_INET;
@@ -129,22 +183,26 @@ int main() {
 
     std::cout << "Server listening on port " << PORT << "...\n";
 
-    // Accept connection
-    if ((client_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) {
-        std::cerr << "Accept failed\n";
-        return -1;
-    }
-    std::cout << "Client connected!\n";
-    const char* L2filename = "L2norm.json";
-    for (int i = 0; i < n; i++) {
-        std::cout << "Iteration " << i + 1 << " of " << n << std::endl;
+    while (true) {
+        // Check for shutdown file
+        if (std::filesystem::exists("/home/odroid/ros2_thrust_ws/src/comms/tcp_server_shutdown")) {
+            std::cout << "Shutdown signal received. Exiting...\n";
+            break;
+        }
 
-        //receive_file(client_socket, filename);
-        //process_file(filename);
-        send_file(client_socket, L2filename);
+        // Accept client connection
+        if ((client_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) {
+            std::cerr << "Accept failed\n";
+            continue;
+        }
+
+        std::cout << "Client connected!\n";
+        receive_file(client_socket, filename);
+        process_file(filename);
+        send_file(client_socket, "L2norm.json");
+        close(client_socket);
     }
-    close(client_socket);
+
     close(server_fd);
-
     return 0;
 }

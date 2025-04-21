@@ -213,10 +213,9 @@ CMakeFiles/flightstack.dir/src/config/config.cpp.o: /home/odroid/ros2_thrust_ws/
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -227,7 +226,6 @@ CMakeFiles/flightstack.dir/src/config/config.cpp.o: /home/odroid/ros2_thrust_ws/
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -4005,10 +4003,9 @@ CMakeFiles/flightstack.dir/src/control/control.cpp.o: /home/odroid/ros2_thrust_w
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -4019,7 +4016,6 @@ CMakeFiles/flightstack.dir/src/control/control.cpp.o: /home/odroid/ros2_thrust_w
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -4067,6 +4063,7 @@ CMakeFiles/flightstack.dir/src/control/control.cpp.o: /home/odroid/ros2_thrust_w
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/ordered_map.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/control/sine_wave_generator.hpp \
   /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__builder.hpp \
   /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__struct.hpp \
   /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__traits.hpp \
@@ -7797,10 +7794,9 @@ CMakeFiles/flightstack.dir/src/control/control_callback.cpp.o: /home/odroid/ros2
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -7811,7 +7807,6 @@ CMakeFiles/flightstack.dir/src/control/control_callback.cpp.o: /home/odroid/ros2
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -11593,6 +11588,9 @@ CMakeFiles/flightstack.dir/src/control/mrac/logging_mrac.cpp.o: /home/odroid/ros
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -15385,6 +15383,9 @@ CMakeFiles/flightstack.dir/src/control/mrac/mrac.cpp.o: /home/odroid/ros2_thrust
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -19173,10 +19174,6 @@ CMakeFiles/flightstack.dir/src/control/pid/logging_pid.cpp.o: /home/odroid/ros2_
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
@@ -19190,7 +19187,6 @@ CMakeFiles/flightstack.dir/src/control/pid/logging_pid.cpp.o: /home/odroid/ros2_
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -22968,10 +22964,6 @@ CMakeFiles/flightstack.dir/src/control/pid/pid.cpp.o: /home/odroid/ros2_thrust_w
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
@@ -22985,7 +22977,6 @@ CMakeFiles/flightstack.dir/src/control/pid/pid.cpp.o: /home/odroid/ros2_thrust_w
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -26747,10 +26738,9 @@ CMakeFiles/flightstack.dir/src/logging/logging_mocap.cpp.o: /home/odroid/ros2_th
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -26759,7 +26749,6 @@ CMakeFiles/flightstack.dir/src/logging/logging_mocap.cpp.o: /home/odroid/ros2_th
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/udp_socket.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/byte_container_with_subtype.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/abi_macros.hpp \
@@ -30535,10 +30524,9 @@ CMakeFiles/flightstack.dir/src/main.cpp.o: /home/odroid/ros2_thrust_ws/src/ACSL-
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/main.hpp \
@@ -30550,7 +30538,6 @@ CMakeFiles/flightstack.dir/src/main.cpp.o: /home/odroid/ros2_thrust_ws/src/ACSL-
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -41096,10 +41083,9 @@ CMakeFiles/flightstack.dir/src/multi_threaded_node.cpp.o: /home/odroid/ros2_thru
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -41110,7 +41096,6 @@ CMakeFiles/flightstack.dir/src/multi_threaded_node.cpp.o: /home/odroid/ros2_thru
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -44888,10 +44873,9 @@ CMakeFiles/flightstack.dir/src/pixhawk_interface/pixhawk_actuator_motors.cpp.o: 
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -44902,7 +44886,6 @@ CMakeFiles/flightstack.dir/src/pixhawk_interface/pixhawk_actuator_motors.cpp.o: 
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -48680,10 +48663,9 @@ CMakeFiles/flightstack.dir/src/pixhawk_interface/pixhawk_vehicle_odometry.cpp.o:
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -48694,7 +48676,6 @@ CMakeFiles/flightstack.dir/src/pixhawk_interface/pixhawk_vehicle_odometry.cpp.o:
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -52472,10 +52453,9 @@ CMakeFiles/flightstack.dir/src/pixhawk_interface/vehicle_state.cpp.o: /home/odro
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -52486,7 +52466,6 @@ CMakeFiles/flightstack.dir/src/pixhawk_interface/vehicle_state.cpp.o: /home/odro
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -56264,10 +56243,9 @@ CMakeFiles/flightstack.dir/src/user_defined_trajectory/piecewise_polynomial_traj
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -56278,7 +56256,6 @@ CMakeFiles/flightstack.dir/src/user_defined_trajectory/piecewise_polynomial_traj
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -60056,10 +60033,9 @@ CMakeFiles/flightstack.dir/src/user_defined_trajectory/user_defined_trajectory.c
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/control.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
+  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/mocap/io_context.hpp \
@@ -60070,7 +60046,6 @@ CMakeFiles/flightstack.dir/src/user_defined_trajectory/user_defined_trajectory.c
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
-  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
   /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/adl_serializer.hpp \
@@ -64640,13 +64615,17 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/main.cpp:
 
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp:
-
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/control/pid/logging_pid.cpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/control/mrac/mrac.cpp:
 
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp:
+
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/control/control_callback.cpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/control/sine_wave_generator.hpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/control/control.cpp:
 
@@ -64787,10 +64766,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/type_traits/has_post_decrement.hpp:
 
 /usr/local/include/boost/type_traits/has_plus.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp:
-
-/usr/local/include/boost/type_traits/has_nothrow_constructor.hpp:
 
 /usr/local/include/boost/type_traits/has_nothrow_assign.hpp:
 
@@ -65990,10 +65965,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/mpl/map/aux_/item.hpp:
 
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp:
-
-/usr/local/include/boost/mpl/map/aux_/contains_impl.hpp:
-
 /usr/local/include/boost/mpl/map.hpp:
 
 /usr/local/include/boost/mpl/long_fwd.hpp:
@@ -66485,8 +66456,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/parameter/config.hpp:
 
 /usr/local/include/boost/move/utility.hpp:
-
-/usr/local/include/boost/move/traits.hpp:
 
 /usr/local/include/boost/preprocessor/list/detail/fold_right.hpp:
 
@@ -67128,6 +67097,12 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/fusion/algorithm/iteration/reverse_iter_fold.hpp:
 
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp:
+
+/usr/include/asio/local/detail/endpoint.hpp:
+
+/usr/local/include/boost/iterator/iterator_adaptor.hpp:
+
 /usr/local/include/boost/numeric/odeint/version.hpp:
 
 /usr/local/include/boost/mpl/at_fwd.hpp:
@@ -67291,12 +67266,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Eigenvalues/RealSchur.h:
-
-/usr/include/asio/local/detail/endpoint.hpp:
-
-/usr/local/include/boost/iterator/iterator_adaptor.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp:
 
 /opt/ros/galactic/include/rclcpp/allocator/allocator_common.hpp:
 
@@ -67548,6 +67517,8 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/fusion/support/config.hpp:
 
+/opt/ros/galactic/include/statistics_msgs/msg/detail/metrics_message__traits.hpp:
+
 /usr/include/aarch64-linux-gnu/bits/locale.h:
 
 /opt/ros/galactic/include/statistics_msgs/msg/detail/metrics_message__struct.hpp:
@@ -67706,17 +67677,9 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/fusion/container/vector/vector.hpp:
 
-/usr/include/asio/post.hpp:
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/meta/void_t.hpp:
 
-/usr/local/include/boost/log/keywords/max_size.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/user_defined_trajectory/user_defined_trajectory.cpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Eigenvalues/ComplexSchur.h:
-
-/usr/local/include/boost/units/detail/dimension_list.hpp:
-
-/usr/local/include/boost/fusion/view/joint_view/detail/begin_impl.hpp:
+/usr/include/c++/9/initializer_list:
 
 /usr/include/asio/impl/io_context.hpp:
 
@@ -67764,9 +67727,17 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/fusion/container/vector/detail/value_of_impl.hpp:
 
-/usr/include/asio/impl/serial_port_base.hpp:
+/usr/include/asio/post.hpp:
 
-/usr/local/include/boost/date_time/date_names_put.hpp:
+/usr/local/include/boost/log/keywords/max_size.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/src/user_defined_trajectory/user_defined_trajectory.cpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Eigenvalues/ComplexSchur.h:
+
+/usr/local/include/boost/units/detail/dimension_list.hpp:
+
+/usr/local/include/boost/fusion/view/joint_view/detail/begin_impl.hpp:
 
 /usr/local/include/boost/mpl/aux_/lambda_support.hpp:
 
@@ -67787,30 +67758,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/iterator/interoperable.hpp:
 
 /opt/ros/galactic/include/rclcpp_lifecycle/transition.hpp:
-
-/opt/ros/galactic/include/statistics_msgs/msg/detail/metrics_message__traits.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp:
-
-/opt/ros/galactic/include/rclcpp/parameter_service.hpp:
-
-/usr/include/asio/impl/executor.ipp:
-
-/usr/local/include/boost/mpl/multiplies.hpp:
-
-/usr/include/c++/9/ios:
-
-/usr/local/include/boost/units/detail/conversion_impl.hpp:
-
-/usr/include/aarch64-linux-gnu/bits/epoll.h:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/arch/Default/Settings.h:
-
-/usr/include/asio/ip/unicast.hpp:
-
-/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/local/include/boost/atomic/detail/wait_capabilities.hpp:
 
 /usr/local/include/boost/units/scale.hpp:
 
@@ -67878,6 +67825,10 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/move/detail/std_ns_end.hpp:
 
+/usr/include/asio/impl/serial_port_base.hpp:
+
+/usr/local/include/boost/date_time/date_names_put.hpp:
+
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/QR/ColPivHouseholderQR.h:
 
 /usr/local/include/boost/type_traits/is_scoped_enum.hpp:
@@ -67931,6 +67882,8 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Geometry/Quaternion.h:
 
 /usr/include/c++/9/bits/exception.h:
+
+/opt/ros/galactic/include/rclcpp/parameter_service.hpp:
 
 /usr/include/asio/basic_signal_set.hpp:
 
@@ -68090,10 +68043,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/include/c++/9/cxxabi.h:
 
-/usr/local/include/boost/move/detail/workaround.hpp:
-
-/usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
-
 /usr/local/include/boost/units/get_system.hpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
@@ -68190,15 +68139,7 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /opt/ros/galactic/include/rcl_interfaces/srv/detail/set_parameters__struct.hpp:
 
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/NestByValue.h:
-
-/usr/local/include/boost/phoenix/operator/bitwise.hpp:
-
-/usr/local/include/boost/numeric/odeint/util/odeint_error.hpp:
-
-/opt/ros/galactic/include/rclcpp/context.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/MathFunctions.h:
+/opt/ros/galactic/include/rclcpp/client.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h:
 
@@ -68292,6 +68233,14 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/include/c++/9/cfloat:
 
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp:
+
+/usr/local/include/boost/date_time/gregorian/formatters.hpp:
+
+/usr/local/include/boost/multi_array.hpp:
+
+/usr/local/include/boost/math/special_functions/powm1.hpp:
+
 /opt/ros/galactic/include/rcl/publisher.h:
 
 /usr/include/c++/9/bit:
@@ -68311,10 +68260,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
 
 /usr/include/c++/9/version:
-
-/opt/ros/galactic/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
-
-/opt/ros/galactic/include/rcl/context.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/9/include/syslimits.h:
 
@@ -68381,10 +68326,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/GeneralProduct.h:
 
 /usr/local/include/boost/fusion/support/as_const.hpp:
-
-/opt/ros/galactic/include/rclcpp/detail/rmw_implementation_specific_payload.hpp:
-
-/usr/local/include/boost/io/detail/buffer_fill.hpp:
 
 /usr/local/include/boost/phoenix/scope/detail/local_variable.hpp:
 
@@ -68482,20 +68423,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/math/ccmath/abs.hpp:
 
-/usr/local/include/boost/optional/detail/optional_trivially_copyable_base.hpp:
-
-/usr/include/c++/9/string:
-
-/usr/local/include/boost/multi_array/multi_array_ref.hpp:
-
-/usr/local/include/boost/date_time/iso_format.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/output/output_adapters.hpp:
-
-/usr/include/asio/io_context.hpp:
-
-/usr/local/include/boost/atomic/detail/gcc_atomic_memory_order_utils.hpp:
-
 /usr/include/asio/detail/reactive_wait_op.hpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
@@ -68511,10 +68438,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /opt/ros/galactic/include/libstatistics_collector/collector/collector.hpp:
 
 /usr/include/c++/9/bits/basic_string.tcc:
-
-/usr/local/include/boost/atomic/detail/storage_traits.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/input/json_sax.hpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp:
 
@@ -68555,6 +68478,14 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/include/aarch64-linux-gnu/bits/socket_type.h:
 
 /opt/ros/galactic/include/rcl_interfaces/msg/detail/parameter_event__traits.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Cholesky/LLT.h:
+
+/usr/local/include/boost/numeric/odeint/iterator/detail/ode_iterator_base.hpp:
+
+/usr/local/include/boost/math/special_functions/zeta.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/output/binary_writer.hpp:
 
 /usr/include/aarch64-linux-gnu/c++/9/bits/ctype_inline.h:
 
@@ -68603,6 +68534,18 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
 
 /usr/include/c++/9/bits/shared_ptr.h:
+
+/usr/include/asio/impl/executor.ipp:
+
+/usr/local/include/boost/mpl/multiplies.hpp:
+
+/usr/include/c++/9/ios:
+
+/usr/local/include/boost/units/detail/conversion_impl.hpp:
+
+/usr/include/aarch64-linux-gnu/bits/epoll.h:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/arch/Default/Settings.h:
 
 /opt/ros/galactic/include/rcl_interfaces/msg/parameter_event.hpp:
 
@@ -68822,6 +68765,20 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/log/utility/setup/filter_parser.hpp:
 
+/opt/ros/galactic/include/builtin_interfaces/msg/detail/time__builder.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/arch/Default/ConjHelper.h:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/NestByValue.h:
+
+/usr/local/include/boost/phoenix/operator/bitwise.hpp:
+
+/usr/local/include/boost/numeric/odeint/util/odeint_error.hpp:
+
+/opt/ros/galactic/include/rclcpp/context.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/MathFunctions.h:
+
 /usr/include/asio/time_traits.hpp:
 
 /usr/local/include/boost/fusion/mpl/at.hpp:
@@ -68846,11 +68803,35 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/NumTraits.h:
 
+/usr/local/include/boost/preprocessor/punctuation/is_begin_parens.hpp:
+
+/usr/local/include/boost/parameter/aux_/template_keyword.hpp:
+
+/usr/include/asio/write.hpp:
+
+/usr/include/asio/detail/timer_scheduler.hpp:
+
+/usr/local/include/boost/log/expressions/message.hpp:
+
 /usr/local/include/boost/multi_array/storage_order.hpp:
 
 /usr/local/include/boost/fusion/iterator/mpl/convert_iterator.hpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/misc/RealSvd2x2.h:
+
+/usr/local/include/boost/mpl/map/aux_/contains_impl.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp:
+
+/usr/local/include/boost/type_traits/is_member_object_pointer.hpp:
+
+/opt/ros/galactic/include/rclcpp/callback_group.hpp:
+
+/usr/local/include/boost/iterator/is_iterator.hpp:
+
+/usr/local/include/boost/log/sources/features.hpp:
+
+/usr/local/include/boost/log/keywords/enable_final_rotation.hpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/DenseBase.h:
 
@@ -68873,6 +68854,20 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/predef/compiler/pgi.h:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/Product.h:
+
+/usr/include/asio/ip/unicast.hpp:
+
+/usr/local/include/boost/io/detail/buffer_fill.hpp:
+
+/opt/ros/galactic/include/rclcpp/detail/rmw_implementation_specific_payload.hpp:
+
+/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/local/include/boost/atomic/detail/wait_capabilities.hpp:
+
+/opt/ros/galactic/include/rcl/context.h:
+
+/opt/ros/galactic/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
 
 /usr/include/asio/detail/push_options.hpp:
 
@@ -69025,22 +69020,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /opt/ros/galactic/include/rcl/init_options.h:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/functors/BinaryFunctors.h:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/meta/void_t.hpp:
-
-/usr/include/c++/9/initializer_list:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/arch/Default/ConjHelper.h:
-
-/opt/ros/galactic/include/builtin_interfaces/msg/detail/time__builder.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Cholesky/LLT.h:
-
-/usr/local/include/boost/numeric/odeint/iterator/detail/ode_iterator_base.hpp:
-
-/usr/local/include/boost/math/special_functions/zeta.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/output/binary_writer.hpp:
 
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h:
 
@@ -69292,6 +69271,10 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/fusion/container/vector/detail/advance_impl.hpp:
 
+/usr/local/include/boost/type_traits/has_nothrow_constructor.hpp:
+
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp:
+
 /usr/include/c++/9/ratio:
 
 /usr/include/asio/detail/consuming_buffers.hpp:
@@ -69307,16 +69290,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/fusion/iterator/distance.hpp:
 
 /opt/ros/galactic/include/rcl/timer.h:
-
-/usr/local/include/boost/type_traits/is_member_object_pointer.hpp:
-
-/opt/ros/galactic/include/rclcpp/callback_group.hpp:
-
-/usr/local/include/boost/iterator/is_iterator.hpp:
-
-/usr/local/include/boost/log/sources/features.hpp:
-
-/usr/local/include/boost/log/keywords/enable_final_rotation.hpp:
 
 /opt/ros/galactic/include/rclcpp/qos_event.hpp:
 
@@ -69365,8 +69338,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /opt/ros/galactic/include/rclcpp/parameter_event_handler.hpp:
 
 /usr/local/include/boost/fusion/adapted/mpl/detail/empty_impl.hpp:
-
-/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp:
 
 /opt/ros/galactic/include/rcl/allocator.h:
 
@@ -69579,8 +69550,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/ratio/ratio_fwd.hpp:
 
 /usr/local/include/boost/fusion/adapted/struct/detail/category_of_impl.hpp:
-
-/opt/ros/galactic/include/rclcpp/client.hpp:
 
 /opt/ros/galactic/include/rclcpp/clock.hpp:
 
@@ -69884,6 +69853,20 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/fusion/algorithm/query/detail/count.hpp:
 
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/output/output_adapters.hpp:
+
+/usr/include/asio/io_context.hpp:
+
+/usr/local/include/boost/atomic/detail/gcc_atomic_memory_order_utils.hpp:
+
+/usr/local/include/boost/optional/detail/optional_trivially_copyable_base.hpp:
+
+/usr/include/c++/9/string:
+
+/usr/local/include/boost/multi_array/multi_array_ref.hpp:
+
+/usr/local/include/boost/date_time/iso_format.hpp:
+
 /usr/include/aarch64-linux-gnu/sys/poll.h:
 
 /usr/include/aarch64-linux-gnu/sys/ucontext.h:
@@ -69909,16 +69892,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/offboard_control_mode.hpp:
 
 /opt/ros/galactic/include/rcutils/types/hash_map.h:
-
-/usr/local/include/boost/preprocessor/punctuation/is_begin_parens.hpp:
-
-/usr/local/include/boost/parameter/aux_/template_keyword.hpp:
-
-/usr/include/asio/write.hpp:
-
-/usr/include/asio/detail/timer_scheduler.hpp:
-
-/usr/local/include/boost/log/expressions/message.hpp:
 
 /usr/local/include/boost/predef/platform/windows_system.h:
 
@@ -70774,6 +70747,10 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/date_time/posix_time/conversion.hpp:
 
+/home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/input/json_sax.hpp:
+
+/usr/local/include/boost/atomic/detail/storage_traits.hpp:
+
 /usr/local/include/boost/atomic/detail/string_ops.hpp:
 
 /usr/local/include/boost/fusion/view/filter_view/detail/value_of_impl.hpp:
@@ -71060,12 +71037,6 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/date_time/gregorian/conversion.hpp:
 
-/usr/local/include/boost/date_time/gregorian/formatters.hpp:
-
-/usr/local/include/boost/multi_array.hpp:
-
-/usr/local/include/boost/math/special_functions/powm1.hpp:
-
 /usr/local/include/boost/date_time/gregorian/greg_date.hpp:
 
 /usr/local/include/boost/date_time/gregorian/greg_duration.hpp:
@@ -71090,9 +71061,9 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/date_time/local_time/custom_time_zone.hpp:
 
-/usr/local/include/boost/next_prior.hpp:
-
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp:
+
+/usr/local/include/boost/next_prior.hpp:
 
 /usr/local/include/boost/date_time/local_time/dst_transition_day_rules.hpp:
 
@@ -71478,9 +71449,9 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 
 /usr/local/include/boost/fusion/include/for_each.hpp:
 
-/usr/include/asio/placeholders.hpp:
-
 /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/Diagonal.h:
+
+/usr/include/asio/placeholders.hpp:
 
 /usr/local/include/boost/fusion/include/is_sequence.hpp:
 
@@ -72249,3 +72220,9 @@ CMakeFiles/flightstack.dir/src/utils/json_parser.cpp.o: /home/odroid/ros2_thrust
 /usr/local/include/boost/move/core.hpp:
 
 /usr/local/include/boost/move/detail/type_traits.hpp:
+
+/usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
+
+/usr/local/include/boost/move/detail/workaround.hpp:
+
+/usr/local/include/boost/move/traits.hpp:

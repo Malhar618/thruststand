@@ -661,7 +661,7 @@ CMakeFiles/flightstack.dir/src/control/pid/pid.cpp.o: \
  /usr/include/c++/9/any \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/detail/macro_unscope.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/json/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/Dense \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/Core \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
@@ -2260,11 +2260,8 @@ CMakeFiles/flightstack.dir/src/control/pid/pid.cpp.o: \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/vehicle_info.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/piecewise_polynomial_trajectory.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/QR \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp \
  /usr/local/include/boost/date_time/posix_time/posix_time.hpp \
  /usr/local/include/boost/date_time/compiler_config.hpp \
  /usr/local/include/boost/date_time/locale_config.hpp \
@@ -3717,7 +3714,4 @@ CMakeFiles/flightstack.dir/src/control/pid/pid.cpp.o: \
  /usr/include/asio/write.hpp /usr/include/asio/write_at.hpp \
  /usr/include/asio/impl/write_at.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/logging/logging_mocap.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/pid_gains.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/pid/logging_pid.hpp
+ /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/print_helpers.hpp

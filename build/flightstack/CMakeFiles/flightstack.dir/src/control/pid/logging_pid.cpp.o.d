@@ -3276,12 +3276,6 @@ CMakeFiles/flightstack.dir/src/control/pid/logging_pid.cpp.o: \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_control_mode__builder.hpp \
  /home/odroid/ros2_thrust_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_control_mode__traits.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/config/config.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/mrac_gains.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/continuous_lyapunov_equation.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/eigen/Eigen/QR \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/projection_operator.hpp \
- /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/control/mrac/logging_mrac.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/utils/json_parser.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/pixhawk_interface/vehicle_state.hpp \
  /home/odroid/ros2_thrust_ws/src/ACSL-flightstack/include/flightstack/user_defined_trajectory/user_defined_trajectory.hpp \
