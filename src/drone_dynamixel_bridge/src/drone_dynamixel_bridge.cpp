@@ -14,6 +14,8 @@
 #include <Eigen/Geometry>
 #include <thread> // For std::this_thread::sleep_for
 
+  // SyncRead helper for reading back present currents
+  std::unique_ptr<dynamixel::GroupSyncRead> groupSyncReadPresentCurrent_;
 using namespace std::chrono_literals;
 
 // --- Dynamixel Configuration (Write-only) ---
@@ -35,7 +37,11 @@ const double CURRENT_LSB         = 0.0045;       // 4.5 mA per tick           �
 const int    CURRENT_OFFSET_RAW  = 2048;         // Register value at 0 A    ◀◀ CHANGED
 const int    CURRENT_RAW_MIN     = 0;            // Min register (0 A => RAW=2048)
 const int    CURRENT_RAW_MAX     = 4095;         // Max register (±9.2115 A) ◀◀ CHANGED
-
+// address & length of the Present Current register in the XM‑series (e.g. XM430‑W210)
+static constexpr uint16_t ADDR_PRESENT_CURRENT = 126;
+static constexpr uint16_t LEN_PRESENT_CURRENT  = 2;
+// SyncRead helper for reading back present currents
+std::unique_ptr<dynamixel::GroupSyncRead> groupSyncReadPresentCurrent_;
 // --- Filter Differentiator Class ---
 // (Used ONLY to obtain a filtered derivative for body rates)
 class FilterDiff {
@@ -143,7 +149,15 @@ public:
 
     // Initialize Sync Write object
     groupSyncWrite_ = std::make_unique<dynamixel::GroupSyncWrite>(portHandler_, packetHandler_, ADDR_GOAL_CURRENT, LEN_GOAL_CURRENT);
-
+    groupSyncReadPresentCurrent_ = std::make_unique<dynamixel::GroupSyncRead>(
+        portHandler_, packetHandler_,
+        ADDR_PRESENT_CURRENT,
+        LEN_PRESENT_CURRENT
+    );
+    // add each Dynamixel ID
+    for (uint8_t id : DXL_IDS) {
+      groupSyncReadPresentCurrent_->addParam(id);
+    }
     RCLCPP_INFO(this->get_logger(), "Node initialized.");
   }
 
@@ -220,7 +234,7 @@ private:
     p_raw_ = odom->angular_velocity[0];
     q_raw_ = odom->angular_velocity[1];
     r_raw_ = odom->angular_velocity[2];
-
+    file << p_raw_ << "," << q_raw_ << "," << r_raw_ << "\n";
     // Get rotation matrix from odometry quaternion ([w, x, y, z] - PX4 standard)
     // Eigen expects Quaterniond(w, x, y, z)
     Eigen::Quaterniond q_I_J(odom->q[0], odom->q[1], odom->q[2], odom->q[3]);
@@ -308,10 +322,37 @@ private:
 
     // --- Logging ---
     // *** UPDATED Logging Format String ***
-    RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 100,
-      "AnglesRaw(p,t,y): [%.2f,%.2f,%.2f] | RatesRaw(p,q,r): [%.2f,%.2f,%.2f] | AccelFilt(p,q,r): [%.2f,%.2f,%.2f] | E RatesRaw(p,t): [%.2f,%.2f] | TorqCmd: [%.3f,%.3f,%.3f] | CurrCmd: [%d,%d,%d]", // Changed %ld to %d
-      phi_raw_, theta_raw_, psi_raw_, p_raw_, q_raw_, r_raw_, p_dot_filt_, q_dot_filt_, r_dot_filt_, phi_dot_raw_calc_, theta_dot_raw_calc_, roll_torque, pitch_torque, yaw_torque, roll_curr, pitch_curr, yaw_curr);
-  }
+  //   RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 100,
+  //     "AnglesRaw(p,t,y): [%.2f,%.2f,%.2f] | RatesRaw(p,q,r): [%.2f,%.2f,%.2f] | AccelFilt(p,q,r): [%.2f,%.2f,%.2f] | E RatesRaw(p,t): [%.2f,%.2f] | TorqCmd: [%.3f,%.3f,%.3f] | CurrCmd: [%d,%d,%d]", // Changed %ld to %d
+  //     phi_raw_, theta_raw_, psi_raw_, p_raw_, q_raw_, r_raw_, p_dot_filt_, q_dot_filt_, r_dot_filt_, phi_dot_raw_calc_, theta_dot_raw_calc_, roll_torque, pitch_torque, yaw_torque, roll_curr, pitch_curr, yaw_curr);
+  // }
+       RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 100,
+        "EulerRaw [φ,θ,ψ]: [%.2f, %.2f, %.2f]  "
+        "RatesRaw [p,q,r]: [%.2f, %.2f, %.2f]  "
+        "AccelFilt [ṗ,q̇,ṙ]: [%.2f, %.2f, %.2f]  "
+        "TorqueMixed [RB,PR,YR]: [%.3f, %.3f, %.3f]  "
+        "GimbalTorq [φ,θ,ψ]: [%.3f, %.3f, %.3f]  "
+        "CurrCmd [roll,pitch,yaw]: [%d, %d, %d]  "
+        "CurrRaw [A]: [%.2f, %.2f, %.2f]",
+        // raw angles
+        phi_raw_, theta_raw_, psi_raw_,
+        // raw rates
+        p_raw_, q_raw_, r_raw_,
+        // filtered accelerations
+        p_dot_filt_, q_dot_filt_, r_dot_filt_,
+        // mixed‐dynamics torque (sum of RB, PR, YR about each axis)
+        (T_RB + T_PR + T_YR).x(),
+        (T_RB + T_PR + T_YR).y(),
+        (T_RB + T_PR + T_YR).z(),
+        // gimbal (Jacobian‑inverted) torque
+        gimbal_torques.x(),
+        gimbal_torques.y(),
+        gimbal_torques.z(),
+        // commanded goal currents
+        roll_curr, pitch_curr, yaw_curr,
+        // raw measured currents in Amps
+        I_roll_A, I_pitch_A, I_yaw_A
+      );
 
   // --- Helper Functions ---
   bool initialize_dynamixels() {
@@ -402,7 +443,7 @@ private:
   }
 
 }; // End class DroneDynamixelBridgeNode
-
+// --- Data to CSV function --- 
 // --- Main Function ---
 int main(int argc, char **argv) {
   rclcpp::init(argc, argv);
