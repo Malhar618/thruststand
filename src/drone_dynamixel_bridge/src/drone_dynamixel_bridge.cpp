@@ -31,8 +31,10 @@ const uint16_t ADDR_GOAL_CURRENT = 102;
 const uint16_t LEN_TORQUE_ENABLE = 1;
 const uint16_t LEN_GOAL_CURRENT = 2;
 // const uint16_t LEN_CURRENT_LIMIT = 2; // Not strictly needed for operation here
-const double CURRENT_STEP = 0.00269; // (2.69 mA per step for MX-106 2.0)
-const double DEFAULT_CURRENT_LIMIT_STEPS = 800.0; // ~3.21 A - Used for clamping
+const double CURRENT_LSB         = 0.0045;       // 4.5 mA per tick           ◀◀ CHANGED
+const int    CURRENT_OFFSET_RAW  = 2048;         // Register value at 0 A    ◀◀ CHANGED
+const int    CURRENT_RAW_MIN     = 0;            // Min register (0 A => RAW=2048)
+const int    CURRENT_RAW_MAX     = 4095;         // Max register (±9.2115 A) ◀◀ CHANGED
 
 // --- Filter Differentiator Class ---
 // (Used ONLY to obtain a filtered derivative for body rates)
@@ -367,11 +369,17 @@ private:
 
   // Converts torque [Nm] to Dynamixel goal current steps using CALIBRATED fits
   int32_t torque_to_goal_current_calibrated(double torque_nm) {
-    double current_A = (torque_nm >= 0) ? (0.6370 * torque_nm + 0.0395) : (0.6439 * torque_nm - 0.1097);
-    double steps = current_A / CURRENT_STEP;
-    double max_steps = DEFAULT_CURRENT_LIMIT_STEPS;
-    steps = std::max(-max_steps, std::min(max_steps, steps)); // Clamp
-    return static_cast<int32_t>(std::round(steps));
+    double current_A;
+    if (torque_nm >= 0.0) {
+      current_A = 0.6370 * torque_nm + 0.0395;
+    } else {
+      current_A = 0.6439 * torque_nm - 0.1097; // ◀◀ CHANGED: negative‐torque branch
+    }
+    // 2) Convert to raw register, add offset
+    double raw = (current_A / CURRENT_LSB) + CURRENT_OFFSET_RAW; // ◀◀ CHANGED
+    // 3) Clamp into valid range
+    raw = std::clamp(raw, double(CURRENT_RAW_MIN), double(CURRENT_RAW_MAX)); // ◀◀ CHANGED
+    return static_cast<int32_t>(std::round(raw));
   }
 
   // Helper to write single byte with logging
