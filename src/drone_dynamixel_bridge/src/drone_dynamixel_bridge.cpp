@@ -328,7 +328,7 @@ private:
     Eigen::Vector3d gimbal_torques = Gamma_inv * required_motor_torque;
 
     // Apply scaling/zeroing
-    double roll_torque=0.1*gimbal_torques.x(), pitch_torque=0, yaw_torque=0;
+    double roll_torque=gimbal_torques.x(), pitch_torque=gimbal_torques.y(), yaw_torque=gimbal_torques.z();
     int32_t roll_curr=torque_to_goal_current_calibrated(roll_torque), pitch_curr=torque_to_goal_current_calibrated(pitch_torque), yaw_curr=torque_to_goal_current_calibrated(yaw_torque);
 
     // --- Log Data to CSV ---
