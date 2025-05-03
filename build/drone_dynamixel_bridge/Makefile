@@ -237,6 +237,19 @@ motor_stepdown/fast:
 .PHONY : motor_stepdown/fast
 
 #=============================================================================
+# Target rules for targets named roll_sine_position_node
+
+# Build rule for target.
+roll_sine_position_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 roll_sine_position_node
+.PHONY : roll_sine_position_node
+
+# fast build rule for target.
+roll_sine_position_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_sine_position_node.dir/build.make CMakeFiles/roll_sine_position_node.dir/build
+.PHONY : roll_sine_position_node/fast
+
+#=============================================================================
 # Target rules for targets named angular_state_logger
 
 # Build rule for target.
@@ -382,6 +395,30 @@ src/performance_index.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/performance_index.dir/build.make CMakeFiles/performance_index.dir/src/performance_index.cpp.s
 .PHONY : src/performance_index.cpp.s
 
+src/roll_sine_position_node.o: src/roll_sine_position_node.cpp.o
+.PHONY : src/roll_sine_position_node.o
+
+# target to build an object file
+src/roll_sine_position_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_sine_position_node.dir/build.make CMakeFiles/roll_sine_position_node.dir/src/roll_sine_position_node.cpp.o
+.PHONY : src/roll_sine_position_node.cpp.o
+
+src/roll_sine_position_node.i: src/roll_sine_position_node.cpp.i
+.PHONY : src/roll_sine_position_node.i
+
+# target to preprocess a source file
+src/roll_sine_position_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_sine_position_node.dir/build.make CMakeFiles/roll_sine_position_node.dir/src/roll_sine_position_node.cpp.i
+.PHONY : src/roll_sine_position_node.cpp.i
+
+src/roll_sine_position_node.s: src/roll_sine_position_node.cpp.s
+.PHONY : src/roll_sine_position_node.s
+
+# target to generate assembly for a file
+src/roll_sine_position_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_sine_position_node.dir/build.make CMakeFiles/roll_sine_position_node.dir/src/roll_sine_position_node.cpp.s
+.PHONY : src/roll_sine_position_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,6 +439,7 @@ help:
 	@echo "... motor_stepdown"
 	@echo "... motor_stepup"
 	@echo "... performance_index"
+	@echo "... roll_sine_position_node"
 	@echo "... src/angular_state_logger.o"
 	@echo "... src/angular_state_logger.i"
 	@echo "... src/angular_state_logger.s"
@@ -417,6 +455,9 @@ help:
 	@echo "... src/performance_index.o"
 	@echo "... src/performance_index.i"
 	@echo "... src/performance_index.s"
+	@echo "... src/roll_sine_position_node.o"
+	@echo "... src/roll_sine_position_node.i"
+	@echo "... src/roll_sine_position_node.s"
 .PHONY : help
 
 

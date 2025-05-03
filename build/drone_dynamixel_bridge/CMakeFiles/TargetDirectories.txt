@@ -3,6 +3,7 @@
 /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/drone_dynamixel_bridge.dir
 /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/motor_stepup.dir
 /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/motor_stepdown.dir
+/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/roll_sine_position_node.dir
 /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/angular_state_logger.dir
 /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/performance_index.dir
 /home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/test.dir

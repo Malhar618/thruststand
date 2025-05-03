@@ -47,6 +47,13 @@ ament_target_dependencies(motor_stepdown
   px4_msgs
 )
 
+add_executable(roll_sine_position_node src/roll_sine_position_node.cpp)
+ament_target_dependencies(roll_sine_position_node
+  rclcpp
+  dynamixel_sdk
+)
+
+
 # angular_state_logger executable
 add_executable(angular_state_logger src/angular_state_logger.cpp)
 ament_target_dependencies(angular_state_logger
@@ -72,6 +79,7 @@ install(TARGETS
   motor_stepdown
   angular_state_logger
   performance_index
+  roll_sine_position_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
