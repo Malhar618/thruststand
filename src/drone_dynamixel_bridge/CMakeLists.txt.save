@@ -79,7 +79,6 @@ install(TARGETS
   motor_stepdown
   angular_state_logger
   performance_index
-  roll_sine_position_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

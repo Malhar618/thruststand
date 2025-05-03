@@ -163,6 +163,30 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge/roll_sine_position_node" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge/roll_sine_position_node")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge/roll_sine_position_node"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge" TYPE EXECUTABLE FILES "/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/roll_sine_position_node")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge/roll_sine_position_node" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge/roll_sine_position_node")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge/roll_sine_position_node"
+         OLD_RPATH "/home/odroid/ros2_thrust_ws/install/dynamixel_sdk/lib:/opt/ros/galactic/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_dynamixel_bridge/roll_sine_position_node")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/CMakeFiles/roll_sine_position_node.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/odroid/ros2_thrust_ws/build/drone_dynamixel_bridge/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/drone_dynamixel_bridge")
 endif()
 

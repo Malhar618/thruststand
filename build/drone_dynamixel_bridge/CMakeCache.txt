@@ -645,6 +645,8 @@ _Python3_INCLUDE_DIR:INTERNAL=/usr/include/python3.8
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;10;64;<none>;cpython-38-aarch64-linux-gnu;abi3;/usr/lib/python3.8;/usr/lib/python3.8;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=180e97fb1279d3b900d9246ae8984c88
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //Path to a library.
 _Python3_LIBRARY_RELEASE:INTERNAL=/usr/lib/aarch64-linux-gnu/libpython3.8.so
 //NumPy reason failure
