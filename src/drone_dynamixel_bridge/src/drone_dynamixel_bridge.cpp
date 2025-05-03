@@ -113,7 +113,11 @@ public:
         init_sdk();
         init_ros();
 
+<<<<<<< HEAD
         RCLCPP_INFO(get_logger(), "✅  Node ready.");
+=======
+        RCLCPP_INFO(get_logger(), "Node ready.");
+>>>>>>> c59c658f0edabbd90e2adf370a3bf49ddba8325c
     }
 
     ~DroneDxlBridge() override {
@@ -269,9 +273,15 @@ private:
 
         // ---- map to gimbal torques & current ----
         const Eigen::Vector3d gimbal_T = inv_jacobian(phi_, theta_) * total_T;
+<<<<<<< HEAD
         const double roll_T  = gimbal_T.x();  // scale per your test
         const double pitch_T = gimbal_T.y();
         const double yaw_T   = gimbal_T.z();
+=======
+        const double roll_T  = 0.1 * gimbal_T.x();  // scale per your test
+        const double pitch_T = 0.0;
+        const double yaw_T   = 0.0;
+>>>>>>> c59c658f0edabbd90e2adf370a3bf49ddba8325c
 
         const int32_t roll_I  = torque_to_current(roll_T);
         const int32_t pitch_I = torque_to_current(pitch_T);
