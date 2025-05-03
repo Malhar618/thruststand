@@ -44,10 +44,10 @@ const int      CURRENT_OFFSET_RAW = 2048;     // register value @ 0 A
 // -----------------------------------------------------------------------------
 //                    Patch‑C constants (damping & clamp)
 // -----------------------------------------------------------------------------
-const double  KD_ROLL   = 0.8;
-const double  KD_PITCH  = 0.6;
-const double  KD_YAW    = 0.6;
-const int16_t RAW_LIMIT = 1200;   // ±1200 ticks ≈ 3 A
+const double  KD_ROLL   = 1.5;
+const double  KD_PITCH  = 1.0;
+const double  KD_YAW    = 1.0;
+const int16_t RAW_LIMIT = 50;   // ±1200 ticks ≈ 3 A
 
 // -----------------------------------------------------------------------------
 //                               Helper classes
@@ -134,9 +134,9 @@ private:
                    "rawIroll,rawIpitch,rawIyaw\n";
         }
     }
-    void init_filters(){ fd_p_=std::make_unique<FilterDiff>(70.0,0.7);
-                         fd_q_=std::make_unique<FilterDiff>(70.0,0.7);
-                         fd_r_=std::make_unique<FilterDiff>(70.0,0.7); }
+    void init_filters(){ fd_p_=std::make_unique<FilterDiff>(30.0,0.7);
+                         fd_q_=std::make_unique<FilterDiff>(30.0,0.7);
+                         fd_r_=std::make_unique<FilterDiff>(30.0,0.7); }
     void init_sdk(){
         port_=dynamixel::PortHandler::getPortHandler(DEVICENAME);
         packet_=dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VER);
@@ -310,7 +310,7 @@ private:
     double phi_dot_{},theta_dot_{},psi_dot_{};
 
     std::unique_ptr<FilterDiff> fd_p_,fd_q_,fd_r_;
-    LP1 lpf_tx_{20.0}, lpf_ty_{20.0}, lpf_tz_{20.0};
+    LP1 lpf_tx_{10.0}, lpf_ty_{10.0}, lpf_tz_{10.0};
 
     Eigen::Matrix3d C_J_I_,C_J_LPR_,C_J_LYR_;
     const Eigen::Matrix3d I_CUAV_,I_CRB_,I_CPR_,I_CYR_;
