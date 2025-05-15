@@ -1,2 +1,0 @@
-odroid
-Times received: 1
