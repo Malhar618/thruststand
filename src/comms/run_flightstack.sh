@@ -3,6 +3,13 @@
 # Before running this program, make it executable with the command:
 # chmod +x ~/run_flightstack.sh
 
+# sudo password for the Odroid user. Set it in your shell first
+# (export SUDO_PASS=...) or the script asks for it. Never commit it.
+if [ -z "$SUDO_PASS" ]; then
+    read -r -s -p "sudo password: " SUDO_PASS
+    echo
+fi
+
 # Change to the ROS2 workspace directory
 cd /home/odroid/ros2_thrust_ws
 

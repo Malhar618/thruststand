@@ -47,7 +47,7 @@ const int      CURRENT_OFFSET_RAW = 2048;     // register value @ 0 A
 const double  KD_ROLL   = 1.5;
 const double  KD_PITCH  = 1.0;
 const double  KD_YAW    = 1.0;
-const int16_t RAW_LIMIT = 50;   // ±1200 ticks ≈ 3 A
+const int16_t RAW_LIMIT = 50;   // ±50 ticks ≈ 0.23 A
 
 // -----------------------------------------------------------------------------
 //                               Helper classes

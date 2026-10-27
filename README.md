@@ -1,7 +1,7 @@
 # ACSL Thrust Stand
 [![BSD License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
 
-This repository implements the ROS2 node and firmware-level integration used to operate and control a high-fidelity thrust stand for evaluating adaptive control algorithms on small UAVs. The system supports moment cancellation via gimbal actuation (roll, pitch, yaw) using Dynamixel MX-106T motors and receives angular state feedback from a Pixhawk flight controller using the PX4-ROS2 bridge. The system is tightly coupled with MATLAB to perform genetic algorithm optimization of UAV control parameters.
+This repository implements the ROS2 node and firmware-level integration used to operate and control a high-fidelity thrust stand for evaluating adaptive control algorithms on small UAVs. The system supports moment cancellation via gimbal actuation (roll, pitch, yaw) using Dynamixel MX-106T motors and receives angular state feedback from a Pixhawk 6C flight controller using the PX4-ROS2 bridge. The system is tightly coupled with MATLAB to perform genetic algorithm optimization of UAV control parameters.
 
 This thrust stand project is part of a broader research initiative titled:
 
@@ -37,7 +37,7 @@ sudo chmod +x build-code.sh
 ```
 
 >[!NOTE]
-> When prompted for password, use: `<your sudo password>`
+> When prompted, enter the sudo password for the Odroid user. `src/comms/run_flightstack.sh` and `src/comms/start_uxrce.sh` read it from `SUDO_PASS` or ask for it.
 
 
 

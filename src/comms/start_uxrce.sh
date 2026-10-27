@@ -1,6 +1,11 @@
 #!/bin/bash
 
-# Define the password
+# sudo password for the Odroid user. Set it in your shell first
+# (export SUDO_PASS=...) or the script asks for it. Never commit it.
+if [ -z "$SUDO_PASS" ]; then
+    read -r -s -p "sudo password: " SUDO_PASS
+    echo
+fi
 password="$SUDO_PASS"
 
 # Define the command
